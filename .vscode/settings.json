@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "datalogger.h": "c"
+        "datalogger.h": "c",
+        "controller.h": "c",
+        "interrupt.h": "c"
     }
 }
