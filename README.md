@@ -7,7 +7,7 @@ Einrichtung der Richtlinien-Bibliotheken:
 
 1. Download der Zip-Datei im Repository.
 
-2. Die Zip-Datei C: entpacken. Die Ordnerstruktur sollte so aussehen:
+2. Die Zip-Datei auf C: entpacken. Die Ordnerstruktur sollte so aussehen:
    C:\FA205\avr\*
 
 3. In MicrochipStudio den Pfad zur Projektvorlage (MeinProjekt.zip) einstellen:
