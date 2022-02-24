@@ -1,12 +1,14 @@
 /* 
-  Beschreibung:     Zusatzfunktionen für Datenlogger-Projekt
+  Beschreibung:     Zusatzfunktionen fï¿½r Datenlogger-Projekt
 
   Autor:            Rolf Rahm
   Datum:            01.11.2017
-  Letzte Änderung:  04.11.2017
+  Letzte ï¿½nderung:  11.12.2021
 */
 #include "controller.h"
 #include "datalogger.h"
+// Globale Variablen in datalogger.h
+// tag,monat,jahr,stunde,minute,sekunde,temperatur
 
 //***************************************************************************
 //**** Datenlogger-Funktionen ************************************************
@@ -25,7 +27,7 @@ void rs232_print_record(uint8_t i2c_address, uint16_t record)
 	if ((temperatur & 0x80) == 0x80)  dezimale = '5';
 	else                              dezimale = '0';
 
-	if ((temperatur & 0x8000) == 0x8000)        // Temperatur negativ?
+	if ( temperatur < 0 )        // Temperatur negativ?
 	{
 		temperatur = ~temperatur;
 		temperatur++;             // 2er-Komplement
@@ -174,7 +176,7 @@ void serial_print_all_records(void)
     rs232_printdd(stunde);  rs232_put(':');
     rs232_printdd(minute);  rs232_put(':');
     rs232_printdd(sekunde); rs232_put(';');
-    // Nachkommastelle. Auflösung 0,5°C
+    // Nachkommastelle. Auflï¿½sung 0,5ï¿½C
     dezimale = temperatur;
     if (dezimale!=0) dezimale = 5; else dezimale = 0;
     ganzzahl = temperatur >>8;
@@ -211,13 +213,13 @@ void lcd_print_temperatur(int16_t degree)
 	uint8_t  buffer[LCD_LEN+1];
 	uint8_t  dezimale,ganzzahl;
 
-	// Nachkommastelle. Auflösung 0,5°C
+	// Nachkommastelle. Auflï¿½sung 0,5ï¿½C
   dezimale = degree & 0x80;   //nur Bit lsb:  0000 0000 1000 0000
   if (dezimale!=0) dezimale = 5; else dezimale = 0;
   ganzzahl = degree >>8;
     
   // Zusammenbauen der Zeichenkette mit der Bibliotheksfunktion sprintf()
-  sprintf(buffer,"%3d,%1u°C",ganzzahl,dezimale);
+  sprintf(buffer,"%3d,%1uï¿½C",ganzzahl,dezimale);
   
 	// Ausgabe auf LC-Display
 	lcd_print(buffer);
@@ -228,20 +230,20 @@ void rs232_print_temperatur(int16_t degree, uint8_t mode)
 	uint8_t  buffer[LCD_LEN+1];
 	uint8_t  dezimale,ganzzahl;
 
-	// Nachkommastelle. Auflösung 0,5°C
+	// Nachkommastelle. Auflï¿½sung 0,5ï¿½C
   dezimale = degree & 0x80;   //nur Bit lsb:  0000 0000 1000 0000
   if (dezimale!=0) dezimale = 5; else dezimale = 0;
   ganzzahl = degree >>8;
   
   // Zusammenbauen der Zeichenkette mit der Bibliotheksfunktion sprintf()
-  //sprintf(buffer,"%3d,%1u°C",ganzzahl,dezimale);
+  //sprintf(buffer,"%3d,%1uï¿½C",ganzzahl,dezimale);
   switch (mode)
   {
     case 0:    sprintf(buffer,"T1=%3d.%1u\r\n",ganzzahl,dezimale); break;
     
     case 1:    sprintf(buffer,"%3d.%1u\r",ganzzahl,dezimale); break;
     
-    case 2:    sprintf(buffer,"%3d.%1u°C\r",ganzzahl,dezimale); break;
+    case 2:    sprintf(buffer,"%3d.%1uï¿½C\r",ganzzahl,dezimale); break;
     default: break;
   }  
 	// Ausgabe auf LC-Display
@@ -266,7 +268,7 @@ int16_t lm75_read(void)
   msb <<= 8;
   data16 = msb | lsb;
   data16 &= 0xff80;           // niederwertige Bits ausmaskieren! 
-  return data16;              // Genauigkeit: +/- 0,5°C
+  return data16;              // Genauigkeit: +/- 0,5ï¿½C
 }
 //---------------------------------------------------------------------------
 uint32_t rs232_get_sampletime(void)
