@@ -19,12 +19,12 @@ Einrichtung der Richtlinien-Bibliotheken:
      "C:\FA205\avr\AtmelStudio_Desktop_Settings.vssettings"
 
 Unterrichtsbeispiele für MicrochipStudio sind im Ordner "avr\examples" 
-2_2_Countdown_Zaehler_7_Segment
-4_2_Inkrementaler_Drehgeber  (Drehgeber-Shield)
-6_3_Datenlogger   (Datalogger-Shield)
-6_5_Robotersteuerung   (Roboter-Shield)
-6_6_Drehzahlregelung_mit_PI_Regler  (2mm-Adapter-Shield)
-7_1_Ampelsteuerung  (Ampel-Shield)
+1. 2_2_Countdown_Zaehler_7_Segment
+2. 4_2_Inkrementaler_Drehgeber  (Drehgeber-Shield)
+3. 6_3_Datenlogger   (Datalogger-Shield)
+4. 6_5_Robotersteuerung   (Roboter-Shield)
+5. 6_6_Drehzahlregelung_mit_PI_Regler  (2mm-Adapter-Shield)
+6. 7_1_Ampelsteuerung  (Ampel-Shield)
 
 
 Für die Beispielprogramme werden z.T. Zusatzshields und Hardware benötigt: 
