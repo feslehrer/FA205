@@ -14,12 +14,15 @@ void eeprom_init(void)
   i2c_init();     // Zugriff auf EEPROM über i2C-Bus
 }
 
-uint8_t eeprom_read (uint8_t i2c_address, uint16_t address)
+int16_t eeprom_read (uint8_t i2c_address, uint16_t address)
 {
   volatile uint8_t temp;
+  uint8_t response;
+  
 
   i2c_start();
-  i2c_write(i2c_address);				// I2C-Adresse EEPROM1
+  response = i2c_write(i2c_address);				// I2C-Adresse EEPROM1
+  if (response == NACK) return -1;
   i2c_write((address>>8) & 0x00ff);	// Address High Byte schreiben
 	i2c_write(address & 0x00ff);			// Address Low Byte schreiben
 	
@@ -39,7 +42,7 @@ void eeprom_write(uint8_t i2c_address, uint16_t address, uint8_t value)
   i2c_write((address>>8) & 0x00ff);				// EEPROM-Adresse High Byte schreiben
 	i2c_write(address & 0x00ff);						// EEPROM-Adresse Low Byte schreiben
   
-  i2c_write(value);	
+  i2c_write(value);
   i2c_stop();
 	delay_100us(1);													// Kurze Pause nötig!!
 	response = NACK;
@@ -56,40 +59,22 @@ void eeprom_write(uint8_t i2c_address, uint16_t address, uint8_t value)
 // Der ursrüngliche Wert wird wieder hergestellt.
 int8_t eeprom_memtest(uint8_t i2c_address)
 {
-	uint16_t adresse;
-	uint8_t buf,temp;
+	uint32_t adresse;
+	uint8_t buf;
+  int16_t temp;
 	
 	for(adresse = 0x0000;adresse <= EEPROM_END_ADDRESS;adresse++)
 	{
-		temp = eeprom_read(i2c_address,adresse);
-		lcd_setcursor(2,1);
-		lcd_int(adresse);
-		lcd_print(" AA:");
-		eeprom_write(i2c_address,adresse,0xAA);
-		buf = eeprom_read(i2c_address,adresse);
-		if (buf == 0xAA)
-		{
-			lcd_print("o");
-		}
-		else
-		{
-			lcd_print("x");
-			return -1;
-		}
+    lcd_setcursor(2,1);
+    lcd_int((uint16_t)adresse);
 		
-		lcd_print(" 55:");
-		eeprom_write(i2c_address,adresse,0x55);
-		buf = eeprom_read(i2c_address,adresse);
-		if (buf == 0x55)
-		{
-			lcd_print("o");
-		}
-		else
-		{
-			lcd_print("x");
-			return -1;
-		}
-		eeprom_write(i2c_address,adresse,temp);
+    temp = eeprom_read(i2c_address,(uint16_t)adresse); if (temp == -1) return -1;
+		eeprom_write(i2c_address,(uint16_t)adresse,0xAA);
+		buf = (uint8_t) eeprom_read(i2c_address,(uint16_t)adresse);	if (buf != 0xAA)	{return -1;}
+		eeprom_write(i2c_address,(uint16_t)adresse,0x55);
+		buf = (uint8_t) eeprom_read(i2c_address,(uint16_t)adresse);	if (buf != 0x55)  {return -1;}
+		eeprom_write(i2c_address,(uint16_t)adresse,(uint8_t)temp);
 	}
+
   return 0;
 }

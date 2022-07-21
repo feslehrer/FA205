@@ -1,14 +1,12 @@
 /* 
-  Beschreibung:     Zusatzfunktionen fï¿½r Datenlogger-Projekt
+  Beschreibung:     Zusatzfunktionen für Datenlogger-Projekt
 
   Autor:            Rolf Rahm
   Datum:            01.11.2017
-  Letzte ï¿½nderung:  11.12.2021
+  Letzte Änderung:  04.11.2017
 */
 #include "controller.h"
 #include "datalogger.h"
-// Globale Variablen in datalogger.h
-// tag,monat,jahr,stunde,minute,sekunde,temperatur
 
 //***************************************************************************
 //**** Datenlogger-Funktionen ************************************************
@@ -27,7 +25,7 @@ void rs232_print_record(uint8_t i2c_address, uint16_t record)
 	if ((temperatur & 0x80) == 0x80)  dezimale = '5';
 	else                              dezimale = '0';
 
-	if ( temperatur < 0 )        // Temperatur negativ?
+	if ((temperatur & 0x8000) == 0x8000)        // Temperatur negativ?
 	{
 		temperatur = ~temperatur;
 		temperatur++;             // 2er-Komplement
@@ -35,50 +33,68 @@ void rs232_print_record(uint8_t i2c_address, uint16_t record)
 	}
 	rs232_printdd((uint8_t)(temperatur>>8)&0xff); rs232_put(',');
 	rs232_put(dezimale);
-	rs232_put('\n');
+	rs232_print("\n\r");
 }
 //---------------------------------------------------------------------------
+void rs232_print_time(void)
+{
+  rtc_get();
+  rs232_print("\n\rAktuelle Zeit: ");
+  rs232_printdd(tag);rs232_put('.');
+  rs232_printdd(monat);rs232_put('.');
+  rs232_printdd(20);rs232_printdd(jahr);rs232_put(', ');
+  rs232_printdd(stunde);rs232_put(':');
+  rs232_printdd(minute);rs232_put(':');
+  rs232_printdd(sekunde);rs232_print("\n\r");
+  return;
+}
+
 void rs232_set_time(void)
 {
   uint8_t temp,i;
 
+  rs232_print_time();
+  
   rs232_print("Uhr stellen [j/n] ?: ");
   temp = 'n';
   for (i=6;i>0;i--)
   {
     rs232_put(i-1+'0');
-    rs232_put('\b');
+    rs232_print("\b");
     delay_ms(1000);
     temp = rs232_get();
     if (temp!='\0')  break;
   }
 
   rs232_put(temp);            // Echo
+  
   if ((temp == 'j') || (temp=='J'))
   {
-    rs232_print("\n***** Aktuelles Datum *****");
+    rs232_print("\n\r***** Aktuelles Datum *****");
 
-    rs232_print("\nTag     [01..31]: ");
+    rs232_print("\n\rTag     [01..31]: ");
     tag = rs232_inputdd();
 
-    rs232_print("\nMonat   [01..12]: ");
+    rs232_print("\n\rMonat   [01..12]: ");
     monat = rs232_inputdd();
 
-    rs232_print("\nJahr    [00..99]: ");
+    rs232_print("\n\rJahr    [00..99]: ");
     jahr = rs232_inputdd();
 
-    rs232_print("\nAktuelle Uhrzeit:");
+    rs232_print("\n\rAktuelle Uhrzeit:");
 
-    rs232_print("\nStunde  [01..24]: ");
+    rs232_print("\n\rStunde  [01..24]: ");
     stunde = rs232_inputdd();
 
-    rs232_print("\nMinuten [00..59]: ");
+    rs232_print("\n\rMinuten [00..59]: ");
     minute = rs232_inputdd();
 
     sekunde = 00;
     rtc_set();
+    rs232_print_time();
   }
 }
+
 //---------------------------------------------------------------------------
 void eeprom_get_record(uint8_t i2c_address, uint16_t record)
 {
@@ -176,11 +192,11 @@ void serial_print_all_records(void)
     rs232_printdd(stunde);  rs232_put(':');
     rs232_printdd(minute);  rs232_put(':');
     rs232_printdd(sekunde); rs232_put(';');
-    // Nachkommastelle. Auflï¿½sung 0,5ï¿½C
+    // Nachkommastelle. Auflösung 0,5°C
     dezimale = temperatur;
     if (dezimale!=0) dezimale = 5; else dezimale = 0;
     ganzzahl = temperatur >>8;
-    sprintf(buffer,"%3d,%1u\n",ganzzahl,dezimale);
+    sprintf(buffer,"%3d,%1u\n\r",ganzzahl,dezimale);
     rs232_print(buffer);
     //rs232_put('\n');
   }
@@ -213,13 +229,13 @@ void lcd_print_temperatur(int16_t degree)
 	uint8_t  buffer[LCD_LEN+1];
 	uint8_t  dezimale,ganzzahl;
 
-	// Nachkommastelle. Auflï¿½sung 0,5ï¿½C
+	// Nachkommastelle. Auflösung 0,5°C
   dezimale = degree & 0x80;   //nur Bit lsb:  0000 0000 1000 0000
   if (dezimale!=0) dezimale = 5; else dezimale = 0;
   ganzzahl = degree >>8;
     
   // Zusammenbauen der Zeichenkette mit der Bibliotheksfunktion sprintf()
-  sprintf(buffer,"%3d,%1uï¿½C",ganzzahl,dezimale);
+  sprintf(buffer,"%3d,%1u°C",ganzzahl,dezimale);
   
 	// Ausgabe auf LC-Display
 	lcd_print(buffer);
@@ -230,20 +246,20 @@ void rs232_print_temperatur(int16_t degree, uint8_t mode)
 	uint8_t  buffer[LCD_LEN+1];
 	uint8_t  dezimale,ganzzahl;
 
-	// Nachkommastelle. Auflï¿½sung 0,5ï¿½C
+	// Nachkommastelle. Auflösung 0,5°C
   dezimale = degree & 0x80;   //nur Bit lsb:  0000 0000 1000 0000
   if (dezimale!=0) dezimale = 5; else dezimale = 0;
   ganzzahl = degree >>8;
   
   // Zusammenbauen der Zeichenkette mit der Bibliotheksfunktion sprintf()
-  //sprintf(buffer,"%3d,%1uï¿½C",ganzzahl,dezimale);
+  //sprintf(buffer,"%3d,%1u°C",ganzzahl,dezimale);
   switch (mode)
   {
     case 0:    sprintf(buffer,"T1=%3d.%1u\r\n",ganzzahl,dezimale); break;
     
     case 1:    sprintf(buffer,"%3d.%1u\r",ganzzahl,dezimale); break;
     
-    case 2:    sprintf(buffer,"%3d.%1uï¿½C\r",ganzzahl,dezimale); break;
+    case 2:    sprintf(buffer,"%3d.%1u°C\r",ganzzahl,dezimale); break;
     default: break;
   }  
 	// Ausgabe auf LC-Display
@@ -268,7 +284,7 @@ int16_t lm75_read(void)
   msb <<= 8;
   data16 = msb | lsb;
   data16 &= 0xff80;           // niederwertige Bits ausmaskieren! 
-  return data16;              // Genauigkeit: +/- 0,5ï¿½C
+  return data16;              // Genauigkeit: +/- 0,5°C
 }
 //---------------------------------------------------------------------------
 uint32_t rs232_get_sampletime(void)
@@ -292,6 +308,6 @@ uint32_t rs232_get_sampletime(void)
     }
   } while (i<5);
   
-  rs232_put('\n');
+  rs232_print("\n\r");
   return buf;
 }
