@@ -4,6 +4,7 @@
 Einrichtung der Richtlinien-Bibliotheken:
    In der Datei: "Dokumente\1_Implementierung_AtmelStudio7_ATmega328.pdf" befinden sich genaue Anleitungsschritte
    zur Einrichtung der Technischen Richtlinie FA205 in MicrochipStudio. 
+![grafik](https://user-images.githubusercontent.com/24614659/236320998-94544814-81e8-421b-9627-0c5e2c16ead0.png)
 
 1. Download der Zip-Datei im Repository.
 
