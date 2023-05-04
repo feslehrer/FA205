@@ -4,7 +4,13 @@
 Einrichtung der Richtlinien-Bibliotheken:
    In der Datei: "Dokumente\1_Implementierung_AtmelStudio7_ATmega328.pdf" befinden sich genaue Anleitungsschritte
    zur Einrichtung der Technischen Richtlinie FA205 in MicrochipStudio. 
-![grafik](https://user-images.githubusercontent.com/24614659/236320998-94544814-81e8-421b-9627-0c5e2c16ead0.png)
+<img src="https://user-images.githubusercontent.com/24614659/236320998-94544814-81e8-421b-9627-0c5e2c16ead0.png" alt="ESP32-Carrier-Board" width="600">
+
+<img src="https://user-images.githubusercontent.com/24614659/236321374-bc42a9b3-c81d-490a-a83e-133e4fe79d99.png" alt="ESP32-Carrier-Board" width="600">
+
+<img src="https://user-images.githubusercontent.com/24614659/236321583-8457da01-e94d-4db5-8539-40f2c315c2b6.png" alt="ESP32-Carrier-Board" width="600">
+
+<img src="https://user-images.githubusercontent.com/24614659/236321645-c13d7fa3-2566-49c7-b55e-53918c5f59d4.png" alt="ESP32-Carrier-Board" width="600">
 
 1. Download der Zip-Datei im Repository.
 
@@ -35,4 +41,4 @@ Für die Beispielprogramme werden z.T. Zusatzshields und Hardware benötigt:
 Beispiel Arbeitsaufträge sind im Ordner "Dokumente\Uebungen_Beispiele"
 
 letzte Änderung:
-21.07.2022@Rah
+4.5.2023@Rah
