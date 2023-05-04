@@ -9,8 +9,7 @@ Einrichtung der Richtlinien-Bibliotheken:
 <img src="https://user-images.githubusercontent.com/24614659/236322408-e825f460-5135-4205-903b-463df35603ee.png" alt="ESP32-Carrier-Board" width="600">
 
 <img src="https://user-images.githubusercontent.com/24614659/236321583-8457da01-e94d-4db5-8539-40f2c315c2b6.png" alt="ESP32-Carrier-Board" width="200">
-
-<img src="https://user-images.githubusercontent.com/24614659/236321645-c13d7fa3-2566-49c7-b55e-53918c5f59d4.png" alt="ESP32-Carrier-Board" width="200">
+<img src="https://user-images.githubusercontent.com/24614659/236321645-c13d7fa3-2566-49c7-b55e-53918c5f59d4.png" alt="ESP32-Carrier-Board" width="400">
 
 1. Download der Zip-Datei im Repository.
 
