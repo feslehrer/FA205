@@ -25,7 +25,7 @@ void     eeprom_init    (void);
 // im angegebenen EEPROM "i2c_address" = EEPROM_1,...,EEPROM3
 void     eeprom_write   (uint8_t i2c_address, uint16_t address, uint8_t value);
 // dito. ein Byte lesen 
-int16_t  eeprom_read    (uint8_t i2c_address, uint16_t address);
+uint8_t  eeprom_read    (uint8_t i2c_address, uint16_t address);
 // führt einen Speichertest des angegebenen EEPROM durch.
 // getestet wird Adresse 0x0000 bis EEPROM_END_ADDRESS
 // Rückgabewert: -1 = Fehler,  0 = OK

@@ -50,14 +50,19 @@
 // Funktionsprototypen für Bit- und Byte Ein-/Ausgabe
 
 void    bit_init   ( volatile uint8_t *port, uint8_t bitnr, uint8_t direction );
+
 uint8_t bit_read   ( volatile uint8_t *port, uint8_t bitnr );
+
 void    bit_write  ( volatile uint8_t *port, uint8_t bitnr, uint8_t value );
 
+
 void    byte_init  ( volatile uint8_t *port, uint8_t direction );
+
 uint8_t byte_read  ( volatile uint8_t *port );
+
 void    byte_write ( volatile uint8_t *port, uint8_t value );
 
-void    bit_toggle ( volatile uint8_t *port, uint8_t bitnr, volatile uint8_t *status );
+void    bit_toggle ( volatile uint8_t *port, uint8_t bitnr, volatile uint8_t *status );    // Keine Richtlinienfunktion
 
 // Funktionsprototypen für PWM
 void    pwm_init   ( void );
@@ -80,6 +85,7 @@ void    adc_init   ( void );
 uint8_t adc_in1    ( void );
 uint8_t adc_in2    ( void );
 
-uint8_t  adc_in    ( uint8_t channel );  // ADC mit freier Kanalwahl (CH1...CH6)
-uint16_t adc_in10  ( uint8_t channel );  // dito. aber in 10Bit-Auflösung
+
+
+uint8_t adc_in     ( uint8_t channel );
 #endif
