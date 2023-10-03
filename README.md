@@ -4,7 +4,7 @@ Die **Technischen Richtlinien FA205** sind maßgeblich für Unterricht und Beruf
 Die vorliegenden Bibliotheken wurden speziell für die Verwendung mit der **Microchip-Studio-IDE** zusammen mit einem **ATmega328pXplainedMini**-Conrollermodul erstellt. Sind aber selbstverständlich für alle Controllermodule mit ATmega328p-Controller, wie z.B. ArduinoUno oder ArduinoNano geeignet.
 
 ### Sonstige FA205-Impementierungen
-Implementierungen sind für folgende Plattformen verfügbar: 
+Implementierungen sind auch für folgende Plattformen verfügbar: 
 + ArduinoUno/Nano mit ATmega328P und ArduinoIDE: https://github.com/feslehrer/FA205_Library_for_Arduino.git
 + ESP32 mit ESP32-Carrier-Board: https://github.com/feslehrer/FA205-ESP32.git
 
