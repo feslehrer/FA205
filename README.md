@@ -46,7 +46,10 @@ Erstellt wurden die Bibliotheken mit der Hardwareplattform **Arduino-Carrier-Boa
 
 Für die Beispielprogramme werden z.T. Zusatzshields und Hardware benötigt: 
 - https://ase-schlierbach.de
-- http://www.hawell-elektronik.de/F_04Antrieb.htm 
+- http://www.hawell-elektronik.de/F_04Antrieb.htm
+
+Projektseite:
+- <a href="https://github.com/feslehrer/NiboBlueConfig_for_ArduinoCarrierBoard.git">NiboBee-Serial-Bluetooth-Adapter am Arduino-Carrier-Board</a>
 
 Beispiel Arbeitsaufträge sind im Ordner **Dokumente\Uebungen_Beispiele**
 
