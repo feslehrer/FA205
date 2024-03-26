@@ -36,13 +36,13 @@ Erstellt wurden die Bibliotheken mit der Hardwareplattform **Arduino-Carrier-Boa
      "C:\FA205\avr\AtmelStudio_Desktop_Settings.vssettings"
 
 ### Unterrichtsbeispiele für MicrochipStudio sind im Ordner "avr\examples" 
-- <a href="Dokumente/Uebungen_Beispiele/2_2_Countdown_Siebensegment.pdf">2_2_Countdown_Zaehler_7_Segment</a>
-- <a href="Dokumente/Uebungen_Beispiele/4_2_1_Inkrementaler_Drehgeber_mit_Externem_Interrupt.pdf">4_2_Inkrementaler_Drehgeber</a>  (<a href="https://ase-schlierbach.de/produkt/drehgeber-shield/">Drehgeber-Shield</a>)
-- <a href="Dokumente/Uebungen_Beispiele/6_3_1_FES_Datenlogger.pdf">6_3_Datenlogger</a>   (<a href="https://ase-schlierbach.de/produkt/datalogger-shield/">Datalogger-Shield</a>)
-- <a href="Dokumente/Uebungen_Beispiele/6_5_Einfache_Robotersteuerung.pdf">6_5_Robotersteuerung</a>   (<a href="https://ase-schlierbach.de/produkt/motorsteuerung-shield/">Roboter-Shield</a>)
-- <a href="Dokumente/Uebungen_Beispiele/6_6_Drehzahlregelung_mit_PI_Regler.pdf">6_6_Drehzahlregelung_mit_PI_Regler</a>  (<a href="https://ase-schlierbach.de/produkt/adapter-shield/">2mm-Adapter-Shield</a>)
-- <a href="Dokumente/Uebungen_Beispiele/7_1_Ampelsteuerung_LfB.pdf">7_1_Ampelsteuerung</a>  (<a href="https://ase-schlierbach.de/produkt/ampel-shield/">Ampel-Shield</a>)
-- <a href="Dokumente/Uebungen_Beispiele/7_2_MP3_Player_Steuerung.pdf">7_2_MP3_Player_Steuerung</a>  (<a href="https://ase-schlierbach.de/produkt/mp3-player-shield/">MP3-Player-Shield</a>)
+- <a href="Dokumente/Uebungen_Beispiele/2_2_Countdown_Siebensegment.pdf">2.2 Countdown Zaehler 7-Segment</a>
+- <a href="Dokumente/Uebungen_Beispiele/4_2_1_Inkrementaler_Drehgeber_mit_Externem_Interrupt.pdf">4.2. Inkrementaler Drehgeber</a>  (<a href="https://ase-schlierbach.de/produkt/drehgeber-shield/">Drehgeber-Shield</a>)
+- <a href="Dokumente/Uebungen_Beispiele/6_3_1_FES_Datenlogger.pdf">6.3. Datenlogger</a>   (<a href="https://ase-schlierbach.de/produkt/datalogger-shield/">Datalogger-Shield</a>)
+- <a href="Dokumente/Uebungen_Beispiele/6_5_Einfache_Robotersteuerung.pdf">6.5. Robotersteuerung</a>   (<a href="https://ase-schlierbach.de/produkt/motorsteuerung-shield/">Roboter-Shield</a>)
+- <a href="Dokumente/Uebungen_Beispiele/6_6_Drehzahlregelung_mit_PI_Regler.pdf">6.6. Drehzahlregelung mit PI Regler</a>  (<a href="https://ase-schlierbach.de/produkt/adapter-shield/">2mm-Adapter-Shield</a>)
+- <a href="Dokumente/Uebungen_Beispiele/7_1_Ampelsteuerung_LfB.pdf">7.1. Ampelsteuerung</a>  (<a href="https://ase-schlierbach.de/produkt/ampel-shield/">Ampel-Shield</a>)
+- <a href="Dokumente/Uebungen_Beispiele/7_2_MP3_Player_Steuerung.pdf">7.2. MP3-Player Steuerung</a>  (<a href="https://ase-schlierbach.de/produkt/mp3-player-shield/">MP3-Player-Shield</a>)
 
 
 Für die Beispielprogramme werden z.T. Zusatzshields und Hardware benötigt: 
