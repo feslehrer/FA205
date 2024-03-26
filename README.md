@@ -5,8 +5,8 @@ Die vorliegenden Bibliotheken wurden speziell für die Verwendung mit der **Micr
 
 ### Sonstige FA205-Impementierungen
 Implementierungen sind auch für folgende Plattformen verfügbar: 
-+ ArduinoUno/Nano mit ATmega328P und ArduinoIDE: https://github.com/feslehrer/FA205_Library_for_Arduino.git
-+ ESP32 mit ESP32-Carrier-Board: https://github.com/feslehrer/FA205-ESP32.git
++ FA205 mit ArduinoUno/Nano (ATmega328P) und ArduinoIDE: https://github.com/feslehrer/FA205_Library_for_Arduino.git
++ FA205 mit ESP32 und ESP32-Carrier-Board: https://github.com/feslehrer/FA205-ESP32.git
 
 ## Arduino-Carrier-Board
 Erstellt wurden die Bibliotheken mit der Hardwareplattform **Arduino-Carrier-Board** von **AS-Elektronik** (www.ase-schlierbach.de).
@@ -54,4 +54,4 @@ Projektseite:
 Beispiel Arbeitsaufträge sind im Ordner **Dokumente\Uebungen_Beispiele**
 
 letzte Änderung:
-4.5.2023@Rah
+26.3.2023@Rah
