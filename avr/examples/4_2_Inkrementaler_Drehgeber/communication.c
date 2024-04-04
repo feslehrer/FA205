@@ -4,10 +4,11 @@
 //     I2C und RS232 Routinen
 // Version:          1.0
 // erstellt am:      5.5.2015
-// letzte Änderung:  17.3.2018
+// letzte Ã„nderung:  17.3.2018
 // Autor:            Rahm
 
 #include "communication.h"
+//#include "interrupt.h"
 
 // *****************************************************************************************
 // I2C- Routinen zur Ansteuerung eins I2C-Slaves
@@ -71,7 +72,7 @@ void i2c_stop (void)
 }
 
 //*****************************************************************************************
-// * Byte ausgeben an I2C-Bus , Rückgabewert = ack = ACK/NACK
+// * Byte ausgeben an I2C-Bus , RÃ¼ckgabewert = ack = ACK/NACK
 // ****************************************************************************************
 uint8_t i2c_write (uint8_t byte)
 {
@@ -163,7 +164,7 @@ void rs232_init(void)
   //#endif
 }
 
-void rs232_baud ( uint32_t baud )     // Ändert die Baudrate
+void rs232_baud ( uint32_t baud )     // Ã„ndert die Baudrate
 {
     #define UART_UBRR_CALC(BAUD_,FREQ_) ((FREQ_)/((BAUD_)*16L)-1)
     #ifdef _ATMEGA8_
@@ -173,22 +174,25 @@ void rs232_baud ( uint32_t baud )     // Ändert die Baudrate
     UBRRL = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
     #endif
     #ifdef _ATMEGA328_
+       #include <util/setbaud.h>
+       UBRR0H = UBRRH_VALUE;
+       UBRR0L = UBRRL_VALUE;
     UCSR0B |= (1<<TXEN0) | (1<<RXEN0);    // UART TX und RX einschalten
     UCSR0C |= (1<<USBS0) | (3<<UCSZ00);   // Asynchron 8N1
-    UBRR0H = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
-    UBRR0L = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
+    //UBRR0H = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
+    //UBRR0L = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
     #endif
 }
 
 uint8_t rs232_get ( void )
 {
   #ifdef _ATMEGA8_
-   if (!(UCSRA & (1<<RXC))) return ('\0');    // Wenn kein Zeichen im Puffer, dann 0 zurückgeben!
-   return UDR;                                // Zeichen zurückliefern
+   if (!(UCSRA & (1<<RXC))) return ('\0');    // Wenn kein Zeichen im Puffer, dann 0 zurÃ¼ckgeben!
+   return UDR;                                // Zeichen zurÃ¼ckliefern
   #endif
   #ifdef _ATMEGA328_
-   if (!(UCSR0A & (1<<RXC0))) return ('\0');    // Wenn kein Zeichen im Puffer, dann 0 zurückgeben!
-   return UDR0;                                // Zeichen zurückliefern
+   if (!(UCSR0A & (1<<RXC0))) return ('\0');    // Wenn kein Zeichen im Puffer, dann 0 zurÃ¼ckgeben!
+   return UDR0;                                // Zeichen zurÃ¼ckliefern
   #endif
 }
 
@@ -225,7 +229,7 @@ uint8_t rs232_inputdd(void )
   do
   {
     while((buf2 = rs232_get()) == 0);
-  } while ((buf1 < '0') || (buf1 > '9'));
+  } while ((buf2 < '0') || (buf2 > '9'));
 
   rs232_put(buf2);    // Echo
 
@@ -256,7 +260,7 @@ void rs232_int(uint16_t val)
     buffer[n++] = val%10 + '0';
   } while ((val /= 10) > 0);
   
-  while (n<5)                   // Rest von buffer mit blank füllen
+  while (n<5)                   // Rest von buffer mit blank fÃ¼llen
   {
     buffer[n++] = ' ';
   }
@@ -266,4 +270,44 @@ void rs232_int(uint16_t val)
     n--;
     rs232_put(buffer[n]);
   }
+}
+
+uint8_t rs232_binary_get ( void )
+{
+   while (!rs232_is_received());    // warten, bis Byte im Puffer!
+
+   return UDR0;                     // wert zurÃ¼ckgeben
+}
+
+uint8_t rs232_readbytes(uint8_t *buf, int8_t _length)
+{
+   uint16_t timeout;
+   uint8_t  i = 0;
+
+   //Puffer lÃ¶schen
+   for (uint8_t n=0; n<=_length;n++)  buf[n] = 0;
+
+   while(_length > 0)
+   {
+     timeout = 0;
+     while(!rs232_is_received())
+     {
+        if(timeout>=0xfffe) return 0;
+        else                 timeout++;
+     }
+     
+     *buf++ = rs232_binary_get();
+     _length--;
+     i++;
+   }
+   return i; 
+}
+
+uint8_t rs232_is_received( void )
+{
+    #ifdef _ATMEGA328_
+    if (!(UCSR0A & (1<<RXC0))) return 0;    // 0, wenn kein Byte im Puffer!
+
+    return 1;                      // 1, wenn ein Byte im Puffer
+    #endif
 }
