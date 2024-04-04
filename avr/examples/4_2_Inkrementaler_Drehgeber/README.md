@@ -3,7 +3,8 @@
 
 ## Hardware
 Erstellt wurden die Bibliotheken mit der Hardwareplattform **Arduino-Carrier-Board** von **AS-Elektronik** (www.ase-schlierbach.de).
-<img src="https://user-images.githubusercontent.com/24614659/236320998-94544814-81e8-421b-9627-0c5e2c16ead0.png" alt="Arduino-Carrier-Board" width="600">
+<img src="https://user-images.githubusercontent.com/24614659/6fe745e1-f1b7-42bd-aa3e-b300a738bb4a" alt="Arduino-Carrier-Board" width="600">
+![P1021052](https://github.com/feslehrer/FA205/assets/24614659/6fe745e1-f1b7-42bd-aa3e-b300a738bb4a)
 
 <a href="https://ase-schlierbach.de/produkt/drehgeber-shield/" target="_blank"> Drehgeber-Shield </a>
 
