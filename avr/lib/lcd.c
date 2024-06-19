@@ -276,7 +276,7 @@ void lcd_print (uint8_t text[])
 Funktion:        lcd_byte(n)                Rahm, 17.2.15
 Beschreibung:    Gibt das Byte n als 3 stelligen Dez-Wert aufs
                  Display. Führende Nullen werden zu blank.
-Eingang:         Byte
+Eingang:         uint8_t
 Ausgang:         ---
 ==============================================================*/
 void lcd_byte(uint8_t val)
@@ -305,7 +305,7 @@ void lcd_byte(uint8_t val)
 Funktion:        lcd_int(n)                Rahm, 17.2.15
 Beschreibung:    Gibt den Integer n als 5 stelligen Dez-Wert aufs
                  Display. Führende Nullen werden zu blank.
-Eingang:         Byte
+Eingang:         uint16_t
 Ausgang:         ---
 ==============================================================*/
 void lcd_int(uint16_t val)
@@ -321,6 +321,41 @@ void lcd_int(uint16_t val)
   while (n<5)                   // Rest von buffer mit blank füllen
   {
     buffer[n++] = ' ';					
+  }
+
+  while (n > 0)                 // Ausgabe auf das Display (umgekehrt)
+  {
+    n--;
+    lcd_char(buffer[n]);
+  }
+}
+
+/*============================================================
+Funktion:        lcd_int32(n)                Rahm, 19.6.24
+Beschreibung:    Gibt den Integer n (0...99.999.999) als 8-stelligen
+                 Dezimalwert aufs Display aus.
+                 Führende Nullen werden zu blank.
+Eingang:         uint32_t
+Ausgang:         ---
+==============================================================*/
+void lcd_int32(uint32_t val)
+{	
+  uint8_t buffer[8];
+  uint8_t n = 0;	
+  
+  if(val>99999999L) 
+  {
+    lcd_print("er: >max");  // Fehler 
+    return;
+  }
+  do
+  {
+    buffer[n++] = val%10 + '0';
+  } while ((val /= 10) > 0);
+		
+  while (n<8)                   // Rest von buffer mit blank füllen
+  {
+    buffer[n++] = ' ';
   }
 
   while (n > 0)                 // Ausgabe auf das Display (umgekehrt)

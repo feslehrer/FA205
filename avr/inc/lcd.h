@@ -80,6 +80,7 @@ extern void lcd_print     ( uint8_t  text[] );                 // Textausgabe ab
 extern void lcd_char      ( uint8_t  value  );                 // Ausgabe eines Zeichens an der aktuellen Cursorposition
 extern void lcd_byte      ( uint8_t  value  );                 // 0 ... 255
 extern void lcd_int       ( uint16_t value  );                 // 0 ... 65535
+void        lcd_int32     ( uint32_t value  );                 // 0 ... 99.999.999
 
 //erweiterte Funktionen nicht Teil der Technischen Richtlinie FA205
 extern void lcd_defchar   ( uint8_t *pixtab, uint8_t char_nr );

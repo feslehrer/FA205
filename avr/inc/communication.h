@@ -22,7 +22,7 @@
 #define NACK 1
 
 // ... für RS232-Funktionen
-#define BAUD  9600 //9600 //19200 //115200
+#define BAUD 9600    //9600, 19200, 38400, 57600, 76800, 250000, 500000, 1000000
 
 //*************************************************************
 // Funktionsprototypen für I2C-Busschnittstelle (Master-Mode)
