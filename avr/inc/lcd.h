@@ -70,6 +70,10 @@
  #define LCD_ADDR_W  0x4e   // 01001110 ->  0100 fest, 111 durch Jumper, 0 Wert schreiben
 #endif
 
+//Konstanten
+#define _TEXT_ALLIGN_LEFT_ 1
+#define _TEXT_ALLIGN_RIGHT_ 0
+
 //Funktionsdefinitionen für Technische Richtlinie FA205
 extern void lcd_init      ( void );                            // Initialisierung des Displays
 extern void lcd_clear     ( void );
@@ -78,9 +82,11 @@ extern void lcd_setcursor ( uint8_t row, uint8_t column );     // Setzen der Cur
 // column (Spalte) = 1,2,3, ...
 extern void lcd_print     ( uint8_t  text[] );                 // Textausgabe ab Cursorposition, bis '\0'
 extern void lcd_char      ( uint8_t  value  );                 // Ausgabe eines Zeichens an der aktuellen Cursorposition
-extern void lcd_byte      ( uint8_t  value  );                 // 0 ... 255
+extern void lcd_byte      ( uint8_t  value  );                 // 0 ... 255  (Nur rechtsbündig FA205)
 extern void lcd_int       ( uint16_t value  );                 // 0 ... 65535
-void        lcd_int32     ( uint32_t value  );                 // 0 ... 99.999.999
+extern void lcd_int32     ( uint32_t value, uint8_t allign );  // 0 ... 99.999.999
+                                                               // _TEXT_ALLIGN_RIGHT_ = 0  (Rechtsbündig)
+                                                               // _TEXT_ALLIGN_LEFT_ = 1   (Linksbündig)
 
 //erweiterte Funktionen nicht Teil der Technischen Richtlinie FA205
 extern void lcd_defchar   ( uint8_t *pixtab, uint8_t char_nr );

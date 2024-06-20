@@ -42,6 +42,9 @@ extern void    rs232_baud    ( uint32_t baud );     // Ändert die Baudrate
 extern uint8_t rs232_inputdd ( void );              // Erzeugt ein Eingabeprompt für eine Zahl von 00 ... 99
 extern void    rs232_printdd ( uint8_t value );     // Ausgabe einer Dezimalzahl 00..99 auf RS232
 extern void    rs232_int     ( uint16_t value );    // Ausgabe einer Dezimalzahl 0...65535 auf RS232
+extern void    rs232_int32   ( uint32_t value, uint8_t allign );  // 0 ... 99.999.999
+                                                                 // _TEXT_ALLIGN_RIGHT_ = 0  (Rechtsbündig)
+                                                                 // _TEXT_ALLIGN_LEFT_ = 1   (Linksbündig)
 extern uint8_t rs232_binary_get ( void );
 //extern uint8_t rs232_binary_get ( uint8_t *buf );   // Gibt ein empfangenes Byte im Binärmodus zurück.
                                                     // buf = empfangenes Zeichen
