@@ -21,6 +21,9 @@ void     lcd_print_timestamp(void);
 volatile uint16_t _SAMPLE_TIME_ = 120;			  // Ein Sample alle 120s (=2min)
 volatile uint8_t  temp_anz = 0;               // Merker für Fortlaufende Temperaturanzeige rs232
 volatile uint8_t  anz_mode = 0;               // Merker für Anzeigemodus (plain, name)
+const uint32_t    baudrate[] = {2400,4800,9600,19200,38400,57600,76800,250000,500000,1000000};
+uint8_t baud = 2;
+
 //*******************************************************************
 void setup(void)
 {  // Initialisierungen
@@ -30,7 +33,8 @@ void setup(void)
 	eeprom_init();
   rs232_init();
   serial_interrupt_init(serial_interrupt_isr);
-  
+  rs232_baud(baudrate[baud]);
+    
   // Definition der Sendezeichen
   lcd_defchar(zeichen1,1);
   lcd_defchar(zeichen2,2);
@@ -41,7 +45,7 @@ void setup(void)
 	lcd_setcursor(1,1);
 	lcd_print("FES Datenlogger");
 	lcd_setcursor(2,1);
-	lcd_print("COM: 9600Bd");
+	lcd_print("COM: ");lcd_int32(baudrate[baud],_TEXT_ALLIGN_LEFT_); lcd_print(" Bd");
   delay_ms(4000);
 	lcd_clear();
   //--------------------------
@@ -169,6 +173,38 @@ void serial_interrupt_isr(void)
               if (test == -1) {lcd_setcursor(1,1); lcd_print("!Speicherfehler!");rs232_print("Speicherfehler!\n\r");delay_s(5);}             
               else rs232_print("OK\n\r");
               break;
+    case 'b':
+    case 'B': // Baudrate ändern
+              rs232_print("\n\rAktuelle Baudrate: "); rs232_int32(baudrate[baud],_TEXT_ALLIGN_LEFT_); rs232_print("Bd");
+              rs232_print("\n\r x:exit   0:2400   1:4800   2:9600    3:19200   4:38400");
+              rs232_print("\n\r          5:57600  6:76800  7:250000  8:500000  9:1000000");
+              rs232_print("\n\rNeue Baudrate: ");
+              
+              n=0;
+              do
+              {
+                while((n = rs232_get()) == 0);
+              } while (((n < '0') || (n > '9')) && (n!='x'));
+              rs232_put(n);    // Echo
+              
+              if (n=='x')
+              { rs232_print("\n\r");
+                break;
+              }              
+              baud = n -'0';
+              
+              rs232_print("\n\rNeue Baudrate: "); rs232_int32(baudrate[baud],_TEXT_ALLIGN_LEFT_);
+              rs232_print("Bd am Terminal einstellen!");
+              delay_ms(1000);
+              
+              rs232_baud(baudrate[baud]);
+              
+              lcd_clear(); lcd_setcursor(1,1);lcd_print("Neue Baudrate: ");
+              lcd_setcursor(2,1);lcd_int32(baudrate[baud],_TEXT_ALLIGN_LEFT_);lcd_print("Bd");
+              delay_ms(2000);
+              lcd_clear();
+
+              break;
     case 'h':
     case 'H': // Hilfe anzeigen
               rs232_print("\n\rHilfe:\n\r");
@@ -178,6 +214,8 @@ void serial_interrupt_isr(void)
               rs232_print("n: Aufzeichnung neustarten\n\r");
               rs232_print("s: Sampleintervall einstellen [default 120s]\n\r");
               rs232_print("e: EEPROM Speichertest [1,2,3]\n\r"); 
+              rs232_print("b: Baudrate ändern\n\r"); 
+              rs232_print("h: Hilfe anzeigen\n\r");              
               break;
     default:  break;
   }

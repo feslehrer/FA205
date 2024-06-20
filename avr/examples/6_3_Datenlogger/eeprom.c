@@ -14,7 +14,7 @@ void eeprom_init(void)
   i2c_init();     // Zugriff auf EEPROM über i2C-Bus
 }
 
-int16_t eeprom_read (uint8_t i2c_address, uint16_t address)
+uint8_t eeprom_read (uint8_t i2c_address, uint16_t address)
 {
   volatile uint8_t temp;
   uint8_t response;
@@ -54,7 +54,7 @@ void eeprom_write(uint8_t i2c_address, uint16_t address, uint8_t value)
 	i2c_stop();
 }
 // testet den gewählten EEPROM durch wiederholtes
-// schreiben und lesen von 0xaa und 0x55 auf jede 
+// schreiben und lesen von 0xaa und 0x55 auf jede
 // Speicherstelle bis zur Endadresse (eeprom.h)
 // Der ursrüngliche Wert wird wieder hergestellt.
 int8_t eeprom_memtest(uint8_t i2c_address)

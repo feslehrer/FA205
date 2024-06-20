@@ -276,7 +276,7 @@ void lcd_print (uint8_t text[])
 Funktion:        lcd_byte(n)                Rahm, 17.2.15
 Beschreibung:    Gibt das Byte n als 3 stelligen Dez-Wert aufs
                  Display. Führende Nullen werden zu blank.
-Eingang:         Byte
+Eingang:         uint8_t
 Ausgang:         ---
 ==============================================================*/
 void lcd_byte(uint8_t val)
@@ -305,7 +305,7 @@ void lcd_byte(uint8_t val)
 Funktion:        lcd_int(n)                Rahm, 17.2.15
 Beschreibung:    Gibt den Integer n als 5 stelligen Dez-Wert aufs
                  Display. Führende Nullen werden zu blank.
-Eingang:         Byte
+Eingang:         uint16_t
 Ausgang:         ---
 ==============================================================*/
 void lcd_int(uint16_t val)
@@ -327,6 +327,45 @@ void lcd_int(uint16_t val)
   {
     n--;
     lcd_char(buffer[n]);
+  }
+}
+
+/*============================================================
+Funktion:        lcd_int32(n,allign)                Rahm, 19.6.24
+Beschreibung:    Gibt den Integer n (0...99.999.999) als 8 stelligen
+                 Dez-Wert aufs Display aus.
+                 allign = 0 = _TEXT_ALLIGN_RIGHT_ : Führende Nullen werden zu blank.
+                 allign = 1 = _TEXT_ALLIGN_LEFT_  : Linksbündige Ausgabe
+Eingang:         int32, uint8
+Ausgang:         ---
+==============================================================*/
+void lcd_int32(uint32_t val, uint8_t allign)
+{	
+  uint8_t buffer[8];
+  uint8_t n = 0;	
+  
+  if(val>99999999L) 
+  {
+    lcd_print("err >max");  // Fehler 
+    return;
+  }
+  do
+  {
+    buffer[n++] = val%10 + '0';
+  } while ((val /= 10) > 0);
+		
+  while (n<8)                   // Rest von buffer mit blank füllen
+  {
+    buffer[n++] = ' ';
+  }
+
+  while (n > 0)                 // Ausgabe auf das Display (umgekehrt)
+  {
+    n--;
+    if (allign==_TEXT_ALLIGN_LEFT_ && buffer[n]!=' ')
+      lcd_char(buffer[n]);
+    if (allign==_TEXT_ALLIGN_RIGHT_)
+      lcd_char(buffer[n]);
   }
 }
 
@@ -415,7 +454,35 @@ void lcd_debug(uint8_t byte)
 {
   for(int8_t i=7; i>=0;i-- )
   {
-    if (((byte>>i) & 0x01) == 0x01)  lcd_char('1');
+    if ((byte>>i)&0x01 == 0x01)  lcd_char('1');
     else lcd_char('0');
+  }
+}
+
+// Zeigt 0000 bis FFFF auf dem Display an!
+void lcd_hhhh(uint16_t val)
+{
+  uint8_t buffer[5];
+  uint8_t temp;
+  uint8_t n = 0;
+  
+  do
+  {
+    temp = val & 0x0f;
+    if (temp < 0x0A)  temp += '0';
+    else
+    {
+      temp -= 10;
+      temp += 'A';
+    }
+    buffer[n++] = temp;
+    val >>= 4;
+  } while (n<4);
+
+  n = 4;				// 4 Stellen anzeigen
+  while (n > 0)
+  {
+    n--;
+    lcd_char(buffer[n]);
   }
 }

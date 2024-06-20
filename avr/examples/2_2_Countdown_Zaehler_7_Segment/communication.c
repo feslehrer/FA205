@@ -146,42 +146,30 @@ uint8_t i2c_read (uint8_t ack)
 //
 // ****************************************************************************
 void rs232_init(void)
-{ 
+{
   rs232_baud(BAUD);
-  //// Hilfsmakro zur UBRR-Berechnung ("Formel" laut Datenblatt)
-  //#define UART_UBRR_CALC(BAUD_,FREQ_) ((FREQ_)/((BAUD_)*16L)-1)
-  //#ifdef _ATMEGA8_
-   //UCSRB |= (1<<TXEN) | (1<<RXEN);    // UART TX und RX einschalten
-   //UCSRC |= (1<<URSEL)|(3<<UCSZ0);    // Asynchron 8N1
-   //UBRRH = (uint8_t)( UART_UBRR_CALC( BAUD, F_CPU ) >> 8 );
-   //UBRRL = (uint8_t)  UART_UBRR_CALC( BAUD, F_CPU );
-  //#endif
-  //#ifdef _ATMEGA328_
-   //UCSR0B |= (1<<TXEN0) | (1<<RXEN0);    // UART TX und RX einschalten
-   //UCSR0C |= (1<<USBS0) | (3<<UCSZ00);   // Asynchron 8N1
-   //UBRR0H = (uint8_t)( UART_UBRR_CALC( BAUD, F_CPU ) >> 8 );
-   //UBRR0L = (uint8_t)  UART_UBRR_CALC( BAUD, F_CPU );
-  //#endif
 }
 
 void rs232_baud ( uint32_t baud )     // Ändert die Baudrate
 {
-    #define UART_UBRR_CALC(BAUD_,FREQ_) ((FREQ_)/((BAUD_)*16L)-1)
-    #ifdef _ATMEGA8_
-    UCSRB |= (1<<TXEN) | (1<<RXEN);    // UART TX und RX einschalten
-    UCSRC |= (1<<URSEL)|(3<<UCSZ0);    // Asynchron 8N1
-    UBRRH = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
-    UBRRL = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
-    #endif
-    #ifdef _ATMEGA328_
-       #include <util/setbaud.h>
-       UBRR0H = UBRRH_VALUE;
-       UBRR0L = UBRRL_VALUE;
-    UCSR0B |= (1<<TXEN0) | (1<<RXEN0);    // UART TX und RX einschalten
-    UCSR0C |= (1<<USBS0) | (3<<UCSZ00);   // Asynchron 8N1
-    //UBRR0H = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
-    //UBRR0L = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
-    #endif
+  #define UART_UBRR_CALC(BAUD_,FREQ_) ((FREQ_)/((BAUD_)*16L)-1)
+  #ifdef _ATMEGA8_
+  UCSRB |= (1<<TXEN) | (1<<RXEN);    // UART TX und RX einschalten
+  UCSRC |= (1<<URSEL)|(3<<UCSZ0);    // Asynchron 8N1
+  UBRRH = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
+  UBRRL = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
+  #endif
+  #ifdef _ATMEGA328_
+  //while((UCSR0A & (1<<TXC0))==0);  // Vor Neuinitialisierung warten, bis Empfang beendet
+  //while((UCSR0A & (1<<RXC0))==0);  // Vor Neuinitialisierung warten, bis Senden beendet
+  
+  UBRR0H = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
+  UBRR0L = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
+  
+  UCSR0B |= (1<<TXEN0) | (1<<RXEN0);    // UART TX und RX einschalten
+  UCSR0C |= (1<<USBS0) | (3<<UCSZ00);   // Asynchron 8N1
+  
+  #endif
 }
 
 uint8_t rs232_get ( void )
@@ -271,6 +259,38 @@ void rs232_int(uint16_t val)
     rs232_put(buffer[n]);
   }
 }
+
+void rs232_int32(uint32_t val, uint8_t allign)
+{
+  uint8_t buffer[8];
+  uint8_t n = 0;
+  
+  if(val>99999999L)
+  {
+    lcd_print("err: Wert>99.999.999");  // Fehler
+    return;
+  }
+  
+  do
+  {
+    buffer[n++] = val%10 + '0';
+  } while ((val /= 10) > 0);
+  
+  while (n<8)                   // Rest von buffer mit blank füllen
+  {
+    buffer[n++] = ' ';
+  }
+
+  while (n > 0)                 // Ausgabe auf das Display (umgekehrt)
+  {
+    n--;
+    if (allign==_TEXT_ALLIGN_LEFT_ && buffer[n] != ' ')
+      rs232_put(buffer[n]);
+    else if (allign==_TEXT_ALLIGN_RIGHT_)
+      rs232_put(buffer[n]);
+  }
+}
+
 
 uint8_t rs232_binary_get ( void )
 {

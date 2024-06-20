@@ -331,6 +331,45 @@ void lcd_int(uint16_t val)
 }
 
 /*============================================================
+Funktion:        lcd_int32(n,allign)                Rahm, 19.6.24
+Beschreibung:    Gibt den Integer n (0...99.999.999) als 8 stelligen
+                 Dez-Wert aufs Display aus.
+                 allign = 0 = _TEXT_ALLIGN_RIGHT_ : Führende Nullen werden zu blank.
+                 allign = 1 = _TEXT_ALLIGN_LEFT_  : Linksbündige Ausgabe
+Eingang:         int32, uint8
+Ausgang:         ---
+==============================================================*/
+void lcd_int32(uint32_t val, uint8_t allign)
+{	
+  uint8_t buffer[8];
+  uint8_t n = 0;	
+  
+  if(val>99999999L) 
+  {
+    lcd_print("err >max");  // Fehler 
+    return;
+  }
+  do
+  {
+    buffer[n++] = val%10 + '0';
+  } while ((val /= 10) > 0);
+		
+  while (n<8)                   // Rest von buffer mit blank füllen
+  {
+    buffer[n++] = ' ';
+  }
+
+  while (n > 0)                 // Ausgabe auf das Display (umgekehrt)
+  {
+    n--;
+    if (allign==_TEXT_ALLIGN_LEFT_ && buffer[n]!=' ')
+      lcd_char(buffer[n]);
+    if (allign==_TEXT_ALLIGN_RIGHT_)
+      lcd_char(buffer[n]);
+  }
+}
+
+/*============================================================
 Funktion:     LookUpTable(char)                Rahm, 4.6.09
 Beschreibung: Ersetzt ein ASCII-Umlaut durch den ent-
               sprechenden Display-Code.
