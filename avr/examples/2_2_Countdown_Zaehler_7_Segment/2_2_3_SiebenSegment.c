@@ -2,7 +2,7 @@
  Beschreibung:
    
  Erstellt am: 
- Letzte �nderung:
+ Letzte Änderung:
  
  Autor: 
 */
@@ -38,7 +38,7 @@ void main(void)
 
   while(1)                          // Endlosschleife loop()
   { 
-    while(bit_read(Start)==1);   //Warten bis Taster bet�tigt
+    while(bit_read(Start)==1);   //Warten bis Taster betätigt
     for(n=9;n>=0;n--)
     {
       delay_ms(1000);

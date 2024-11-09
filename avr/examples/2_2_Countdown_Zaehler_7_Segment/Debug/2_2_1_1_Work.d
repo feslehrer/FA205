@@ -1,5 +1,5 @@
-interrupt.d interrupt.o: .././interrupt.c ../../../inc/interrupt.h \
- ../../../inc/controller.h \
+2_2_1_1_Work.d 2_2_1_1_Work.o: .././2_2_1_1_Work.c \
+ C:\FA205\avr\inc/controller.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -12,13 +12,12 @@ interrupt.d interrupt.o: .././interrupt.c ../../../inc/interrupt.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../../../inc/communication.h ../../../inc/in_out.h \
- ../../../inc/interrupt.h ../../../inc/lcd.h ../../../inc/delay.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h
+ C:\FA205\avr\inc/communication.h C:\FA205\avr\inc/controller.h \
+ C:\FA205\avr\inc/in_out.h C:\FA205\avr\inc/interrupt.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
+ C:\FA205\avr\inc/lcd.h C:\FA205\avr\inc/delay.h
 
-../../../inc/interrupt.h:
-
-../../../inc/controller.h:
+C:\FA205\avr\inc/controller.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -44,14 +43,16 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 
-../../../inc/communication.h:
+C:\FA205\avr\inc/communication.h:
 
-../../../inc/in_out.h:
+C:\FA205\avr\inc/controller.h:
 
-../../../inc/interrupt.h:
+C:\FA205\avr\inc/in_out.h:
 
-../../../inc/lcd.h:
-
-../../../inc/delay.h:
+C:\FA205\avr\inc/interrupt.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
+
+C:\FA205\avr\inc/lcd.h:
+
+C:\FA205\avr\inc/delay.h:

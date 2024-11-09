@@ -151,12 +151,12 @@
     <None Include="2_2_2_SiebenSegment.c">
       <SubType>compile</SubType>
     </None>
-    <None Include="2_2_3_SiebenSegment.c">
-      <SubType>compile</SubType>
-    </None>
-    <Compile Include="2_2_1_1_Work.c">
+    <Compile Include="2_2_3_SiebenSegment.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="2_2_1_1_Work.c">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="communication.c">
       <SubType>compile</SubType>
     </Compile>
