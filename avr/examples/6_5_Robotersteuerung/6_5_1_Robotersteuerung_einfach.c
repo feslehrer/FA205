@@ -7,10 +7,14 @@
 */
 #include "controller.h"
 
-#define SensorD _PORTD_
-#define IRL     0        // PD0
-#define IRM     1        // PD1
-#define IRR     7        // PD7
+#define _PORTD_,IRL     0        // PD0
+#define _PORTD_,IRM     1        // PD1
+#define _PORTD_,IRR     7        // PD7
+
+#define INPUT_1 _PORTD_,2
+#define INPUT_2 _PORTB_,2
+#define INPUT_3 _PORTB_,4
+#define INPUT_4 _PORTB_,5
 
 const uint8_t directions[9][4] = {
 								{0,0,0,0},     // stopp
@@ -32,15 +36,15 @@ void robby_richtung(uint8_t dir);
 void setup (void)   // Initialisierungen
 { 
   // IR-Sensorsignale
-  bit_init(SensorD,IRL,IN);
-  bit_init(SensorD,IRM,IN);
-  bit_init(SensorD,IRR,IN);
+  bit_init(IRL,IN);
+  bit_init(IRM,IN);
+  bit_init(IRR,IN);
   // Motorsignale 
-  bit_init(_PORTD_,2,OUT);      // Input 1
-  bit_init(_PORTB_,2,OUT);      // Input 2 
-  bit_init(_PORTB_,4,OUT);      // Input 3
-  bit_init(_PORTB_,5,OUT);      // Input 4
-  // PWM für Motordrehzahl 
+  bit_init(INPUT_1,OUT);      // Input 1
+  bit_init(INPUT_2,OUT);      // Input 2 
+  bit_init(INPUT_3,OUT);      // Input 3
+  bit_init(INPUT_4,OUT);      // Input 4
+  // PWM fï¿½r Motordrehzahl 
   pwm_init();                   // Enable A (pwm)
   pwm2_init();                  // Enable B (pwm)
 }
@@ -58,10 +62,10 @@ int main (void)
   
   while(1)
   {  
-    if      (bit_read(SensorD,IRM)==0)  robby_richtung(STOPP);
-    else if (bit_read(SensorD,IRL)==0)  robby_richtung(RECHTSDREH);
-    else if (bit_read(SensorD,IRR)==0)  robby_richtung(LINKSDREH);
-    else                                robby_richtung(VORWAERTS);
+    if      (bit_read(IRM)==0)  robby_richtung(STOPP);
+    else if (bit_read(IRL)==0)  robby_richtung(RECHTSDREH);
+    else if (bit_read(IRR)==0)  robby_richtung(LINKSDREH);
+    else                        robby_richtung(VORWAERTS);
   }
 }
 
@@ -72,8 +76,8 @@ int main (void)
 void robby_richtung(uint8_t dir)
 {
   //Bewegungsrichtung
-  bit_write(_PORTD_,2,directions[dir][0]);       // Input 1
-  bit_write(_PORTB_,2,directions[dir][1]);       // Input 2
-  bit_write(_PORTB_,4,directions[dir][2]);       // Input 3
-  bit_write(_PORTB_,5,directions[dir][3]);       // Input 4
+  bit_write(INPUT_1,directions[dir][0]);       // Input 1
+  bit_write(INPUT_2,directions[dir][1]);       // Input 2
+  bit_write(INPUT_3,directions[dir][2]);       // Input 3
+  bit_write(INPUT_4,directions[dir][3]);       // Input 4
 }
