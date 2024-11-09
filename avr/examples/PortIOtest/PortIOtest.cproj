@@ -25,9 +25,23 @@
     <preserveEEPROM>true</preserveEEPROM>
     <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
-    <eraseonlaunchrule>0</eraseonlaunchrule>
-    <avrtool />
-    <avrtoolinterface />
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <avrtool>com.atmel.avrdbg.tool.medbg</avrtool>
+    <avrtoolinterface>debugWIRE</avrtoolinterface>
+    <ResetRule>0</ResetRule>
+    <EraseKey />
+    <avrtoolserialnumber>ATML2323052700004374</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E950F</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_medbg>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>debugWIRE</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.medbg</ToolType>
+      <ToolNumber>ATML2323052700004374</ToolNumber>
+      <ToolName>mEDBG</ToolName>
+    </com_atmel_avrdbg_tool_medbg>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>

@@ -13,8 +13,8 @@
 #define	LED1         _PORTD_,1
 #define	LED2         _PORTD_,2
 
-#define	S1           _PORTB,2
-#define	S2           _PORTB,3
+#define	S1           _PORTB_,2
+#define	S2           _PORTB_,3
 
 void setup (void)
 {
