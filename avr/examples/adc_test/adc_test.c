@@ -8,7 +8,7 @@
 
   Autor:           Rolf Rahm
   Datum:           18.02.2015
-  Letzte Änderung: 06.02.2016
+  Letzte Ã„nderung: 06.02.2016
 */
 
 #include "controller.h"

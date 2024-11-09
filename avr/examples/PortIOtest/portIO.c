@@ -1,30 +1,29 @@
 /* 
-  Beschreibung:     Testprogramm zur Umsetzung der Technischen Richtlinie FA205 für 
-	                MyAVR-Board (ATMega8A)
-                    Vorschlag für Bit- und Byte-IO
+  Beschreibung:   Testprogramm zur Umsetzung der Technischen Richtlinie FA205 
+                  fÃ¼r ATMega328P auf ARduino-Carrier-Board
+                  Vorschlag fÃ¼r Bit- und Byte-IO
 								
   Autor:            Rolf Rahm
   Datum:            26.05.2015
-  Letzte Änderung:  12.02.2016
+  Letzte Ã„nderung:   9.11.2024
   Hinweise:									
 */
 #include "controller.h"
 
-#define	LED             &PORTB       // Alternativ: _PORTB_
-#define	Taster          &PORTC       // Alternativ: _PORTC_
+#define	LED1         _PORTD_,1
+#define	LED2         _PORTD_,2
+
+#define	S1           _PORTB,2
+#define	S2           _PORTB,3
 
 void setup (void)
 {
 	/* Initialisierungen */
-  //byte_init(_PORTB,OUT);             // Portinitialisierung ist beim 8051 meistens nicht nötig
-  //byte_init(_PORTD,IN);              // aber aus Kompatibilitätsgründen mit Technischer Richtlinie!
-
-  bit_init(&PORTB,2,OUT);             // LED
-  bit_init(LED,1,OUT);                // LED
-  bit_init(LED,2,OUT);                // LED
+  bit_init(LED1,OUT);           // PD1
+  bit_init(LED2,OUT);           // PD2
   
-  bit_init(Taster,0,IN);              // PortC.0 = Taster 1
-  bit_init(Taster,1,IN);              // PortC.1 = Taster 2
+  bit_init(S1,IN);              // PB2
+  bit_init(S2,IN);              // PB3
 }
 
 // Funktion main()
@@ -43,12 +42,13 @@ int main(void)
     // Bit-Operationen:
     // mit Funktionen ...
 
-    temp = bit_read(Taster,0);		
-	temp = ~temp;
-    bit_write(&PORTB,2,temp);         // drei Parameter !!!
-
-	temp = bit_read(Taster,1);	
-	temp = ~temp;
-    bit_write(LED,2,temp);			
+    temp = bit_read(S1);		
+	  temp = ~temp;
+    bit_write(LED1,temp);          
+    // Alternativ mit 3 Parametern !!!
+    // bit_write(_PORTD_,1,temp);   //Port, Bit, Wert
+	  temp = bit_read(S2);	
+	  temp = ~temp;
+    bit_write(LED2,temp);			
   }
 }
