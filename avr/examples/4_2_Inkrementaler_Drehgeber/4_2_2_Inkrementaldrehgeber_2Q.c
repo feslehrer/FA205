@@ -1,5 +1,5 @@
 /*
-Beschreibung:     Übung für externen Interrupt
+Beschreibung:     Ãœbung fÃ¼r externen Interrupt
                   Je Raster des Drehgebers werden 2 Counts erkannt.
                   Wertet Kanal A und B des Drehgebers (Sensor) mit
                   ext_interrupt0 und ext_interrupt1 aus. Die Interrupts
@@ -8,18 +8,16 @@ Beschreibung:     Übung für externen Interrupt
                   #define _FALLING_EDGE_TRIGGER_
                   aktiviert sein.
 Erstellt am:       13.12.2016
-Letzte Änderung:   23.07.2019
+Letzte Ã„nderung:   23.07.2019
 
 Autor:             Rahm
 */
 
 #include "controller.h"
 
-#define Sensor _PORTD_
-#define B1_A     2
-#define B1_B     3
-#define Taster   _PORTB_
-#define Reset    2
+#define _PORTD_,B1_A     2
+#define _PORTD_,B1_B     3 
+#define _PORTB_,Reset    2
 #define M        48			  // Impulse/Umdrehung
 
 #define MAXCOUNTS 2000
@@ -28,9 +26,9 @@ volatile uint16_t counts = 0;
 
 void setup (void)
 {  /* Initialisierungen */
-  bit_init(Sensor,B1_B,IN);
-  bit_init(Sensor,B1_A,IN);
-  bit_init(Reset,Taster,IN);
+  bit_init(B1_B,IN);
+  bit_init(B1_A,IN);
+  bit_init(Reset,IN);
   
   lcd_init();
   lcd_clear();
@@ -60,13 +58,13 @@ void main(void)
     lcd_setcursor(2,9);		
     lcd_int(turns);
 
-    if (!bit_read(Taster,Reset)) counts = 0;  // Reset, wenn Drehknopf gedrückt!
+    if (!bit_read(Reset)) counts = 0;  // Reset, wenn Drehknopf gedrï¿½ckt!
   }
 }
 
 void ext_interrupt_isr(void)
 { // Interrupt bei fallender Flanke an A
-  if (bit_read(Sensor,B1_B) == 1)
+  if (bit_read(B1_B) == 1)
   {
     if (counts != 0)  counts--;
   }
@@ -78,7 +76,7 @@ void ext_interrupt_isr(void)
 
 void ext_interrupt1_isr(void)
 { // Interrupt bei fallender Flanke an B
-  if (bit_read(Sensor,B1_A) == 0)
+  if (bit_read(B1_A) == 0)
   {
     if (counts != 0)  counts--;
   }

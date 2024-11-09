@@ -2,29 +2,27 @@
  Beschreibung:      Inkrementaldrehgeber mit Interrupt auswerten.
    
  Erstellt am:       05.12.2017
- Letzte Änderung:
+ Letzte Ã„nderung:
  
  Autor:             Rahm
 */
 
 #include "controller.h"
 
-#define Sensor   _PORTD_
-#define B1_A     2			  // INT0  Definition nicht erforderlich!
-#define B1_B     3        // INT1
+#define B1_A     _PORTD_,2			  // INT0  Definition nicht erforderlich!
+#define B1_B     _PORTD_,3        // INT1
 
-#define Taster   _PORTB_
-#define Reset    2			  // Taster des Drehgebers ist Low-aktiv
+#define Reset    _PORTB_,2			  // Taster des Drehgebers ist Low-aktiv
 
 #define M        24			  // Impulse/Umdrehung
-#define MAXCOUNTS 0xffff  // Maximaler Zählwert
+#define MAXCOUNTS 0xffff  // Maximaler ZÃ¤hlwert
 
-volatile uint16_t counts;	// Variablen, die in ISR verändert werden, immer als volatile
+volatile uint16_t counts;	// Variablen, die in ISR verÃ¤ndert werden, immer als volatile
 
 void setup (void)
 {  /* Initialisierungen */
-  bit_init(Sensor,B1_B,IN);
-  bit_init(Taster,Reset,IN);
+  bit_init(B1_B,IN);
+  bit_init(Reset,IN);
 
   lcd_init();
   lcd_clear();
@@ -52,7 +50,7 @@ void main(void)
     lcd_setcursor(2,8);		
     lcd_int(turns);
 
-    if (!bit_read(Taster,Reset)) counts = 0;  // Reset, wenn Drehknopf gedrückt!
+    if (!bit_read(Reset)) counts = 0;  // Reset, wenn Drehknopf gedrÃ¼ckt!
   }
 }
 
@@ -60,7 +58,7 @@ void ext_interrupt_isr(void)
 {
   volatile uint8_t dir;
 	
-  dir = bit_read(Sensor,B1_B);	// dir = 1: Linksturn
+  dir = bit_read(B1_B);	        // dir = 1: Linksturn
 																// dir = 0: Rechtsturn
   if (dir == 1)
   {

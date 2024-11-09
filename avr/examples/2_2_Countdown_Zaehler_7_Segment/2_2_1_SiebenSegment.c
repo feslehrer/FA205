@@ -2,7 +2,7 @@
  Beschreibung:
  
  Erstellt am: 
- Letzte Änderung:
+ Letzte ï¿½nderung:
  
  Autor: 
 */
@@ -10,15 +10,14 @@
 #include "controller.h"
 
 #define	SiebenSegment   _PORTD_
-#define Taster          _PORTB_
-#define Start           2
+#define Start           _PORTB_,2
 
 void setup (void)
 {  /* Initialisierungen */
   byte_init(SiebenSegment,OUT);
   byte_write(SiebenSegment,0xff);     // Anzeige dunkelschalten
 
-  bit_init(Taster,Start,IN);
+  bit_init(Start,IN);
 }
 
 // Funktion main()
@@ -28,7 +27,7 @@ void main(void)
 
   while(1)                          // Endlosschleife loop()
   {
-    while(bit_read(Taster,Start)==1);   //Warten bis Taster betätigt
+    while(bit_read(Start)==1);      //Warten bis Taster betÃ¶tigt
 
     byte_write(SiebenSegment,0x90);
     delay_ms(1000);

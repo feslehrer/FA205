@@ -1,6 +1,6 @@
 /*
 //
-//	Programm:		Vorlage für C-Programm FA205
+//	Programm:		Vorlage fï¿½r C-Programm FA205
 //  Beschreibung:
 //
 //	Datum:			2016.10.09
@@ -10,15 +10,10 @@
 #include "controller.h"
 #include "nunchuk.h"
 
-#define Input1 _PORTD_
-#define Input2 _PORTB_
-#define Input3 _PORTB_
-#define Input4 _PORTB_
-
-#define dir1   2        // Port D.2
-#define dir2   2        // Port B.2
-#define dir3   4        // Port B.4
-#define dir4   5        // Port B.5
+#define INPUT_1 _PORTD_,2
+#define INPUT_2 _PORTB_,2
+#define INPUT_3 _PORTB_,4
+#define INPUT_4 _PORTB_,5
 
 #define tol    5
 
@@ -36,10 +31,10 @@ void setup (void)   // Initialisierungen
   pwm_init();       // Motor rechts Speed
   pwm2_init();      // Motor links  Speed
   
-  bit_init(Input1,dir1,OUT);
-  bit_init(Input2,dir2,OUT);
-  bit_init(Input3,dir3,OUT);
-  bit_init(Input4,dir4,OUT);
+  bit_init(INPUT_1,OUT);
+  bit_init(INPUT_2,OUT);
+  bit_init(INPUT_3,OUT);
+  bit_init(INPUT_4,OUT);
   
   RoboterMotoren(127,127);
   pwm2_start();
@@ -64,15 +59,15 @@ int main (void)
     X_norm = normalize(X_joy);
     Y_norm = normalize(Y_joy);
     
-    if ( Y_norm < -tol && X_norm < -tol )      // Rechtsrück (oder Rechtsdrehen)
+    if ( Y_norm < -tol && X_norm < -tol )      // Rechtsrï¿½ck (oder Rechtsdrehen)
      { M_links = -X_norm; M_rechts =  Y_norm;}   
-    else if ( Y_norm < -tol && X_norm > tol ) // Linksrück (oder Linksdrehen)
+    else if ( Y_norm < -tol && X_norm > tol ) // Linksrï¿½ck (oder Linksdrehen)
      { M_links = -X_norm; M_rechts = -Y_norm;}
     else if ( X_norm < -tol )                  // Linksdrehen    
      { M_links =  X_norm; M_rechts = -X_norm; }
     else if ( X_norm > tol )                   // Rechtsdrehen
      { M_links =  X_norm; M_rechts = -X_norm; }
-    else                                       // Vorwärts/Rückwärts/Stopp
+    else                                       // Vorwï¿½rts/Rï¿½ckwï¿½rts/Stopp
      { M_links = Y_norm; M_rechts = Y_norm; }
 
     RoboterMotoren(M_links,M_rechts); 
@@ -84,40 +79,40 @@ void RoboterMotoren( int8_t speedL, int8_t speedR)
   //***** linke Raupe
   if (speedL > tol)       
   {
-    bit_write(Input2,dir2,1);   // vor
-    bit_write(Input1,dir1,0);
+    bit_write(INPUT_1,0);   // vor
+    bit_write(INPUT_2,1);
     pwm2_duty_cycle(speedL*2+1);
   }
   else if (speedL < -tol)
   {
-    bit_write(Input1,dir1,1);   // rück
-    bit_write(Input2,dir2,0);
+    bit_write(INPUT_1,1);   // rÃ¼ck
+    bit_write(INPUT_2,0);
     pwm2_duty_cycle((-speedL)*2-1);
   }
   else
   {
-    bit_write(Input1,dir1,0);   // Stopp
-    bit_write(Input2,dir2,0);
+    bit_write(INPUT_1,0);   // Stopp
+    bit_write(INPUT_2,0);
     pwm2_duty_cycle(0);
   }
   
   //***** rechte Raupe 
   if (speedR > tol)
   {  
-    bit_write(Input4,dir4,1);   // vor
-    bit_write(Input3,dir3,0);
+    bit_write(INPUT_3,0);   // vor
+    bit_write(INPUT_4,1);
     pwm_duty_cycle(speedR*2+1);
   }
   else if (speedR < -tol)
   {
-    bit_write(Input3,dir3,1);   // rück
-    bit_write(Input4,dir4,0);
+    bit_write(INPUT_3,1);   // rÃ¼ck
+    bit_write(INPUT_4,0);
     pwm_duty_cycle((-speedR)*2-1);
   }
   else
   {
-    bit_write(Input3,dir3,0);   // Stopp
-    bit_write(Input4,dir4,0);
+    bit_write(INPUT_3,0);   // Stopp
+    bit_write(INPUT_4,0);
     pwm_duty_cycle(0);
   }
   return;

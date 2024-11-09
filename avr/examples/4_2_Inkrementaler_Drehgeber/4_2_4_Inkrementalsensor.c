@@ -1,19 +1,18 @@
 /*
- Beschreibung:      Übung für externen Interrupt
+ Beschreibung:      ï¿½bung fï¿½r externen Interrupt
    
  Erstellt am:       13.12.2016
- Letzte Änderung:
+ Letzte ï¿½nderung:
  
  Autor:             Rahm
 */
 
 #include "controller.h"
 
-#define Sensor _PORTD_
-#define B1_A     2
-#define B1_B     3
-#define Taster   _PORTB_
-#define Reset   2
+#define _PORTD_,B1_A     2
+#define _PORTD_,B1_B     3
+#define _PORTB_,Reset   2
+
 #define m       20 // Impulse/cm
 #define MAXCOUNTS 2000
 
@@ -21,8 +20,8 @@ volatile uint16_t counts = 0;
 
 void setup (void)
 {  /* Initialisierungen */
-  bit_init(Sensor,B1_B,IN);
-  bit_init(Reset,Taster,IN);
+  bit_init(B1_B,IN);
+  bit_init(Reset,IN);
   
   lcd_init();
   lcd_clear();
@@ -59,13 +58,13 @@ void main(void)
     
     lcd_print(" cm");
 
-    if (!bit_read(Reset,Taster)) counts = 0;
+    if (!bit_read(Reset)) counts = 0;
   }
 }
 
 void ext_interrupt_isr(void)
 {
-  if (bit_read(Sensor,B1_B))       // Wenn B1_A noch 0 ist...
+  if (bit_read(B1_B))           // Wenn B1_A noch 0 ist...
   {
     if (counts != 0)  counts--;
 	}
