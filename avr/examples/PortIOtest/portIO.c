@@ -36,14 +36,13 @@ int main(void)
     uint8_t temp;
 
     // Byte-Operationen
-    //temp = byte_read(_PORTD);
-    //byte_write(_PORTB,temp);
+    //temp = byte_read(_PORTD_);
+    //byte_write(_PORTB_,temp);
 
     // Bit-Operationen:
     // mit Funktionen ...
 
     temp = bit_read(S1);		
-	  temp = ~temp;
     bit_write(LED1,temp);          
     // Alternativ mit 3 Parametern !!!
     // bit_write(_PORTD_,1,temp);   //Port, Bit, Wert

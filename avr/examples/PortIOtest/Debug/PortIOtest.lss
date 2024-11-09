@@ -3,11 +3,11 @@ PortIOtest.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000290  2**0
+  0 .data         00000000  00800100  00800100  0000028e  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         0000023c  00000000  00000000  00000054  2**1
+  1 .text         0000023a  00000000  00000000  00000054  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  00000290  2**0
+  2 .comment      00000030  00000000  00000000  0000028e  2**0
                   CONTENTS, READONLY
   3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000002c0  2**2
                   CONTENTS, READONLY
@@ -23,9 +23,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_str    0000027c  00000000  00000000  000014e4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    0000040d  00000000  00000000  00001760  2**0
+ 10 .debug_loc    0000040a  00000000  00000000  00001760  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 000000d8  00000000  00000000  00001b6d  2**0
+ 11 .debug_ranges 000000d8  00000000  00000000  00001b6a  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -66,7 +66,7 @@ Disassembly of section .text:
   70:	de bf       	out	0x3e, r29	; 62
   72:	cd bf       	out	0x3d, r28	; 61
   74:	0e 94 01 01 	call	0x202	; 0x202 <main>
-  78:	0c 94 1c 01 	jmp	0x238	; 0x238 <_exit>
+  78:	0c 94 1b 01 	jmp	0x236	; 0x236 <_exit>
 
 0000007c <__bad_interrupt>:
   7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -310,7 +310,7 @@ int main(void)
 {
   setup();
  202:	0e 94 e8 00 	call	0x1d0	; 0x1d0 <setup>
-    //byte_write(_PORTB,temp);
+    //byte_write(_PORTB_,temp);
 
     // Bit-Operationen:
     // mit Funktionen ...
@@ -320,33 +320,31 @@ int main(void)
  208:	85 e2       	ldi	r24, 0x25	; 37
  20a:	90 e0       	ldi	r25, 0x00	; 0
  20c:	0e 94 a9 00 	call	0x152	; 0x152 <bit_read>
-	  temp = ~temp;
     bit_write(LED1,temp);          
  210:	48 2f       	mov	r20, r24
- 212:	40 95       	com	r20
- 214:	61 e0       	ldi	r22, 0x01	; 1
- 216:	8b e2       	ldi	r24, 0x2B	; 43
- 218:	90 e0       	ldi	r25, 0x00	; 0
- 21a:	0e 94 ce 00 	call	0x19c	; 0x19c <bit_write>
+ 212:	61 e0       	ldi	r22, 0x01	; 1
+ 214:	8b e2       	ldi	r24, 0x2B	; 43
+ 216:	90 e0       	ldi	r25, 0x00	; 0
+ 218:	0e 94 ce 00 	call	0x19c	; 0x19c <bit_write>
     // Alternativ mit 3 Parametern !!!
     // bit_write(_PORTD_,1,temp);   //Port, Bit, Wert
 	  temp = bit_read(S2);	
- 21e:	63 e0       	ldi	r22, 0x03	; 3
- 220:	85 e2       	ldi	r24, 0x25	; 37
- 222:	90 e0       	ldi	r25, 0x00	; 0
- 224:	0e 94 a9 00 	call	0x152	; 0x152 <bit_read>
+ 21c:	63 e0       	ldi	r22, 0x03	; 3
+ 21e:	85 e2       	ldi	r24, 0x25	; 37
+ 220:	90 e0       	ldi	r25, 0x00	; 0
+ 222:	0e 94 a9 00 	call	0x152	; 0x152 <bit_read>
 	  temp = ~temp;
     bit_write(LED2,temp);			
- 228:	48 2f       	mov	r20, r24
- 22a:	40 95       	com	r20
- 22c:	62 e0       	ldi	r22, 0x02	; 2
- 22e:	8b e2       	ldi	r24, 0x2B	; 43
- 230:	90 e0       	ldi	r25, 0x00	; 0
- 232:	0e 94 ce 00 	call	0x19c	; 0x19c <bit_write>
- 236:	e7 cf       	rjmp	.-50     	; 0x206 <main+0x4>
+ 226:	48 2f       	mov	r20, r24
+ 228:	40 95       	com	r20
+ 22a:	62 e0       	ldi	r22, 0x02	; 2
+ 22c:	8b e2       	ldi	r24, 0x2B	; 43
+ 22e:	90 e0       	ldi	r25, 0x00	; 0
+ 230:	0e 94 ce 00 	call	0x19c	; 0x19c <bit_write>
+ 234:	e8 cf       	rjmp	.-48     	; 0x206 <main+0x4>
 
-00000238 <_exit>:
- 238:	f8 94       	cli
+00000236 <_exit>:
+ 236:	f8 94       	cli
 
-0000023a <__stop_program>:
- 23a:	ff cf       	rjmp	.-2      	; 0x23a <__stop_program>
+00000238 <__stop_program>:
+ 238:	ff cf       	rjmp	.-2      	; 0x238 <__stop_program>
