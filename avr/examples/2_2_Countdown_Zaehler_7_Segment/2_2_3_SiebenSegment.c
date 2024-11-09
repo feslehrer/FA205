@@ -11,7 +11,7 @@
 
 #define	SiebenSeg    _PORTD_
 #define Start        _PORTB_,2
-#define Speaker      _PORTB_,3
+#define SPEAKER      _PORTB_,3
 
  uint8_t seg7code[] = { 0xc0,0xf9,0xa4,0xb0,
                         0x99,0x92,0x82,0xf8,
@@ -24,7 +24,7 @@ void setup (void)
   byte_write(SiebenSeg,seg7code[0]); //Startwert 0
   
   bit_init(Start,IN);
-  bit_init(Speaker,OUT);
+  bit_init(SPEAKER,OUT);
 }
 
 // Funktion main()
@@ -47,7 +47,7 @@ void main(void)
     
     for(i=0; i<2000; i++)
     {
-      bit_write(Speaker,beep);
+      bit_write(SPEAKER,beep);
       delay_100us(5);
       beep=~beep;
     }

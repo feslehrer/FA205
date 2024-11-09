@@ -128,7 +128,7 @@ void setup (void)
   ca:	85 e2       	ldi	r24, 0x25	; 37
   cc:	90 e0       	ldi	r25, 0x00	; 0
   ce:	0e 94 6f 01 	call	0x2de	; 0x2de <bit_init>
-  bit_init(Speaker,OUT);
+  bit_init(SPEAKER,OUT);
   d2:	41 e0       	ldi	r20, 0x01	; 1
   d4:	63 e0       	ldi	r22, 0x03	; 3
   d6:	85 e2       	ldi	r24, 0x25	; 37
@@ -162,7 +162,7 @@ void main(void)
 
   while(1)                          // Endlosschleife loop()
   { 
-    while(bit_read(Start)==1);   //Warten bis Taster bet�tigt
+    while(bit_read(Start)==1);   //Warten bis Taster betätigt
   f2:	62 e0       	ldi	r22, 0x02	; 2
   f4:	85 e2       	ldi	r24, 0x25	; 37
   f6:	90 e0       	ldi	r25, 0x00	; 0
@@ -186,7 +186,7 @@ void main(void)
 
   while(1)                          // Endlosschleife loop()
   { 
-    while(bit_read(Start)==1);   //Warten bis Taster bet�tigt
+    while(bit_read(Start)==1);   //Warten bis Taster betätigt
     for(n=9;n>=0;n--)
  116:	ce 15       	cp	r28, r14
  118:	df 05       	cpc	r29, r15
@@ -198,7 +198,7 @@ void main(void)
     
     for(i=0; i<2000; i++)
     {
-      bit_write(Speaker,beep);
+      bit_write(SPEAKER,beep);
  120:	41 2f       	mov	r20, r17
  122:	63 e0       	ldi	r22, 0x03	; 3
  124:	85 e2       	ldi	r24, 0x25	; 37

@@ -3,7 +3,7 @@
 // Controller:       atmel ATMega8
 // Version:          1.1
 // erstellt am:      30.09.2015
-// letzte Änderung:  21.6.2018
+// letzte Änderung:  09.11.2024
 //                   Hinzugefügt pwm3
 // Autor:            Rahm
 
@@ -24,8 +24,32 @@
 #endif
 #ifdef _ATMEGA328_
  #define _PORTD_     &PORTD			// Vorsicht! PD0 = RxD (Input) PD1 = TxD (Output) müssen beim Programmieren floaten
+ // Spezielle Portdefinitionen für Arduino-Carrier_Board
+ #define LED0        _PORTD_,0
+ #define LED1        _PORTD_,1
+ #define LED2        _PORTD_,2
+ #define LED3        _PORTD_,3
+ #define LED4        _PORTD_,4
+ #define LED5        _PORTD_,5
+ #define LED6        _PORTD_,6
+ #define LED7        _PORTD_,7
+ #define SEG_a       _PORTD_,0
+ #define SEG_b       _PORTD_,1
+ #define SEG_c       _PORTD_,2
+ #define SEG_d       _PORTD_,3
+ #define SEG_e       _PORTD_,4
+ #define SEG_f       _PORTD_,5
+ #define SEG_g       _PORTD_,6
+ #define SEG_dp      _PORTD_,7
 #endif
 #define _PORTB_      &PORTB			// Arduino-Pins: 8 ... 13
+#define S1           _PORTB_,2
+#define S2           _PORTB_,3
+#define S3           _PORTB_,4
+#define S4           _PORTB_,5
+#define SPEAKER      _PORTB_,3
+#define BACKLIGHT    _PORTB_,3
+
 #define _PORTC_      &PORTC			// PC6 => Arduino Reset-Pin
 
 // ... für PWM
@@ -84,8 +108,6 @@ void    pwm3_duty_cycle ( uint8_t value);
 void    adc_init   ( void );
 uint8_t adc_in1    ( void );
 uint8_t adc_in2    ( void );
-
-
 
 uint8_t adc_in     ( uint8_t channel );
 #endif
