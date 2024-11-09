@@ -2,7 +2,7 @@
  Beschreibung:
    
  Erstellt am: 
- Letzte Änderung:
+ Letzte ï¿½nderung:
  
  Autor: 
 */
@@ -10,10 +10,8 @@
 #include "controller.h"
 
 #define	SiebenSeg    _PORTD_
-#define Taster       _PORTB_
-#define Start        2
-#define Speaker      _PORTB_
-#define B1           3
+#define Start        _PORTB_,2
+#define Speaker      _PORTB_,3
 
  uint8_t seg7code[] = { 0xc0,0xf9,0xa4,0xb0,
                         0x99,0x92,0x82,0xf8,
@@ -25,8 +23,8 @@ void setup (void)
   byte_write(SiebenSeg,0xff);     // Anzeige dunkelschalten
   byte_write(SiebenSeg,seg7code[0]); //Startwert 0
   
-  bit_init(Taster,Start,IN);
-  bit_init(Speaker,B1,OUT);
+  bit_init(Start,IN);
+  bit_init(Speaker,OUT);
 }
 
 // Funktion main()
@@ -40,7 +38,7 @@ void main(void)
 
   while(1)                          // Endlosschleife loop()
   { 
-    while(bit_read(Taster,Start)==1);   //Warten bis Taster betätigt
+    while(bit_read(Start)==1);   //Warten bis Taster betï¿½tigt
     for(n=9;n>=0;n--)
     {
       delay_ms(1000);
@@ -49,7 +47,7 @@ void main(void)
     
     for(i=0; i<2000; i++)
     {
-      bit_write(Speaker,B1,beep);
+      bit_write(Speaker,beep);
       delay_100us(5);
       beep=~beep;
     }

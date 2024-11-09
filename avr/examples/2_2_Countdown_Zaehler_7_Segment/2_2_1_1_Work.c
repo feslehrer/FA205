@@ -2,7 +2,7 @@
  Beschreibung:
    
  Erstellt am: 
- Letzte Änderung:
+ Letzte Ã„nderung:
  
  Autor: 
 */
@@ -10,8 +10,7 @@
 #include "controller.h"
 
 #define	SiebenSegment   _PORTD_
-#define Taster          _PORTB_
-#define Start           2
+#define Start           _PORTB_,2
 
 
 void setup (void)
