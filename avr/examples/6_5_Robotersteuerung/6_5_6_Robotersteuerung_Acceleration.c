@@ -4,12 +4,17 @@
 //  Beschreibung:
 //
 //	Datum:			     2016.10.09
-//  letzte Änderung: 27.12.19
+//  letzte Ã„nderung: 27.12.19
 //	Autor:
 //
 */
 #include "controller.h"
 #include "nunchuk.h"
+
+#define INPUT_1 _PORTD_,2
+#define INPUT_2 _PORTB_,2
+#define INPUT_3 _PORTB_,4
+#define INPUT_4 _PORTB_,5
 
 const int directions[9][4] = {
   {0,0,0,0},     // stopp
@@ -39,11 +44,10 @@ void setup (void)   // Initialisierungen
   pwm2_init();      // Motor links  Speed
   
   // Motorsignale
-  bit_init(_PORTD_,2,OUT);      // Input 1
-  bit_init(_PORTB_,2,OUT);      // Input 2
-  bit_init(_PORTB_,4,OUT);      // Input 3
-  bit_init(_PORTB_,5,OUT);      // Input 4
-
+  bit_init(INPUT_1,OUT);      // Input 1
+  bit_init(INPUT_2,OUT);      // Input 2 
+  bit_init(INPUT_3,OUT);      // Input 3
+  bit_init(INPUT_4,OUT);      // Input 4
   pwm2_start();
   pwm_start();
 }
@@ -83,16 +87,16 @@ void robby_richtung(uint8_t dir, uint8_t speed, int16_t fade)
   int16_t left, right;
   
   //Bewegungsrichtung
-  bit_write(_PORTD_,2,directions[dir][0]);       // Input 1
-  bit_write(_PORTB_,2,directions[dir][1]);       // Input 2
-  bit_write(_PORTB_,4,directions[dir][2]);       // Input 3
-  bit_write(_PORTB_,5,directions[dir][3]);       // Input 4
+  bit_write(INPUT_1,directions[dir][0]);       // Input 1
+  bit_write(INPUT_2,directions[dir][1]);       // Input 2
+  bit_write(INPUT_3,directions[dir][2]);       // Input 3
+  bit_write(INPUT_4,directions[dir][3]);       // Input 4
   
   //Differenzial
   left  = (int16_t)speed - fade;
   right = (int16_t)speed + fade;
   
-  //Bereichsbegrenzung für PWM
+  //Bereichsbegrenzung fÃ¼r PWM
   if (left > 255)     left = 255;
   else if (left < 0)  left = 0;
   if (right > 255)    right = 255;

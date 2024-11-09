@@ -9,9 +9,9 @@
 */
 #include "controller.h"
 
-#define _PORTD_,IRL     0        // PD0
-#define _PORTD_,IRM     1        // PD1
-#define _PORTD_,IRR     7        // PD7
+#define IRL _PORTD_,0        // PD0
+#define IRM _PORTD_,1        // PD1
+#define IRR _PORTD_,7        // PD7
 
 #define INPUT_1 _PORTD_,2
 #define INPUT_2 _PORTB_,2
@@ -21,11 +21,11 @@
 //Funktionsprototypen
 void setup (void)   // Initialisierungen
 { 
-  // Motorsignale 
   // IR-Sensorsignale
   bit_init(IRL,IN);
   bit_init(IRM,IN);
   bit_init(IRR,IN);
+  
   // Motorsignale 
   bit_init(INPUT_1,OUT);      // Input 1
   bit_init(INPUT_2,OUT);      // Input 2 
@@ -35,10 +35,6 @@ void setup (void)   // Initialisierungen
   pwm_init();                   // Enable A (pwm)
   pwm2_init();                  // Enable B (pwm)
   
-  // IR-Sensorsignale
-  bit_init(IRL,IN);
-  bit_init(IRM,IN);
-  bit_init(IRR,IN); 
 }
 
 // Bewegungsrichtungen festlegen

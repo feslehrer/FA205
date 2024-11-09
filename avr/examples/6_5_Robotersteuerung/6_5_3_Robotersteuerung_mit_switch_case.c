@@ -3,7 +3,7 @@
 //  Beschreibung:	    Einfacher Ausweich-Roboter mit Front-IR-Sensoren
 //
 //	Datum:			      19.12.2019
-//  letzte Änderung:  23.12.2019
+//  letzte Ã„nderung:  23.12.2019
 //	Autor:			      Rahm
 */
 #include "controller.h"
@@ -19,7 +19,12 @@
 #define EndL    1        // Endschalter vorne
 #define EndR    0
 
-// 2 dimensionales Array für Einstellung der Roboterrichtung
+#define INPUT_1 _PORTD_,2
+#define INPUT_2 _PORTB_,2
+#define INPUT_3 _PORTB_,4
+#define INPUT_4 _PORTB_,5
+
+// 2 dimensionales Array fï¿½r Einstellung der Roboterrichtung
 // Reihenfolge der Steuersignale: {Input1, Input2, Input3, Input4}
 const uint8_t directions[9][4] = {
 								{0,0,0,0},     // stopp
@@ -33,7 +38,7 @@ const uint8_t directions[9][4] = {
 								{0,0,1,0}      // rechtsrueck
 };
 
-// Namen für Richtungen festlegen
+// Namen fÃ¼r Richtungen festlegen
 enum Richtungen {STOPP,        // 0
                  VORWAERTS,    // 1
                  RUECKWAERTS,  // 2
@@ -56,11 +61,12 @@ void setup (void)   // Initialisierungen
   //bit_init(SensorD,IRR,IN);
   byte_init(SensorD,IN);
   //byte_init(SensorB,IN);
+
   // Motorsignale 
-  bit_init(_PORTD_,2,OUT);      // Input 1
-  bit_init(_PORTB_,2,OUT);      // Input 2 
-  bit_init(_PORTB_,4,OUT);      // Input 3
-  bit_init(_PORTB_,5,OUT);      // Input 4
+  bit_init(INPUT_1,OUT);      // Input 1
+  bit_init(INPUT_2,OUT);      // Input 2 
+  bit_init(INPUT_3,OUT);      // Input 3
+  bit_init(INPUT_4,OUT);      // Input 4
   
   pwm_init();                   // Enable A (pwm)
   pwm2_init();                  // Enable B (pwm)
@@ -131,16 +137,16 @@ void robby_richtung(uint8_t dir, uint8_t speed, int16_t fade)
   int16_t left, right;
   
   //Bewegungsrichtung
-  bit_write(_PORTD_,2,directions[dir][0]);       // Input 1
-  bit_write(_PORTB_,2,directions[dir][1]);       // Input 2
-  bit_write(_PORTB_,4,directions[dir][2]);       // Input 3
-  bit_write(_PORTB_,5,directions[dir][3]);       // Input 4
+  bit_write(INPUT_1,directions[dir][0]);       // Input 1
+  bit_write(INPUT_2,directions[dir][1]);       // Input 2
+  bit_write(INPUT_3,directions[dir][2]);       // Input 3
+  bit_write(INPUT_4,directions[dir][3]);       // Input 4
   
   //Differenzial
   left  = (int16_t)speed - fade;
   right = (int16_t)speed + fade;
   
-  //Bereichsbegrenzung für PWM
+  //Bereichsbegrenzung fï¿½r PWM
   if (left > 255)     left = 255;
   else if (left < 0)  left = 0;
   if (right > 255)    right = 255;

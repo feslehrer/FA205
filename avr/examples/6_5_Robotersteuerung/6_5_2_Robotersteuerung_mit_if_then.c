@@ -7,10 +7,14 @@
 */
 #include "controller.h"
 
-#define SensorD _PORTD_
-#define IRL    0        // PD0
-#define IRM    1        // PD1
-#define IRR    7        // PD7
+#define IRL _PORTD_,0        // PD0
+#define IRM _PORTD_,1        // PD1
+#define IRR _PORTD_,7        // PD7
+
+#define INPUT_1 _PORTD_,2
+#define INPUT_2 _PORTB_,2
+#define INPUT_3 _PORTB_,4
+#define INPUT_4 _PORTB_,5
 
 const uint8_t directions[9][4] = {
 								{0,0,0,0},     // stopp
@@ -32,15 +36,14 @@ void robby_richtung(uint8_t dir, uint8_t speed);
 void setup (void)   // Initialisierungen
 { 
   // IR-Sensorsignale
-  bit_init(SensorD,IRL,IN);
-  bit_init(SensorD,IRM,IN);
-  bit_init(SensorD,IRR,IN);
-    
+  bit_init(IRL,IN);
+  bit_init(IRM,IN);
+  bit_init(IRR,IN);
   // Motorsignale 
-  bit_init(_PORTD_,2,OUT);      // Input 1
-  bit_init(_PORTB_,2,OUT);      // Input 2 
-  bit_init(_PORTB_,4,OUT);      // Input 3
-  bit_init(_PORTB_,5,OUT);      // Input 4
+  bit_init(INPUT_1,OUT);      // Input 1
+  bit_init(INPUT_2,OUT);      // Input 2 
+  bit_init(INPUT_3,OUT);      // Input 3
+  bit_init(INPUT_4,OUT);      // Input 4
   
   pwm_init();                   // Enable A (pwm)
   pwm2_init();                  // Enable B (pwm)
@@ -54,6 +57,7 @@ int main (void)
   
   setup();
   
+  // Speed über Enable A und B
   pwm_start();
   pwm2_start();
   
@@ -61,19 +65,19 @@ int main (void)
   {
     speed = adc_in1();
      
-    if      (!bit_read(SensorD,IRM))  
+    if      (!bit_read(IRM))  
       robby_richtung(RECHTSRUECK, speed);
-    else if (!bit_read(SensorD,IRL))  
+    else if (!bit_read(IRL))  
       robby_richtung(RECHTSVOR, speed);
-    else if (!bit_read(SensorD,IRR))
+    else if (!bit_read(IRR))
       robby_richtung(LINKSVOR, speed);
-    else if (!bit_read(SensorD,IRM) && !bit_read(SensorD,IRL))
+    else if (!bit_read(IRM) && !bit_read(IRL))
       robby_richtung(RECHTSDREH, speed);
-    else if (!bit_read(SensorD,IRM) && !bit_read(SensorD,IRR))
+    else if (!bit_read(IRM) && !bit_read(IRR))
       robby_richtung(LINKSDREH, speed);    
-    else if (!bit_read(SensorD,IRR) && !bit_read(SensorD,IRL))
+    else if (!bit_read(IRR) && !bit_read(IRL))
       robby_richtung(RECHTSRUECK, speed);
-    else if (!bit_read(SensorD,IRM) && !bit_read(SensorD,IRL) && !bit_read(SensorD,IRR)) 
+    else if (!bit_read(IRM) && !bit_read(IRL) && !bit_read(IRR)) 
       robby_richtung(RECHTSRUECK,speed);
     else 
       robby_richtung(VORWAERTS, speed);
@@ -88,10 +92,10 @@ int main (void)
 void robby_richtung(uint8_t dir, uint8_t speed)
 { 
   //Bewegungsrichtung
-  bit_write(_PORTD_,2,directions[dir][0]);       // Input 1
-  bit_write(_PORTB_,2,directions[dir][1]);       // Input 2
-  bit_write(_PORTB_,4,directions[dir][2]);       // Input 3
-  bit_write(_PORTB_,5,directions[dir][3]);       // Input 4
+  bit_write(INPUT_1,directions[dir][0]);       // Input 1
+  bit_write(INPUT_2,directions[dir][1]);       // Input 2
+  bit_write(INPUT_3,directions[dir][2]);       // Input 3
+  bit_write(INPUT_4,directions[dir][3]);       // Input 4
   
   pwm_duty_cycle(speed);
   pwm2_duty_cycle(speed);
