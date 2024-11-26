@@ -18,6 +18,11 @@
 //#define NOPULLUPS
 #define IN  0
 #define OUT 1
+#define PRESS 0
+#define RELEASED 1
+#define ON 0
+#define OFF 1
+
 // Portregisterdefinitionen. Können an dieser Stelle angepasst werden. 
 #ifdef _ATtiny104_
 #define _PORTA_      &PORTA			// Vorsicht! PD0 = RxD (Input) PD1 = TxD (Output) müssen beim Programmieren floaten
@@ -50,7 +55,62 @@
 #define SPEAKER      _PORTB_,3
 #define BACKLIGHT    _PORTB_,3
 
-#define _PORTC_      &PORTC			// PC6 => Arduino Reset-Pin
+#define _PORTC_      &PORTC   			// PC6 => Arduino Reset-Pin
+
+// AVR Portpins
+#undef PD0
+#undef PD1
+#undef PD2
+#undef PD3
+#undef PD4
+#undef PD5
+#undef PD6
+#undef PD7
+
+#undef PB0
+#undef PB1
+#undef PB2
+#undef PB3
+#undef PB4
+#undef PB5
+#undef PB6
+#undef PB7
+
+#undef PC0
+#undef PC1
+#undef PC2
+#undef PC3
+#undef PC4
+#undef PC5
+#undef PC6
+#undef PC7
+
+#define PD0 _PORTD_,0
+#define PD1 _PORTD_,1
+#define PD2 _PORTD_,2
+#define PD3 _PORTD_,3
+#define PD4 _PORTD_,4
+#define PD5 _PORTD_,5
+#define PD6 _PORTD_,6
+#define PD7 _PORTD_,7
+
+#define PB0 _PORTB_,0
+#define PB1 _PORTB_,1
+#define PB2 _PORTB_,2
+#define PB3 _PORTB_,3
+#define PB4 _PORTB_,4
+#define PB5 _PORTB_,5
+#define PB6 _PORTB_,6
+#define PB7 _PORTB_,7
+
+#define PC0 _PORTC_,0
+#define PC1 _PORTC_,1
+#define PC2 _PORTC_,2
+#define PC3 _PORTC_,3
+#define PC4 _PORTC_,4
+#define PC5 _PORTC_,5
+#define PC6 _PORTC_,6
+#define PC7 _PORTC_,7
 
 // ... für PWM
 // Der PWM-Ausgang ist standardmäßig PORTB.3 (PWM mit Timer2)
