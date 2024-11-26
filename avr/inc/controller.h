@@ -37,7 +37,6 @@
 typedef unsigned char uint8_t;
 typedef unsigned int  uint16_t;
 typedef unsigned long uint32_t;
-
 typedef signed   char int8_t;
 typedef signed   int  int16_t;
 typedef signed   long int32_t;
@@ -48,5 +47,33 @@ typedef signed   long int32_t;
 #include "interrupt.h"
 #include "lcd.h"
 #include "delay.h"
+
+// AVR Portpins
+#define PD0 _PORTD_,0
+#define PD1 _PORTD_,1
+#define PD2 _PORTD_,2
+#define PD3 _PORTD_,3
+#define PD4 _PORTD_,4
+#define PD5 _PORTD_,5
+#define PD6 _PORTD_,6
+#define PD7 _PORTD_,7
+
+#define PB0 _PORTB_,0
+#define PB1 _PORTB_,1
+#define PB2 _PORTB_,2
+#define PB3 _PORTB_,3
+#define PB4 _PORTB_,4
+#define PB5 _PORTB_,5
+#define PB6 _PORTB_,6
+#define PB7 _PORTB_,7
+
+#define PC0 _PORTC_,0
+#define PC1 _PORTC_,1
+#define PC2 _PORTC_,2
+#define PC3 _PORTC_,3
+#define PC4 _PORTC_,4
+#define PC5 _PORTC_,5
+#define PC6 _PORTC_,6
+#define PC7 _PORTC_,7
 
 #endif
