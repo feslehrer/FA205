@@ -154,21 +154,18 @@ void rs232_baud ( uint32_t baud )     // Ändert die Baudrate
 {
   #define UART_UBRR_CALC(BAUD_,FREQ_) ((FREQ_)/((BAUD_)*16L)-1)
   #ifdef _ATMEGA8_
-  UCSRB |= (1<<TXEN) | (1<<RXEN);    // UART TX und RX einschalten
-  UCSRC |= (1<<URSEL)|(3<<UCSZ0);    // Asynchron 8N1
-  UBRRH = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
-  UBRRL = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
+   UCSRB |= (1<<TXEN) | (1<<RXEN);    // UART TX und RX einschalten
+   UCSRC |= (1<<URSEL)|(3<<UCSZ0);    // Asynchron 8N1
+   UBRRH = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
+   UBRRL = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
   #endif
   #ifdef _ATMEGA328_
-  //while((UCSR0A & (1<<TXC0))==0);  // Vor Neuinitialisierung warten, bis Empfang beendet
-  //while((UCSR0A & (1<<RXC0))==0);  // Vor Neuinitialisierung warten, bis Senden beendet
-  
-  UBRR0H = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
-  UBRR0L = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
-  
-  UCSR0B |= (1<<TXEN0) | (1<<RXEN0);    // UART TX und RX einschalten
-  UCSR0C |= (1<<USBS0) | (3<<UCSZ00);   // Asynchron 8N1
-  
+   //while((UCSR0A & (1<<TXC0))==0);  // Vor Neuinitialisierung warten, bis Empfang beendet
+   //while((UCSR0A & (1<<RXC0))==0);  // Vor Neuinitialisierung warten, bis Senden beendet
+   UCSR0B |= (1<<TXEN0) | (1<<RXEN0);    // UART TX und RX einschalten
+   UCSR0C |= (1<<USBS0) | (3<<UCSZ00);   // Asynchron 8N1
+   UBRR0H = (uint8_t)( UART_UBRR_CALC( baud, F_CPU ) >> 8 );
+   UBRR0L = (uint8_t)  UART_UBRR_CALC( baud, F_CPU );
   #endif
 }
 
