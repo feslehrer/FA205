@@ -10,7 +10,7 @@ Implementierungen sind auch für folgende Plattformen verfügbar:
 
 ## Arduino-Carrier-Board
 Erstellt wurden die Bibliotheken mit der Hardwareplattform **Arduino-Carrier-Board** von **AS-Elektronik** (www.ase-schlierbach.de).
-<img src="https://user-images.githubusercontent.com/24614659/236320998-94544814-81e8-421b-9627-0c5e2c16ead0.png" alt="Arduino-Carrier-Board" width="600">
+<br><img src="https://user-images.githubusercontent.com/24614659/236320998-94544814-81e8-421b-9627-0c5e2c16ead0.png" alt="Arduino-Carrier-Board" width="600">
 
 ### Carrier-Board mit aufgestecktem Controllermodul (hier: ATmega328pXplainedMini)
 <img src="https://user-images.githubusercontent.com/24614659/236322408-e825f460-5135-4205-903b-463df35603ee.png" alt="Arduino-Carrier-Board mit ATmega328pXplainedMini" width="600">
