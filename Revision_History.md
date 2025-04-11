@@ -2,7 +2,7 @@ FA205-Biblitheken für MicrochipStudio und Arduino-Carrier-Board mit ATmega328P 
 Revision-History
 **************************
 2025.04.11:<br>
-+timer1ms mit Timer1 anstelle von Timer0<br>
++ timer1ms mit Timer1 anstelle von Timer0<br>
   Vorteil: die Arduino-Funktion millis() kann nun parallel verwendet werden.<br>
 +Timer Bug gefixt<br>
 +lcd_print() und rs232_print() Warnungen wegen unerlaubter Datentypkonvertierung gefixt
