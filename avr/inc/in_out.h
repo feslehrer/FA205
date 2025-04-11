@@ -18,7 +18,7 @@
 //#define NOPULLUPS
 #define IN  0
 #define OUT 1
-#define PRESS 0
+#define PRESSED 0
 #define RELEASED 1
 #define ON 0
 #define OFF 1
