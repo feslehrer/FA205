@@ -48,4 +48,7 @@ typedef signed   long int32_t;
 #include "lcd.h"
 #include "delay.h"
 
+// Funktionsprototypen
+void setup( void );
+
 #endif

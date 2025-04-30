@@ -84,11 +84,11 @@ extern void lcd_print     ( uint8_t  text[] );                 // Textausgabe ab
 extern void lcd_char      ( uint8_t  value  );                 // Ausgabe eines Zeichens an der aktuellen Cursorposition
 extern void lcd_byte      ( uint8_t  value  );                 // 0 ... 255  (Nur rechtsbündig FA205)
 extern void lcd_int       ( uint16_t value  );                 // 0 ... 65535
+
+//erweiterte Funktionen nicht Teil der Technischen Richtlinie FA205
 extern void lcd_int32     ( uint32_t value, uint8_t allign );  // 0 ... 99.999.999
                                                                // _TEXT_ALLIGN_RIGHT_ = 0  (Rechtsbündig)
                                                                // _TEXT_ALLIGN_LEFT_ = 1   (Linksbündig)
-
-//erweiterte Funktionen nicht Teil der Technischen Richtlinie FA205
 extern void lcd_defchar   ( uint8_t *pixtab, uint8_t char_nr );
 // Definition von 7 eigenen Zeichen. char_nr: 1 bis 7
 // char_nr = 0 funktioniert nur, wenn das Zeichen nicht in Zeichenketten ('\0' = 0) verwendet wird.

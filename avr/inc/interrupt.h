@@ -65,6 +65,7 @@ extern void timer1ms_isr          ( void );
  // frequenz: Tonfrequenz in Hz
  extern void note_on(float frequenz);
  extern void note_off(void);
+ extern void note_isr( void );
 #endif
 
 #endif

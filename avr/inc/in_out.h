@@ -170,4 +170,5 @@ uint8_t adc_in1    ( void );
 uint8_t adc_in2    ( void );
 
 uint8_t adc_in     ( uint8_t channel );
+uint16_t adc_in10  ( uint8_t ch );
 #endif
