@@ -54,4 +54,4 @@ Projektseite:
 Beispiel Arbeitsaufträge sind im Ordner **Dokumente\Uebungen_Beispiele**
 
 letzte Änderung:
-26.3.2024@Rah
+30.04.2025@Rah
