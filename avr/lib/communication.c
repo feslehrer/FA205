@@ -193,22 +193,10 @@ void rs232_put ( uint8_t value )
   #endif
 }
 
-// void rs232_print ( uint8_t *text )
-// {
-//   while (*text != '\0')
-//   rs232_put(*text++);
-// }
-// Doppelte Definition notwendig, sonst Fehlermeldung "unerlaubte Typumwandlung"
-void rs232_print(const char* text) 
+void rs232_print ( uint8_t *text )
 {
   while (*text != '\0')
   rs232_put(*text++);
-}
-
-void rs232_print(uint8_t* text) 
-{
-  const char* temp_str = (const char*)text;
-  rs232_print(temp_str);
 }
 
 // RS232-Erweiterungen sind nicht Teil der Technischen Richtlinie FA205!!

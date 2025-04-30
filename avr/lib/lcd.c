@@ -266,31 +266,10 @@ void lcd_char (uint8_t zeichen)
 /*****************************************************************************************
  * \0-terminierten Text an das LCD-Display ausgeben. 
  ******************************************************************************************/
-// void lcd_print (uint8_t text[])
-// {				
-//   while (*text != '\0')                   // Text													
-//     lcd_char (*text++);                   // zeichenweise ausgeben 	
-// }
-
-void lcd_print(const char* text) 
-{
-  while (*text != '\0')             // Text													
-  {
-    if ((*text & 0xe0) == 0xe0)   // 3-Byte UTF8 ?
-    {
-      *text++;
-      if ((*text & 0x80) == 0x80)  *text++;
-    }          
-    if ((*text & 0xc0) != 0xc0)   // 2-Byte UTF8 ?
-      lcd_char (*text);             // nein, dann zeichenweise ausgeben 	
-    *text++;                        // Pointer inkrementieren
-  }
-}
-  
-void lcd_print(uint8_t* text) 
-{
-  const char* temp_str = (const char*)text;
-  lcd_print(temp_str);
+void lcd_print (uint8_t text[])
+{				
+  while (*text != '\0')                   // Text													
+    lcd_char (*text++);                   // zeichenweise ausgeben 	
 }
 
 /*============================================================
