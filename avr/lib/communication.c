@@ -4,7 +4,7 @@
 //     I2C und RS232 Routinen
 // Version:          1.0
 // erstellt am:      5.5.2015
-// letzte Änderung:  17.3.2018
+// letzte Änderung:  30.4.2025
 // Autor:            Rahm
 
 #include "communication.h"
@@ -193,10 +193,22 @@ void rs232_put ( uint8_t value )
   #endif
 }
 
-void rs232_print ( uint8_t *text )
+// void rs232_print ( uint8_t *text )
+// {
+//   while (*text != '\0')
+//   rs232_put(*text++);
+// }
+// Doppelte Definition notwendig, sonst Fehlermeldung "unerlaubte Typumwandlung"
+void rs232_print(const char* text) 
 {
   while (*text != '\0')
   rs232_put(*text++);
+}
+
+void rs232_print(uint8_t* text) 
+{
+  const char* temp_str = (const char*)text;
+  rs232_print(temp_str);
 }
 
 // RS232-Erweiterungen sind nicht Teil der Technischen Richtlinie FA205!!

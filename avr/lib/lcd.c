@@ -1,10 +1,10 @@
 // Technische Richtlinie FA205
 // Bibliothek:       lcd.c 
-// Controller:       für ATmega 
-//                   Mit Support für I2C-Display mit PCF8574
+// Controller:       fï¿½r ATmega 
+//                   Mit Support fï¿½r I2C-Display mit PCF8574
 // Version:          2.0
 // erstellt am:      17.2.2015
-// letzte Änderung:  9.4.2018
+// letzte ï¿½nderung:  30.4.2025
 // Autor:            Rahm
 
 // Headerdateien inkludieren
@@ -19,7 +19,7 @@ void    lowlevel_write    ( uint8_t data );
 
 // Definition der Funktionen
 // LCD lowlevel-Funktionen: lcd_waitwhilebusy(), lcd_befehl(), lcd_daten() und lcd_init(), lowlevel_write()
-// müssen für jeden Controller/Board angepasst werden.
+// mï¿½ssen fï¿½r jeden Controller/Board angepasst werden.
 void lcd_waitwhilebusy(void)
 { 
   #ifdef LCD_BUSY
@@ -46,7 +46,7 @@ void lcd_waitwhilebusy(void)
 }
 
 #ifdef LCD_I2C
-// 8-Bit Portausgabe (PCF8574) über I2C-Bus
+// 8-Bit Portausgabe (PCF8574) ï¿½ber I2C-Bus
 void port_out(uint8_t wert)
 {
   i2c_start();                // Startbedingung    
@@ -76,7 +76,7 @@ void lowlevel_write(uint8_t data)
 
 /*****************************************************************************************
  * 	Gibt das Byte 'befehl' als Befehl ans LCD-Display im 4Bit-Modus                              
- *     Entweder Busy-Flag des LCD abfragen oder Zeitverzögerung verwenden        
+ *     Entweder Busy-Flag des LCD abfragen oder Zeitverzï¿½gerung verwenden        
  *****************************************************************************************/
 #if (LCD_PORT_MASK == 0xf0)
 #define MSB_SHIFT 0
@@ -132,7 +132,7 @@ void lcd_befehl (uint8_t befehl)
 
 /*****************************************************************************************
  * 	Gibt das Byte 'daten' ans LCD-Display im 4Bit-Modus aus.
- *    Entweder Busy-Flag des LCD abfragen oder Zeitverzögerung verwenden        
+ *    Entweder Busy-Flag des LCD abfragen oder Zeitverzï¿½gerung verwenden        
  *****************************************************************************************/
 void lcd_daten(uint8_t daten)
 {
@@ -169,7 +169,7 @@ void lcd_daten(uint8_t daten)
 }
 
 /******************************************************************************************
- * Initialisierung des LCD- Displays für den 4-Bit-Modus                                         
+ * Initialisierung des LCD- Displays fï¿½r den 4-Bit-Modus                                         
  ******************************************************************************************/
 void lcd_init (void)	
 { 
@@ -220,20 +220,20 @@ void lcd_init (void)
    temp >>= MSB_SHIFT;
    lowlevel_write(temp);
   #endif
-  // Ab hier Busy-Flag Abfrage möglich	
+  // Ab hier Busy-Flag Abfrage mï¿½glich	
   lcd_befehl (0x28);                       // Function set 4 bits  													
   lcd_befehl (CURSOR);                     // Display AN, Cursor AUS													
   lcd_befehl (DISPLAY);                    // Not Shifted Display, Increment				
 }
 
-// Ab hier sind alle Funktionen Controllerunabhängig!!!!
+// Ab hier sind alle Funktionen Controllerunabhï¿½ngig!!!!
 /******************************************************************************************
- * Display löschen	                                                                                                      
+ * Display lï¿½schen	                                                                                                      
  ******************************************************************************************/
 void lcd_clear (void)     { lcd_befehl(0x01); }
 
 /*****************************************************************************************
- * LCD-Cursor auf eine position setzen: Zeile 1..4, Spalte 1..16 (Displayabhängig)               
+ * LCD-Cursor auf eine position setzen: Zeile 1..4, Spalte 1..16 (Displayabhï¿½ngig)               
  ******************************************************************************************/
 void lcd_setcursor (uint8_t zeile, uint8_t spalte)
 {
@@ -250,12 +250,12 @@ void lcd_setcursor (uint8_t zeile, uint8_t spalte)
 	
   position += (spalte-1);
 		
-  lcd_befehl ( position | 0x80 );          // 0x80 = Kennung für DD RAM address set
+  lcd_befehl ( position | 0x80 );          // 0x80 = Kennung fï¿½r DD RAM address set
 }								
 
 /*****************************************************************************************
  * 	Ausgabe eines Zeichens an das LCD-Display                                                          
- *  Entweder Busy-Flag des LCD abfragen oder Zeitverzögerung verwenden         
+ *  Entweder Busy-Flag des LCD abfragen oder Zeitverzï¿½gerung verwenden         
  ******************************************************************************************/
 void lcd_char (uint8_t zeichen)
 {
@@ -266,16 +266,37 @@ void lcd_char (uint8_t zeichen)
 /*****************************************************************************************
  * \0-terminierten Text an das LCD-Display ausgeben. 
  ******************************************************************************************/
-void lcd_print (uint8_t text[])
-{				
-  while (*text != '\0')                   // Text													
-    lcd_char (*text++);                   // zeichenweise ausgeben 	
+// void lcd_print (uint8_t text[])
+// {				
+//   while (*text != '\0')                   // Text													
+//     lcd_char (*text++);                   // zeichenweise ausgeben 	
+// }
+
+void lcd_print(const char* text) 
+{
+  while (*text != '\0')             // Text													
+  {
+    if ((*text & 0xe0) == 0xe0)   // 3-Byte UTF8 ?
+    {
+      *text++;
+      if ((*text & 0x80) == 0x80)  *text++;
+    }          
+    if ((*text & 0xc0) != 0xc0)   // 2-Byte UTF8 ?
+      lcd_char (*text);             // nein, dann zeichenweise ausgeben 	
+    *text++;                        // Pointer inkrementieren
+  }
+}
+  
+void lcd_print(uint8_t* text) 
+{
+  const char* temp_str = (const char*)text;
+  lcd_print(temp_str);
 }
 
 /*============================================================
 Funktion:        lcd_byte(n)                Rahm, 17.2.15
 Beschreibung:    Gibt das Byte n als 3 stelligen Dez-Wert aufs
-                 Display. Führende Nullen werden zu blank.
+                 Display. FÃ¼hrende Nullen werden zu blank.
 Eingang:         uint8_t
 Ausgang:         ---
 ==============================================================*/
@@ -289,7 +310,7 @@ void lcd_byte(uint8_t val)
     buffer[n++] = val%10 + '0';
   } while ((val /= 10) > 0);
 				
-  while (n<3)                             // Rest von buffer mit blank füllen
+  while (n<3)                             // Rest von buffer mit blank fÃ¼llen
   {
     buffer[n++] = ' ';					
   }
@@ -304,7 +325,7 @@ void lcd_byte(uint8_t val)
 /*============================================================
 Funktion:        lcd_int(n)                Rahm, 17.2.15
 Beschreibung:    Gibt den Integer n als 5 stelligen Dez-Wert aufs
-                 Display. Führende Nullen werden zu blank.
+                 Display. Fï¿½hrende Nullen werden zu blank.
 Eingang:         uint16_t
 Ausgang:         ---
 ==============================================================*/
@@ -318,7 +339,7 @@ void lcd_int(uint16_t val)
     buffer[n++] = val%10 + '0';
   } while ((val /= 10) > 0);
 		
-  while (n<5)                   // Rest von buffer mit blank füllen
+  while (n<5)                   // Rest von buffer mit blank fï¿½llen
   {
     buffer[n++] = ' ';					
   }
@@ -334,8 +355,8 @@ void lcd_int(uint16_t val)
 Funktion:        lcd_int32(n,allign)                Rahm, 19.6.24
 Beschreibung:    Gibt den Integer n (0...99.999.999) als 8 stelligen
                  Dez-Wert aufs Display aus.
-                 allign = 0 = _TEXT_ALLIGN_RIGHT_ : Führende Nullen werden zu blank.
-                 allign = 1 = _TEXT_ALLIGN_LEFT_  : Linksbündige Ausgabe
+                 allign = 0 = _TEXT_ALLIGN_RIGHT_ : Fï¿½hrende Nullen werden zu blank.
+                 allign = 1 = _TEXT_ALLIGN_LEFT_  : Linksbï¿½ndige Ausgabe
 Eingang:         int32, uint8
 Ausgang:         ---
 ==============================================================*/
@@ -354,7 +375,7 @@ void lcd_int32(uint32_t val, uint8_t allign)
     buffer[n++] = val%10 + '0';
   } while ((val /= 10) > 0);
 		
-  while (n<8)                   // Rest von buffer mit blank füllen
+  while (n<8)                   // Rest von buffer mit blank fï¿½llen
   {
     buffer[n++] = ' ';
   }
@@ -380,23 +401,23 @@ uint8_t lcd_lookup(uint8_t ascii)
 {
   switch (ascii)
   {
-    case 0xb0: return 0xdf;  // '°'
-    case 'ä':  return 0xe1;
-    case 'ö':  return 0xef;
-    case 'ü':  return 0xf5;
-    case 'Ä':  return 0xe1;
-    case 'Ö':  return 0xef;
-    case 'Ü':  return 0xf5;
-    case 'ß':  return 0xe2;
-    case 'µ':  return 0xe4;
+    case 0xb0: return 0xdf;  // 'ï¿½'
+    case 'ï¿½':  return 0xe1;
+    case 'ï¿½':  return 0xef;
+    case 'ï¿½':  return 0xf5;
+    case 'ï¿½':  return 0xe1;
+    case 'ï¿½':  return 0xef;
+    case 'ï¿½':  return 0xf5;
+    case 'ï¿½':  return 0xe2;
+    case 'ï¿½':  return 0xe4;
     case '\\': return 0xa4;
-    case '€':  return 0xd3;
+    case 'ï¿½':  return 0xd3;
   }
   return ascii;
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-// Ab hier sind ergänzende Funktionen definiert, die nicht Teil der technischen
+// Ab hier sind ergï¿½nzende Funktionen definiert, die nicht Teil der technischen
 // Richtlinie FA205 sind.
 /////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************
@@ -416,7 +437,7 @@ void lcd_defchar (uint8_t *pix_tab, uint8_t char_nr)
 }
 
 /*************************************************************************
-Löschen der Zeilen 1 bis 4 des Displays
+Lï¿½schen der Zeilen 1 bis 4 des Displays
 Es wird ein Leerstring (16 Byte) auf die Zeile geschrieben
 ***************************************************************************/
 void lcd_clearline(uint8_t line)
