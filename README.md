@@ -24,16 +24,15 @@ Erstellt wurden die Bibliotheken mit der Hardwareplattform **Arduino-Carrier-Boa
 
 1. Download der Zip-Datei im Repository.
 
-2. Die Zip-Datei auf C: entpacken. Die Ordnerstruktur sollte so aussehen:
-   C:\FA205\avr\*
+2. Die Zip-Datei auf einen beliebigen Ordner entpacken. (Z.B. C:\Users\your_user\Documents\Controller)
 
 3. In MicrochipStudio den Pfad zur Projektvorlage (MeinProjekt.zip) einstellen:
-   Tools->Options->Projects->General-> user projects template location: "C:\FA205\avr\"
+   Tools->Options->Projects->General-> user projects template location: "C:\Users\your_user\Documents\Controller\avr"
 
 4. TeamSettings-Datei (AtmelStudio_Desktop_Settings.vssettings) laden:
    Tools->Options->Environment->Import and Export Settings-> check "Use team settings file" -> Dateinamen der Team-Settings-Datei
    eintragen:
-     "C:\FA205\avr\AtmelStudio_Desktop_Settings.vssettings"
+     "C:\Users\your_user\Documents\Controller\avr\TeamSettings-2025-04-30.vssettings"
 
 ### Unterrichtsbeispiele für MicrochipStudio sind im Ordner "avr\examples" 
 - <a href="Dokumente/Uebungen_Beispiele/2_2_Countdown_Siebensegment.pdf">2.2 Countdown Zaehler 7-Segment</a>
