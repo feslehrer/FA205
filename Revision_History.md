@@ -2,6 +2,11 @@ FA205-Biblitheken für MicrochipStudio und Arduino-Carrier-Board mit ATmega328P 
 Revision-History
 **************************
 
+2025.04.30:<br>
++ Template-Datei "MeinProjekt.zip" neu strukturiert:<br>
+  Include-Files und Bibliotheksdateien sind in 2 Ordnern (inc, lib) im Projekt integriert.<br>
++ Team-Settingsfile mit neuer Toolbar-Struktur.<br>
+ 
 2022.07.21:<br>
 + Unterrichtsbeispiele für MicrochipStudio im Ordner "avr\examples" hinzugefügt: <br>
  2_2_Countdown_Zaehler_7_Segment<br>
