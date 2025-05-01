@@ -11,6 +11,7 @@
 #include "controller.h"
 #include "eeprom.h"
 #include "rtc.h"
+#include <stdio.h>
 
 // Globale Variablen als Übergabe-Parameter für das Datenlogger-Programm (main)
 volatile uint8_t jahr,monat,tag,stunde,minute,sekunde;
@@ -67,5 +68,6 @@ void     lcd_print_temperatur  (int16_t degree);
 // mode = 2: ohne Name, mit °C mit \r  (z.B.: 23,5°c)
 void     rs232_print_temperatur(int16_t degree, uint8_t mode);
 uint32_t rs232_get_sampletime(void);
+void     rs232_print_time(void);
 #endif
 

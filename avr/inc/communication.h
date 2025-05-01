@@ -49,7 +49,7 @@ extern uint8_t rs232_binary_get ( void );
 //extern uint8_t rs232_binary_get ( uint8_t *buf );   // Gibt ein empfangenes Byte im Binärmodus zurück.
                                                     // buf = empfangenes Zeichen
                                                     // Rückgabe: 1 = Byte empfangen, 0 = keine Byte empfangen
-extern uint8_t rs232_readbytes(uint8_t * buffer, int8_t length);
+extern uint8_t rs232_readbytes(uint8_t *buffer, int8_t length);
 extern uint8_t rs232_is_received( void );           // Ist ein Byte im Empfangspuffer? Ja = 1; Nein = 0
 
 #endif

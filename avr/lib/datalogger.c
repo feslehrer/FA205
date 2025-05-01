@@ -33,19 +33,19 @@ void rs232_print_record(uint8_t i2c_address, uint16_t record)
 	}
 	rs232_printdd((uint8_t)(temperatur>>8)&0xff); rs232_put(',');
 	rs232_put(dezimale);
-	rs232_print("\n\r");
+	rs232_print((uint8_t *)"\n\r");
 }
 //---------------------------------------------------------------------------
 void rs232_print_time(void)
 {
   rtc_get();
-  rs232_print("\n\rAktuelle Zeit: ");
+  rs232_print((uint8_t *)"\n\rAktuelle Zeit: ");
   rs232_printdd(tag);rs232_put('.');
   rs232_printdd(monat);rs232_put('.');
-  rs232_printdd(20);rs232_printdd(jahr);rs232_put(', ');
+  rs232_printdd(20);rs232_printdd(jahr);rs232_put(',');
   rs232_printdd(stunde);rs232_put(':');
   rs232_printdd(minute);rs232_put(':');
-  rs232_printdd(sekunde);rs232_print("\n\r");
+  rs232_printdd(sekunde);rs232_print((uint8_t *)"\n\r");
   return;
 }
 
@@ -55,12 +55,12 @@ void rs232_set_time(void)
 
   rs232_print_time();
   
-  rs232_print("Uhr stellen [j/n] ?: ");
+  rs232_print((uint8_t *)"Uhr stellen [j/n] ?: ");
   temp = 'n';
   for (i=6;i>0;i--)
   {
     rs232_put(i-1+'0');
-    rs232_print("\b");
+    rs232_print((uint8_t *)"\b");
     delay_ms(1000);
     temp = rs232_get();
     if (temp!='\0')  break;
@@ -70,23 +70,23 @@ void rs232_set_time(void)
   
   if ((temp == 'j') || (temp=='J'))
   {
-    rs232_print("\n\r***** Aktuelles Datum *****");
+    rs232_print((uint8_t *)"\n\r***** Aktuelles Datum *****");
 
-    rs232_print("\n\rTag     [01..31]: ");
+    rs232_print((uint8_t *)"\n\rTag     [01..31]: ");
     tag = rs232_inputdd();
 
-    rs232_print("\n\rMonat   [01..12]: ");
+    rs232_print((uint8_t *)"\n\rMonat   [01..12]: ");
     monat = rs232_inputdd();
 
-    rs232_print("\n\rJahr    [00..99]: ");
+    rs232_print((uint8_t *)"\n\rJahr    [00..99]: ");
     jahr = rs232_inputdd();
 
-    rs232_print("\n\rAktuelle Uhrzeit:");
+    rs232_print((uint8_t *)"\n\rAktuelle Uhrzeit:");
 
-    rs232_print("\n\rStunde  [01..24]: ");
+    rs232_print((uint8_t *)"\n\rStunde  [01..24]: ");
     stunde = rs232_inputdd();
 
-    rs232_print("\n\rMinuten [00..59]: ");
+    rs232_print((uint8_t *)"\n\rMinuten [00..59]: ");
     minute = rs232_inputdd();
 
     sekunde = 00;
@@ -179,7 +179,7 @@ void serial_print_all_records(void)
   uint16_t i;
   uint8_t dezimale;
   int8_t ganzzahl;
-  uint8_t buffer[6];
+  char buffer[8];
 
   delay_ms(20);
   
@@ -197,7 +197,7 @@ void serial_print_all_records(void)
     if (dezimale!=0) dezimale = 5; else dezimale = 0;
     ganzzahl = temperatur >>8;
     sprintf(buffer,"%3d,%1u\n\r",ganzzahl,dezimale);
-    rs232_print(buffer);
+    rs232_print((uint8_t *)buffer);
     //rs232_put('\n');
   }
 }
@@ -207,12 +207,12 @@ void eeprom_speichertest(void)
   int8_t test = 0;
 	
   lcd_setcursor(1,1);
-	lcd_print("EEPROM #1 test");
+	lcd_print((uint8_t *)"EEPROM #1 test");
 	test = eeprom_memtest(EEPROM_1);
   if (test == -1) 
   {
     lcd_setcursor(1,1);
-    lcd_print("!Speicherfehler!");
+    lcd_print((uint8_t *)"!Speicherfehler!");
   }    
   
   //
@@ -226,7 +226,7 @@ void eeprom_speichertest(void)
 //---------------------------------------------------------------------------
 void lcd_print_temperatur(int16_t degree)
 {
-	uint8_t  buffer[LCD_LEN+1];
+	char  buffer[LCD_LEN+1];
 	uint8_t  dezimale,ganzzahl;
 
 	// Nachkommastelle. Auflösung 0,5°C
@@ -238,12 +238,12 @@ void lcd_print_temperatur(int16_t degree)
   sprintf(buffer,"%3d,%1u°C",ganzzahl,dezimale);
   
 	// Ausgabe auf LC-Display
-	lcd_print(buffer);
+	lcd_print((uint8_t *)buffer);
 }
 //---------------------------------------------------------------------------
 void rs232_print_temperatur(int16_t degree, uint8_t mode)
 {
-	uint8_t  buffer[LCD_LEN+1];
+	char  buffer[LCD_LEN+1];
 	uint8_t  dezimale,ganzzahl;
 
 	// Nachkommastelle. Auflösung 0,5°C
@@ -263,7 +263,7 @@ void rs232_print_temperatur(int16_t degree, uint8_t mode)
     default: break;
   }  
 	// Ausgabe auf LC-Display
-	rs232_print(buffer);           //rs232_put('\n');
+	rs232_print((uint8_t *)buffer);           //rs232_put('\n');
 }
 //---------------------------------------------------------------------------
 int16_t lm75_read(void)
@@ -308,6 +308,6 @@ uint32_t rs232_get_sampletime(void)
     }
   } while (i<5);
   
-  rs232_print("\n\r");
+  rs232_print((uint8_t *)"\n\r");
   return buf;
 }

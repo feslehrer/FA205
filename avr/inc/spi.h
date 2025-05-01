@@ -1,7 +1,7 @@
 #ifndef SPI_H_
 #define SPI_H_
 
-#define  SPI_PORT PORTB
+#define  SPI_PORT _PORTB_
 #define  MOSI 3
 #define  MISO 4
 #define  SCK  5
