@@ -61,7 +61,7 @@ void port_out(uint8_t wert)
 void lowlevel_write(uint8_t data)
 {
 #ifdef LCD_I2C
-  data |=  (1<<BL);             // BL = on (Backlight)
+  //data |=  (1<<BL);             // BL = on (Backlight)
   data |=  (1<<EN);             // EN = 1
   port_out(data);
   data &= ~(1<<EN);             // EN = 0
