@@ -61,6 +61,7 @@
  #endif
 
 #else   // Für I2C-Display mit PCF8574T (D7..D4 => P7..P4)!!!
+ //#define LCD_BUSY 7
  #define RS       0
  #define RW       1
  #define EN       2
