@@ -9,7 +9,8 @@ void spi_init( void )
 	bit_init(SCK,OUT);
   bit_init(CS,OUT);
 	
-	SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR1);		// Enable SPI, Set as Master, Prescaler: Fosc/16
+	//SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);		// Enable SPI, Set as Master, Prescaler: Fosc/16
+	SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR1);		// Enable SPI, Set as Master, Prescaler: Fosc/32
 }
 
 // Chip Select steuern (z.?B. PB2 als CS)
