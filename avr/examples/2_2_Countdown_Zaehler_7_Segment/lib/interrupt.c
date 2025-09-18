@@ -8,6 +8,8 @@
 // Autor:            Rahm
 
 #include "interrupt.h"
+#include "math.h"
+
 #ifdef _ATMEGA8_
  #define _INT_CONFIG_     MCUCR
  #define _INT_ENABLE_     GICR
@@ -167,7 +169,7 @@ ISR(TIMER0_COMPA_vect)        // Timer0-Interrupt im Autoreload-mode (CTC)
 
 void timer_ms_init ( void (*ti) (void), float time)
 {
-  my_timer = ti;					   // Pointer auf isr im User-Code (normalerweise: timer_ms_isr) !!
+  my_timer = ti;					         // Pointer auf isr im User-Code (normalerweise: timer_ms_isr) !!
    
   TCCR0A |= (1 << WGM01);          // Timer Mode: CTC   (Autoreload-Modus)
   OCR0A = preload_calc(time);      // Bei welchem Zählwert soll der Interrupt kommen
@@ -238,8 +240,20 @@ extern void serial_interrupt_disable ( void )
 //  
 // Soundausgabe auf Lautsprecher an Port B.3
 // 
-void note_isr( void )
+#ifndef TON_PORT
+  #define TON_PORT _PORTB_
+#endif
+#ifndef TON_BIT
+  #define TON_BIT 3
+#endif
+
+void sound_init(void)
 {
+    bit_init(TON_PORT,TON_BIT,OUT);
+}
+
+void note_isr( void )
+{  
   bit_write(TON_PORT,TON_BIT,~bit_read(TON_PORT,TON_BIT));
 }
 

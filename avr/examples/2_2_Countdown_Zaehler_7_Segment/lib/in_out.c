@@ -194,7 +194,7 @@ void pwm3_duty_cycle ( uint8_t value )
 //***** Konstanten
 #define AD_START    6             // Bit ADCSRA.6 startet die Wandlung
 
-uint8_t adc_in(uint8_t ch);       // Prototyp! Lokale Funktion mit Kanalwahl
+//uint16_t adc_in(uint8_t ch);       // Prototyp! Lokale Funktion mit Kanalwahl
 
 // Initialisierung des ADU.
 void adc_init(void)
@@ -225,4 +225,16 @@ uint8_t adc_in(uint8_t ch)
   while( ADCSRA & (1<<AD_START) );  // Warten bis Wandlung beendet
 
   return ADCH;
+}
+
+// Gibt den 10 Bit-Wert des ADC zurück. Funktion mit Kanal-Parameter
+uint16_t adc_in10(uint8_t ch)
+{
+  ADMUX  &=0xf0;
+  ADMUX  |= ch;                     // Kanal Nr.
+  ADCSRA |= (1<<AD_START);          // Wandlung starten
+  
+  while( ADCSRA & (1<<AD_START) );  // Warten bis Wandlung beendet
+
+  return (ADC>>6); //Bit nach links schieben (alternativ Flag ADLS = 1 setzen)
 }
