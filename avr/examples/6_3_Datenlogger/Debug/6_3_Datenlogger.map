@@ -1,19 +1,19 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                              interrupt.o (__subsf3)
+                              lib/interrupt.o (__subsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o) (__addsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
-                              delay.o (__ltsf2)
+                              lib/delay.o (__ltsf2)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                              delay.o (__divsf3)
+                              lib/delay.o (__divsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o) (__divsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                              delay.o (__fixunssfsi)
+                              lib/delay.o (__fixunssfsi)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                              delay.o (__floatunsisf)
+                              lib/delay.o (__floatunsisf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o) (__fp_cmp)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
@@ -31,13 +31,13 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_zero)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
-                              delay.o (__gtsf2)
+                              lib/delay.o (__gtsf2)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                              delay.o (__mulsf3)
+                              lib/delay.o (__mulsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(pow.o)
-                              interrupt.o (pow)
+                              lib/interrupt.o (pow)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(exp.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(pow.o) (exp)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
@@ -53,21 +53,21 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(ldexp.o) (__fp_mpack)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
-                              6_3_2_Datenlogger_mit_Com_Steuerung.o (__udivmodhi4)
+                              lib/interrupt.o (__udivmodhi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
-                              communication.o (__udivmodsi4)
+                              lib/communication.o (__udivmodsi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
                               6_3_2_Datenlogger_mit_Com_Steuerung.o (__tablejump2__)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                              6_3_2_Datenlogger_mit_Com_Steuerung.o (__do_copy_data)
+                              lib/communication.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
-                              6_3_2_Datenlogger_mit_Com_Steuerung.o (__do_clear_bss)
+                              lib/datalogger.o (__do_clear_bss)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                              communication.o (__umulhisi3)
+                              lib/communication.o (__umulhisi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
-                              datalogger.o (sprintf)
+                              lib/datalogger.o (sprintf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(sprintf.o) (vfprintf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
@@ -86,159 +86,165 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 Allocating common symbols
 Common symbol       size              file
 
-monat               0x1               6_3_2_Datenlogger_mit_Com_Steuerung.o
-tag                 0x1               6_3_2_Datenlogger_mit_Com_Steuerung.o
-minute              0x1               6_3_2_Datenlogger_mit_Com_Steuerung.o
-my_timer            0x2               interrupt.o
-my_interrupt0       0x2               interrupt.o
+monat               0x1               lib/datalogger.o
+tag                 0x1               lib/datalogger.o
+minute              0x1               lib/datalogger.o
+my_timer            0x2               lib/interrupt.o
+my_interrupt0       0x2               lib/interrupt.o
 aktueller_Datensatz
-                    0x2               6_3_2_Datenlogger_mit_Com_Steuerung.o
-stunde              0x1               6_3_2_Datenlogger_mit_Com_Steuerung.o
-temperatur          0x2               6_3_2_Datenlogger_mit_Com_Steuerung.o
-my_datareceived     0x2               interrupt.o
-sekunde             0x1               6_3_2_Datenlogger_mit_Com_Steuerung.o
-my_interrupt1       0x2               interrupt.o
-jahr                0x1               6_3_2_Datenlogger_mit_Com_Steuerung.o
+                    0x2               lib/datalogger.o
+stunde              0x1               lib/datalogger.o
+temperatur          0x2               lib/datalogger.o
+my_datareceived     0x2               lib/interrupt.o
+sekunde             0x1               lib/datalogger.o
+my_interrupt1       0x2               lib/interrupt.o
+jahr                0x1               lib/datalogger.o
 
 Discarded input sections
 
  .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .text          0x00000000        0x0 lib/communication.o
+ .data          0x00000000        0x0 lib/communication.o
+ .bss           0x00000000        0x0 lib/communication.o
+ .text.rs232_is_received
+                0x00000000        0xc lib/communication.o
+ .text.rs232_binary_get
+                0x00000000        0xe lib/communication.o
+ .text.rs232_readbytes
+                0x00000000       0x78 lib/communication.o
+ .text          0x00000000        0x0 lib/datalogger.o
+ .data          0x00000000        0x0 lib/datalogger.o
+ .bss           0x00000000        0x0 lib/datalogger.o
+ .text.rs232_print_record
+                0x00000000       0xcc lib/datalogger.o
+ .text.eeprom_speichertest
+                0x00000000       0x2c lib/datalogger.o
+ .text          0x00000000        0x0 lib/delay.o
+ .data          0x00000000        0x0 lib/delay.o
+ .bss           0x00000000        0x0 lib/delay.o
+ .text.delay_us
+                0x00000000      0x14e lib/delay.o
+ .text          0x00000000        0x0 lib/eeprom.o
+ .data          0x00000000        0x0 lib/eeprom.o
+ .bss           0x00000000        0x0 lib/eeprom.o
+ .text          0x00000000        0x0 lib/interrupt.o
+ .data          0x00000000        0x0 lib/interrupt.o
+ .bss           0x00000000        0x0 lib/interrupt.o
+ .text.note_isr
+                0x00000000       0x1a lib/interrupt.o
+ .text.ext_interrupt_init
+                0x00000000       0x1a lib/interrupt.o
+ .text.ext_interrupt_enable
+                0x00000000        0x6 lib/interrupt.o
+ .text.ext_interrupt_disable
+                0x00000000        0x6 lib/interrupt.o
+ .text.ext_interrupt1_init
+                0x00000000       0x1a lib/interrupt.o
+ .text.ext_interrupt1_enable
+                0x00000000        0x6 lib/interrupt.o
+ .text.ext_interrupt1_disable
+                0x00000000        0x4 lib/interrupt.o
+ .text.preload_calc
+                0x00000000       0xd8 lib/interrupt.o
+ .text.timer_ms_init
+                0x00000000       0x1a lib/interrupt.o
+ .text.timer1ms_init
+                0x00000000        0xe lib/interrupt.o
+ .text.timer_ms_enable
+                0x00000000       0x60 lib/interrupt.o
+ .text.timer1ms_enable
+                0x00000000        0x6 lib/interrupt.o
+ .text.timer_ms_disable
+                0x00000000        0xe lib/interrupt.o
+ .text.timer1ms_disable
+                0x00000000        0x6 lib/interrupt.o
+ .text.serial_interrupt_disable
+                0x00000000        0xc lib/interrupt.o
+ .text.sound_init
+                0x00000000        0xe lib/interrupt.o
+ .text.note_on  0x00000000       0x22 lib/interrupt.o
+ .text.note_off
+                0x00000000        0x6 lib/interrupt.o
+ .text.play_note
+                0x00000000       0x6a lib/interrupt.o
+ .bss.prescaler
+                0x00000000        0x2 lib/interrupt.o
+ .text          0x00000000        0x0 lib/in_out.o
+ .data          0x00000000        0x0 lib/in_out.o
+ .bss           0x00000000        0x0 lib/in_out.o
+ .text.bit_init
+                0x00000000       0xd2 lib/in_out.o
+ .text.byte_init
+                0x00000000       0x32 lib/in_out.o
+ .text.bit_read
+                0x00000000       0x4a lib/in_out.o
+ .text.bit_write
+                0x00000000       0x34 lib/in_out.o
+ .text.byte_read
+                0x00000000       0x20 lib/in_out.o
+ .text.byte_write
+                0x00000000        0x6 lib/in_out.o
+ .text.bit_toggle
+                0x00000000       0x4e lib/in_out.o
+ .text.pwm_init
+                0x00000000       0x1e lib/in_out.o
+ .text.pwm_start
+                0x00000000        0xc lib/in_out.o
+ .text.pwm_stop
+                0x00000000        0xc lib/in_out.o
+ .text.pwm_duty_cycle
+                0x00000000        0x6 lib/in_out.o
+ .text.pwm2_init
+                0x00000000       0x1e lib/in_out.o
+ .text.pwm2_start
+                0x00000000        0xc lib/in_out.o
+ .text.pwm2_stop
+                0x00000000        0xc lib/in_out.o
+ .text.pwm2_duty_cycle
+                0x00000000        0x6 lib/in_out.o
+ .text.pwm3_init
+                0x00000000       0x24 lib/in_out.o
+ .text.pwm3_start
+                0x00000000        0xc lib/in_out.o
+ .text.pwm3_stop
+                0x00000000        0xc lib/in_out.o
+ .text.pwm3_duty_cycle
+                0x00000000       0x12 lib/in_out.o
+ .text.adc_init
+                0x00000000        0xe lib/in_out.o
+ .text.adc_in   0x00000000       0x26 lib/in_out.o
+ .text.adc_in1  0x00000000        0x8 lib/in_out.o
+ .text.adc_in2  0x00000000        0x8 lib/in_out.o
+ .text.adc_in10
+                0x00000000       0x3c lib/in_out.o
+ .debug_info    0x00000000      0x570 lib/in_out.o
+ .debug_abbrev  0x00000000      0x176 lib/in_out.o
+ .debug_loc     0x00000000      0x3f4 lib/in_out.o
+ .debug_aranges
+                0x00000000       0xd8 lib/in_out.o
+ .debug_ranges  0x00000000       0xc8 lib/in_out.o
+ .debug_line    0x00000000      0x4c8 lib/in_out.o
+ .debug_str     0x00000000      0x2a2 lib/in_out.o
+ .comment       0x00000000       0x31 lib/in_out.o
+ .debug_frame   0x00000000      0x1b0 lib/in_out.o
+ .text          0x00000000        0x0 lib/lcd.o
+ .data          0x00000000        0x0 lib/lcd.o
+ .bss           0x00000000        0x0 lib/lcd.o
+ .text.lcd_byte
+                0x00000000       0x94 lib/lcd.o
+ .text.lcd_clearline
+                0x00000000       0x18 lib/lcd.o
+ .text.lcd_debug
+                0x00000000       0x3e lib/lcd.o
+ .text.lcd_hhhh
+                0x00000000       0x6a lib/lcd.o
+ .text          0x00000000        0x0 lib/rtc.o
+ .data          0x00000000        0x0 lib/rtc.o
+ .bss           0x00000000        0x0 lib/rtc.o
  .text          0x00000000        0x0 6_3_2_Datenlogger_mit_Com_Steuerung.o
  .data          0x00000000        0x0 6_3_2_Datenlogger_mit_Com_Steuerung.o
  .bss           0x00000000        0x0 6_3_2_Datenlogger_mit_Com_Steuerung.o
- .text          0x00000000        0x0 communication.o
- .data          0x00000000        0x0 communication.o
- .bss           0x00000000        0x0 communication.o
- .text.rs232_is_received
-                0x00000000        0xc communication.o
- .text.rs232_binary_get
-                0x00000000        0xe communication.o
- .text.rs232_readbytes
-                0x00000000       0x78 communication.o
- .text          0x00000000        0x0 datalogger.o
- .data          0x00000000        0x0 datalogger.o
- .bss           0x00000000        0x0 datalogger.o
- .text.rs232_print_record
-                0x00000000       0xcc datalogger.o
- .text.eeprom_speichertest
-                0x00000000       0x2c datalogger.o
- .text          0x00000000        0x0 delay.o
- .data          0x00000000        0x0 delay.o
- .bss           0x00000000        0x0 delay.o
- .text.delay_us
-                0x00000000      0x14e delay.o
- .text          0x00000000        0x0 eeprom.o
- .data          0x00000000        0x0 eeprom.o
- .bss           0x00000000        0x0 eeprom.o
- .text          0x00000000        0x0 interrupt.o
- .data          0x00000000        0x0 interrupt.o
- .bss           0x00000000        0x0 interrupt.o
- .text.note_isr
-                0x00000000       0x1a interrupt.o
- .text.ext_interrupt_init
-                0x00000000       0x1a interrupt.o
- .text.ext_interrupt_enable
-                0x00000000        0x6 interrupt.o
- .text.ext_interrupt_disable
-                0x00000000        0x6 interrupt.o
- .text.ext_interrupt1_init
-                0x00000000       0x1a interrupt.o
- .text.ext_interrupt1_enable
-                0x00000000        0x6 interrupt.o
- .text.ext_interrupt1_disable
-                0x00000000        0x4 interrupt.o
- .text.preload_calc
-                0x00000000       0xd8 interrupt.o
- .text.timer_ms_init
-                0x00000000       0x1a interrupt.o
- .text.timer1ms_init
-                0x00000000        0xe interrupt.o
- .text.timer_ms_enable
-                0x00000000       0x60 interrupt.o
- .text.timer1ms_enable
-                0x00000000        0x6 interrupt.o
- .text.timer_ms_disable
-                0x00000000        0xe interrupt.o
- .text.timer1ms_disable
-                0x00000000        0x6 interrupt.o
- .text.serial_interrupt_disable
-                0x00000000        0xc interrupt.o
- .text.note_on  0x00000000       0x22 interrupt.o
- .text.note_off
-                0x00000000        0x6 interrupt.o
- .text.play_note
-                0x00000000       0x6a interrupt.o
- .bss.prescaler
-                0x00000000        0x2 interrupt.o
- .text          0x00000000        0x0 in_out.o
- .data          0x00000000        0x0 in_out.o
- .bss           0x00000000        0x0 in_out.o
- .text.bit_init
-                0x00000000       0xd2 in_out.o
- .text.byte_init
-                0x00000000       0x32 in_out.o
- .text.bit_read
-                0x00000000       0x4a in_out.o
- .text.bit_write
-                0x00000000       0x34 in_out.o
- .text.byte_read
-                0x00000000       0x20 in_out.o
- .text.byte_write
-                0x00000000        0x6 in_out.o
- .text.bit_toggle
-                0x00000000       0x4e in_out.o
- .text.pwm_init
-                0x00000000       0x1e in_out.o
- .text.pwm_start
-                0x00000000        0xc in_out.o
- .text.pwm_stop
-                0x00000000        0xc in_out.o
- .text.pwm_duty_cycle
-                0x00000000        0x6 in_out.o
- .text.pwm2_init
-                0x00000000       0x1e in_out.o
- .text.pwm2_start
-                0x00000000        0xc in_out.o
- .text.pwm2_stop
-                0x00000000        0xc in_out.o
- .text.pwm2_duty_cycle
-                0x00000000        0x6 in_out.o
- .text.pwm3_init
-                0x00000000       0x24 in_out.o
- .text.pwm3_start
-                0x00000000        0xc in_out.o
- .text.pwm3_stop
-                0x00000000        0xc in_out.o
- .text.pwm3_duty_cycle
-                0x00000000       0x12 in_out.o
- .text.adc_init
-                0x00000000        0xe in_out.o
- .text.adc_in   0x00000000       0x26 in_out.o
- .text.adc_in1  0x00000000        0x8 in_out.o
- .text.adc_in2  0x00000000        0x8 in_out.o
- .debug_info    0x00000000      0x543 in_out.o
- .debug_abbrev  0x00000000      0x176 in_out.o
- .debug_loc     0x00000000      0x3d3 in_out.o
- .debug_aranges
-                0x00000000       0xd0 in_out.o
- .debug_ranges  0x00000000       0xc0 in_out.o
- .debug_line    0x00000000      0x497 in_out.o
- .debug_str     0x00000000      0x2c4 in_out.o
- .comment       0x00000000       0x31 in_out.o
- .debug_frame   0x00000000      0x1a0 in_out.o
- .text          0x00000000        0x0 lcd.o
- .data          0x00000000        0x0 lcd.o
- .bss           0x00000000        0x0 lcd.o
- .text.lcd_byte
-                0x00000000       0x94 lcd.o
- .text.lcd_clearline
-                0x00000000       0x18 lcd.o
- .text.lcd_debug
-                0x00000000       0x3e lcd.o
- .text          0x00000000        0x0 rtc.o
- .data          0x00000000        0x0 rtc.o
- .bss           0x00000000        0x0 rtc.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -541,15 +547,15 @@ Linker script and memory map
 
 Address of section .data set to 0x800100
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+LOAD lib/communication.o
+LOAD lib/datalogger.o
+LOAD lib/delay.o
+LOAD lib/eeprom.o
+LOAD lib/interrupt.o
+LOAD lib/in_out.o
+LOAD lib/lcd.o
+LOAD lib/rtc.o
 LOAD 6_3_2_Datenlogger_mit_Com_Steuerung.o
-LOAD communication.o
-LOAD datalogger.o
-LOAD delay.o
-LOAD eeprom.o
-LOAD interrupt.o
-LOAD in_out.o
-LOAD lcd.o
-LOAD rtc.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -659,7 +665,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2002
+.text           0x00000000     0x1f80
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -744,237 +750,237 @@ END GROUP
                 0x00000108                __vector_20
                 0x0000010c                . = ALIGN (0x2)
  *(.text.*)
- .text.serial_interrupt_isr
-                0x0000010c      0x378 6_3_2_Datenlogger_mit_Com_Steuerung.o
-                0x0000010c                serial_interrupt_isr
- .text.setup    0x00000484      0x10a 6_3_2_Datenlogger_mit_Com_Steuerung.o
-                0x00000484                setup
- .text.lcd_print_timestamp
-                0x0000058e       0x4c 6_3_2_Datenlogger_mit_Com_Steuerung.o
-                0x0000058e                lcd_print_timestamp
- .text.main     0x000005da      0x128 6_3_2_Datenlogger_mit_Com_Steuerung.o
-                0x000005da                main
  .text.i2c_init
-                0x00000702       0x12 communication.o
-                0x00000702                i2c_init
+                0x0000010c       0x12 lib/communication.o
+                0x0000010c                i2c_init
  .text.i2c_start
-                0x00000714       0x12 communication.o
-                0x00000714                i2c_start
+                0x0000011e       0x12 lib/communication.o
+                0x0000011e                i2c_start
  .text.i2c_stop
-                0x00000726        0x8 communication.o
-                0x00000726                i2c_stop
+                0x00000130        0x8 lib/communication.o
+                0x00000130                i2c_stop
  .text.i2c_write
-                0x0000072e       0x4e communication.o
-                0x0000072e                i2c_write
+                0x00000138       0x4e lib/communication.o
+                0x00000138                i2c_write
  .text.i2c_read
-                0x0000077c       0x22 communication.o
-                0x0000077c                i2c_read
+                0x00000186       0x22 lib/communication.o
+                0x00000186                i2c_read
  .text.rs232_baud
-                0x0000079e       0x66 communication.o
-                0x0000079e                rs232_baud
+                0x000001a8       0x20 lib/communication.o
+                0x000001a8                rs232_baud
  .text.rs232_init
-                0x00000804        0xe communication.o
-                0x00000804                rs232_init
+                0x000001c8        0xe lib/communication.o
+                0x000001c8                rs232_init
  .text.rs232_get
-                0x00000812       0x12 communication.o
-                0x00000812                rs232_get
+                0x000001d6       0x12 lib/communication.o
+                0x000001d6                rs232_get
  .text.rs232_put
-                0x00000824       0x10 communication.o
-                0x00000824                rs232_put
+                0x000001e8       0x10 lib/communication.o
+                0x000001e8                rs232_put
  .text.rs232_print
-                0x00000834       0x1e communication.o
-                0x00000834                rs232_print
+                0x000001f8       0x1e lib/communication.o
+                0x000001f8                rs232_print
  .text.rs232_inputdd
-                0x00000852       0x3e communication.o
-                0x00000852                rs232_inputdd
+                0x00000216       0x3e lib/communication.o
+                0x00000216                rs232_inputdd
  .text.rs232_printdd
-                0x00000890       0x36 communication.o
-                0x00000890                rs232_printdd
+                0x00000254       0x36 lib/communication.o
+                0x00000254                rs232_printdd
  .text.rs232_int
-                0x000008c6       0xd0 communication.o
-                0x000008c6                rs232_int
+                0x0000028a       0xd0 lib/communication.o
+                0x0000028a                rs232_int
  .text.rs232_int32
-                0x00000996      0x10a communication.o
-                0x00000996                rs232_int32
+                0x0000035a      0x10a lib/communication.o
+                0x0000035a                rs232_int32
  .text.eeprom_get_record
-                0x00000aa0       0xcc datalogger.o
-                0x00000aa0                eeprom_get_record
+                0x00000464       0xc8 lib/datalogger.o
+                0x00000464                eeprom_get_record
  .text.eeprom_set_record
-                0x00000b6c       0xb8 datalogger.o
-                0x00000b6c                eeprom_set_record
- .text.rtc_set  0x00000c24       0x3e datalogger.o
-                0x00000c24                rtc_set
- .text.rtc_get  0x00000c62       0x3e datalogger.o
-                0x00000c62                rtc_get
+                0x0000052c       0xb8 lib/datalogger.o
+                0x0000052c                eeprom_set_record
+ .text.rtc_set  0x000005e4       0x3e lib/datalogger.o
+                0x000005e4                rtc_set
+ .text.rtc_get  0x00000622       0x3e lib/datalogger.o
+                0x00000622                rtc_get
  .text.rs232_print_time
-                0x00000ca0       0x6a datalogger.o
-                0x00000ca0                rs232_print_time
+                0x00000660       0x6a lib/datalogger.o
+                0x00000660                rs232_print_time
  .text.rs232_set_time
-                0x00000d0a       0xbe datalogger.o
-                0x00000d0a                rs232_set_time
+                0x000006ca       0xbe lib/datalogger.o
+                0x000006ca                rs232_set_time
  .text.read_current_recordnumber_from_rtc
-                0x00000dc8       0x24 datalogger.o
-                0x00000dc8                read_current_recordnumber_from_rtc
+                0x00000788       0x24 lib/datalogger.o
+                0x00000788                read_current_recordnumber_from_rtc
  .text.write_current_recordnumber_to_rtc
-                0x00000dec       0x18 datalogger.o
-                0x00000dec                write_current_recordnumber_to_rtc
+                0x000007ac       0x18 lib/datalogger.o
+                0x000007ac                write_current_recordnumber_to_rtc
  .text.read_current_sampletime_from_rtc
-                0x00000e04       0x24 datalogger.o
-                0x00000e04                read_current_sampletime_from_rtc
+                0x000007c4       0x24 lib/datalogger.o
+                0x000007c4                read_current_sampletime_from_rtc
  .text.write_current_sampletime_to_rtc
-                0x00000e28       0x18 datalogger.o
-                0x00000e28                write_current_sampletime_to_rtc
+                0x000007e8       0x18 lib/datalogger.o
+                0x000007e8                write_current_sampletime_to_rtc
  .text.serial_print_all_records
-                0x00000e40      0x120 datalogger.o
-                0x00000e40                serial_print_all_records
+                0x00000800      0x126 lib/datalogger.o
+                0x00000800                serial_print_all_records
  .text.lcd_print_temperatur
-                0x00000f60       0x6e datalogger.o
-                0x00000f60                lcd_print_temperatur
+                0x00000926       0x6e lib/datalogger.o
+                0x00000926                lcd_print_temperatur
  .text.rs232_print_temperatur
-                0x00000fce       0xc4 datalogger.o
-                0x00000fce                rs232_print_temperatur
+                0x00000994       0xc4 lib/datalogger.o
+                0x00000994                rs232_print_temperatur
  .text.lm75_read
-                0x00001092       0x4a datalogger.o
-                0x00001092                lm75_read
+                0x00000a58       0x4a lib/datalogger.o
+                0x00000a58                lm75_read
  .text.rs232_get_sampletime
-                0x000010dc       0xce datalogger.o
-                0x000010dc                rs232_get_sampletime
+                0x00000aa2       0xce lib/datalogger.o
+                0x00000aa2                rs232_get_sampletime
  .text.delay_100us
-                0x000011aa       0x1e delay.o
-                0x000011aa                delay_100us
+                0x00000b70       0x1e lib/delay.o
+                0x00000b70                delay_100us
  .text.delay_ms
-                0x000011c8       0x2c delay.o
-                0x000011c8                delay_ms
- .text.delay_s  0x000011f4       0x2c delay.o
-                0x000011f4                delay_s
+                0x00000b8e       0x2c lib/delay.o
+                0x00000b8e                delay_ms
+ .text.delay_s  0x00000bba       0x2c lib/delay.o
+                0x00000bba                delay_s
  .text.eeprom_init
-                0x00001220        0x6 eeprom.o
-                0x00001220                eeprom_init
+                0x00000be6        0x6 lib/eeprom.o
+                0x00000be6                eeprom_init
  .text.eeprom_read
-                0x00001226       0x5c eeprom.o
-                0x00001226                eeprom_read
+                0x00000bec       0x60 lib/eeprom.o
+                0x00000bec                eeprom_read
  .text.eeprom_write
-                0x00001282       0x54 eeprom.o
-                0x00001282                eeprom_write
+                0x00000c4c       0x54 lib/eeprom.o
+                0x00000c4c                eeprom_write
  .text.eeprom_memtest
-                0x000012d6       0x88 eeprom.o
-                0x000012d6                eeprom_memtest
+                0x00000ca0       0x98 lib/eeprom.o
+                0x00000ca0                eeprom_memtest
  .text.__vector_1
-                0x0000135e       0x52 interrupt.o
-                0x0000135e                __vector_1
+                0x00000d38       0x52 lib/interrupt.o
+                0x00000d38                __vector_1
  .text.__vector_2
-                0x000013b0       0x52 interrupt.o
-                0x000013b0                __vector_2
+                0x00000d8a       0x52 lib/interrupt.o
+                0x00000d8a                __vector_2
  .text.__vector_14
-                0x00001402       0x66 interrupt.o
-                0x00001402                __vector_14
+                0x00000ddc       0x66 lib/interrupt.o
+                0x00000ddc                __vector_14
  .text.serial_interrupt_init
-                0x00001468       0x18 interrupt.o
-                0x00001468                serial_interrupt_init
+                0x00000e42       0x18 lib/interrupt.o
+                0x00000e42                serial_interrupt_init
  .text.__vector_18
-                0x00001480       0x4e interrupt.o
-                0x00001480                __vector_18
+                0x00000e5a       0x4e lib/interrupt.o
+                0x00000e5a                __vector_18
  .text.serial_interrupt_enable
-                0x000014ce        0xe interrupt.o
-                0x000014ce                serial_interrupt_enable
+                0x00000ea8        0xe lib/interrupt.o
+                0x00000ea8                serial_interrupt_enable
  .text.lcd_waitwhilebusy
-                0x000014dc        0xa lcd.o
-                0x000014dc                lcd_waitwhilebusy
+                0x00000eb6        0xa lib/lcd.o
+                0x00000eb6                lcd_waitwhilebusy
  .text.port_out
-                0x000014e6       0x1c lcd.o
-                0x000014e6                port_out
+                0x00000ec0       0x1c lib/lcd.o
+                0x00000ec0                port_out
  .text.lowlevel_write
-                0x00001502       0x18 lcd.o
-                0x00001502                lowlevel_write
+                0x00000edc       0x16 lib/lcd.o
+                0x00000edc                lowlevel_write
  .text.lcd_befehl
-                0x0000151a       0x1e lcd.o
-                0x0000151a                lcd_befehl
+                0x00000ef2       0x1e lib/lcd.o
+                0x00000ef2                lcd_befehl
  .text.lcd_daten
-                0x00001538       0x22 lcd.o
-                0x00001538                lcd_daten
+                0x00000f10       0x22 lib/lcd.o
+                0x00000f10                lcd_daten
  .text.lcd_init
-                0x0000155a       0x50 lcd.o
-                0x0000155a                lcd_init
+                0x00000f32       0x50 lib/lcd.o
+                0x00000f32                lcd_init
  .text.lcd_clear
-                0x000015aa        0x8 lcd.o
-                0x000015aa                lcd_clear
+                0x00000f82        0x8 lib/lcd.o
+                0x00000f82                lcd_clear
  .text.lcd_setcursor
-                0x000015b2       0x28 lcd.o
-                0x000015b2                lcd_setcursor
+                0x00000f8a       0x28 lib/lcd.o
+                0x00000f8a                lcd_setcursor
  .text.lcd_lookup
-                0x000015da       0x62 lcd.o
-                0x000015da                lcd_lookup
+                0x00000fb2       0x12 lib/lcd.o
+                0x00000fb2                lcd_lookup
  .text.lcd_char
-                0x0000163c        0xa lcd.o
-                0x0000163c                lcd_char
+                0x00000fc4        0xa lib/lcd.o
+                0x00000fc4                lcd_char
  .text.lcd_print
-                0x00001646       0x1e lcd.o
-                0x00001646                lcd_print
- .text.lcd_int  0x00001664       0xd0 lcd.o
-                0x00001664                lcd_int
+                0x00000fce       0x1e lib/lcd.o
+                0x00000fce                lcd_print
+ .text.lcd_int  0x00000fec       0xd0 lib/lcd.o
+                0x00000fec                lcd_int
  .text.lcd_int32
-                0x00001734      0x10a lcd.o
-                0x00001734                lcd_int32
+                0x000010bc      0x10a lib/lcd.o
+                0x000010bc                lcd_int32
  .text.lcd_defchar
-                0x0000183e       0x48 lcd.o
-                0x0000183e                lcd_defchar
- .text.lcd_dd   0x00001886       0x56 lcd.o
-                0x00001886                lcd_dd
+                0x000011c6       0x48 lib/lcd.o
+                0x000011c6                lcd_defchar
+ .text.lcd_dd   0x0000120e       0x56 lib/lcd.o
+                0x0000120e                lcd_dd
  .text.rtc_lowlevel_read
-                0x000018dc       0x30 rtc.o
-                0x000018dc                rtc_lowlevel_read
+                0x00001264       0x30 lib/rtc.o
+                0x00001264                rtc_lowlevel_read
  .text.rtc_read
-                0x0000190c       0x20 rtc.o
-                0x0000190c                rtc_read
+                0x00001294       0x20 lib/rtc.o
+                0x00001294                rtc_read
  .text.rtc_lowlevel_write
-                0x0000192c       0x28 rtc.o
-                0x0000192c                rtc_lowlevel_write
+                0x000012b4       0x28 lib/rtc.o
+                0x000012b4                rtc_lowlevel_write
  .text.rtc_init
-                0x00001954       0x16 rtc.o
-                0x00001954                rtc_init
+                0x000012dc       0x16 lib/rtc.o
+                0x000012dc                rtc_init
  .text.rtc_write
-                0x0000196a       0x2a rtc.o
-                0x0000196a                rtc_write
+                0x000012f2       0x2a lib/rtc.o
+                0x000012f2                rtc_write
+ .text.serial_interrupt_isr
+                0x0000131c      0x378 6_3_2_Datenlogger_mit_Com_Steuerung.o
+                0x0000131c                serial_interrupt_isr
+ .text.setup    0x00001694      0x10a 6_3_2_Datenlogger_mit_Com_Steuerung.o
+                0x00001694                setup
+ .text.lcd_print_timestamp
+                0x0000179e       0x4c 6_3_2_Datenlogger_mit_Com_Steuerung.o
+                0x0000179e                lcd_print_timestamp
+ .text.main     0x000017ea      0x128 6_3_2_Datenlogger_mit_Com_Steuerung.o
+                0x000017ea                main
  .text.libgcc.div
-                0x00001994       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
-                0x00001994                __udivmodhi4
+                0x00001912       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+                0x00001912                __udivmodhi4
  .text.libgcc.div
-                0x000019bc       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
-                0x000019bc                __udivmodsi4
- .text.libgcc   0x00001a00        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
-                0x00001a00                __tablejump2__
+                0x0000193a       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x0000193a                __udivmodsi4
+ .text.libgcc   0x0000197e        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+                0x0000197e                __tablejump2__
  .text.libgcc.mul
-                0x00001a0c       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                0x00001a0c                __umulhisi3
+                0x0000198a       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x0000198a                __umulhisi3
  .text.avr-libc
-                0x00001a2a       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
-                0x00001a2a                sprintf
+                0x000019a8       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+                0x000019a8                sprintf
  .text.avr-libc
-                0x00001a6e      0x3c2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-                0x00001a6e                vfprintf
+                0x000019ec      0x3c2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+                0x000019ec                vfprintf
  .text.avr-libc
-                0x00001e30       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                0x00001e30                strnlen_P
+                0x00001dae       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+                0x00001dae                strnlen_P
  .text.avr-libc
-                0x00001e46       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                0x00001e46                strnlen
+                0x00001dc4       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
+                0x00001dc4                strnlen
  .text.avr-libc
-                0x00001e5c       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(fputc.o)
-                0x00001e5c                fputc
+                0x00001dda       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(fputc.o)
+                0x00001dda                fputc
  .text.avr-libc
-                0x00001ed4       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                0x00001ed4                __ultoa_invert
+                0x00001e52       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+                0x00001e52                __ultoa_invert
  .text.libgcc.prologue
-                0x00001f90       0x38 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_prologue.o)
-                0x00001f90                __prologue_saves__
+                0x00001f0e       0x38 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_prologue.o)
+                0x00001f0e                __prologue_saves__
  .text.libgcc.prologue
-                0x00001fc8       0x36 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_epilogue.o)
-                0x00001fc8                __epilogue_restores__
-                0x00001ffe                . = ALIGN (0x2)
+                0x00001f46       0x36 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_epilogue.o)
+                0x00001f46                __epilogue_restores__
+                0x00001f7c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00001ffe        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00001ffe                _exit
-                0x00001ffe                exit
+ .fini9         0x00001f7c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00001f7c                _exit
+                0x00001f7c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -993,11 +999,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00001ffe        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00001f7c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002002                _etext = .
+                0x00001f80                _etext = .
 
-.data           0x00800100      0x444 load address 0x00002002
+.data           0x00800100      0x444 load address 0x00001f80
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -1019,18 +1025,18 @@ END GROUP
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x0080011b      0x2d9 6_3_2_Datenlogger_mit_Com_Steuerung.o
-                                0x2f9 (size before relaxing)
- .rodata.baudrate
-                0x008003f4       0x28 6_3_2_Datenlogger_mit_Com_Steuerung.o
-                0x008003f4                baudrate
+                0x0080011b       0x15 lib/communication.o
  .rodata.str1.1
-                0x0080041c       0x15 communication.o
- .rodata.str1.1
-                0x00800431      0x109 datalogger.o
+                0x00800130      0x11a lib/datalogger.o
                                 0x11d (size before relaxing)
  .rodata.str1.1
-                0x0080053a        0x9 lcd.o
+                0x0080024a        0x9 lib/lcd.o
+ .rodata.str1.1
+                0x00800253      0x2c8 6_3_2_Datenlogger_mit_Com_Steuerung.o
+                                0x2f9 (size before relaxing)
+ .rodata.baudrate
+                0x0080051b       0x28 6_3_2_Datenlogger_mit_Com_Steuerung.o
+                0x0080051b                baudrate
  *(.gnu.linkonce.r*)
                 0x00800544                . = ALIGN (0x2)
  *fill*         0x00800543        0x1 
@@ -1048,7 +1054,7 @@ END GROUP
  .bss.zeichen1  0x00800546        0x8 6_3_2_Datenlogger_mit_Com_Steuerung.o
                 0x00800546                zeichen1
  *(COMMON)
- COMMON         0x0080054e        0xa 6_3_2_Datenlogger_mit_Com_Steuerung.o
+ COMMON         0x0080054e        0xa lib/datalogger.o
                 0x0080054e                monat
                 0x0080054f                tag
                 0x00800550                minute
@@ -1057,14 +1063,14 @@ END GROUP
                 0x00800554                temperatur
                 0x00800556                sekunde
                 0x00800557                jahr
- COMMON         0x00800558        0x8 interrupt.o
+ COMMON         0x00800558        0x8 lib/interrupt.o
                 0x00800558                my_timer
                 0x0080055a                my_interrupt0
                 0x0080055c                my_datareceived
                 0x0080055e                my_interrupt1
                 0x00800560                PROVIDE (__bss_end, .)
-                0x00002002                __data_load_start = LOADADDR (.data)
-                0x00002446                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001f80                __data_load_start = LOADADDR (.data)
+                0x000023c4                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800560        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -1112,15 +1118,15 @@ END GROUP
 
 .comment        0x00000000       0x5c
  *(.comment)
- .comment       0x00000000       0x30 6_3_2_Datenlogger_mit_Com_Steuerung.o
+ .comment       0x00000000       0x30 lib/communication.o
                                  0x31 (size before relaxing)
- .comment       0x00000030       0x31 communication.o
- .comment       0x00000030       0x31 datalogger.o
- .comment       0x00000030       0x31 delay.o
- .comment       0x00000030       0x31 eeprom.o
- .comment       0x00000030       0x31 interrupt.o
- .comment       0x00000030       0x31 lcd.o
- .comment       0x00000030       0x31 rtc.o
+ .comment       0x00000030       0x31 lib/datalogger.o
+ .comment       0x00000030       0x31 lib/delay.o
+ .comment       0x00000030       0x31 lib/eeprom.o
+ .comment       0x00000030       0x31 lib/interrupt.o
+ .comment       0x00000030       0x31 lib/lcd.o
+ .comment       0x00000030       0x31 lib/rtc.o
+ .comment       0x00000030       0x31 6_3_2_Datenlogger_mit_Com_Steuerung.o
  .comment       0x00000030       0x31 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
  .comment       0x00000030       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
                                  0x2d (size before relaxing)
@@ -1146,105 +1152,105 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x3a8
+.debug_aranges  0x00000000      0x3b8
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x38 6_3_2_Datenlogger_mit_Com_Steuerung.o
+                0x00000000       0xa0 lib/communication.o
  .debug_aranges
-                0x00000038       0xa0 communication.o
+                0x000000a0       0xa0 lib/datalogger.o
  .debug_aranges
-                0x000000d8       0xa0 datalogger.o
+                0x00000140       0x38 lib/delay.o
  .debug_aranges
-                0x00000178       0x38 delay.o
+                0x00000178       0x38 lib/eeprom.o
  .debug_aranges
-                0x000001b0       0x38 eeprom.o
+                0x000001b0       0xe0 lib/interrupt.o
  .debug_aranges
-                0x000001e8       0xd8 interrupt.o
+                0x00000290       0xb0 lib/lcd.o
  .debug_aranges
-                0x000002c0       0xa8 lcd.o
+                0x00000340       0x40 lib/rtc.o
  .debug_aranges
-                0x00000368       0x40 rtc.o
+                0x00000380       0x38 6_3_2_Datenlogger_mit_Com_Steuerung.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x421c
+.debug_info     0x00000000     0x4255
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4      0xe4d 6_3_2_Datenlogger_mit_Com_Steuerung.o
- .debug_info    0x00001441      0x4d7 communication.o
- .debug_info    0x00001918     0x1063 datalogger.o
- .debug_info    0x0000297b      0x3b9 delay.o
- .debug_info    0x00002d34      0x42e eeprom.o
- .debug_info    0x00003162      0x59f interrupt.o
- .debug_info    0x00003701      0x852 lcd.o
- .debug_info    0x00003f53      0x2c9 rtc.o
+ .debug_info    0x000005f4      0x4e1 lib/communication.o
+ .debug_info    0x00000ad5      0xfe1 lib/datalogger.o
+ .debug_info    0x00001ab6      0x3b9 lib/delay.o
+ .debug_info    0x00001e6f      0x42e lib/eeprom.o
+ .debug_info    0x0000229d      0x5e9 lib/interrupt.o
+ .debug_info    0x00002886      0x8b2 lib/lcd.o
+ .debug_info    0x00003138      0x2c9 lib/rtc.o
+ .debug_info    0x00003401      0xe54 6_3_2_Datenlogger_mit_Com_Steuerung.o
 
-.debug_abbrev   0x00000000     0x123e
+.debug_abbrev   0x00000000     0x1223
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_abbrev  0x000005a2      0x145 6_3_2_Datenlogger_mit_Com_Steuerung.o
- .debug_abbrev  0x000006e7      0x24d communication.o
- .debug_abbrev  0x00000934      0x1d5 datalogger.o
- .debug_abbrev  0x00000b09      0x1aa delay.o
- .debug_abbrev  0x00000cb3      0x10d eeprom.o
- .debug_abbrev  0x00000dc0      0x1ef interrupt.o
- .debug_abbrev  0x00000faf      0x17c lcd.o
- .debug_abbrev  0x0000112b      0x113 rtc.o
+ .debug_abbrev  0x000005a2      0x24d lib/communication.o
+ .debug_abbrev  0x000007ef      0x1ab lib/datalogger.o
+ .debug_abbrev  0x0000099a      0x1aa lib/delay.o
+ .debug_abbrev  0x00000b44      0x10d lib/eeprom.o
+ .debug_abbrev  0x00000c51      0x1ef lib/interrupt.o
+ .debug_abbrev  0x00000e40      0x18b lib/lcd.o
+ .debug_abbrev  0x00000fcb      0x113 lib/rtc.o
+ .debug_abbrev  0x000010de      0x145 6_3_2_Datenlogger_mit_Com_Steuerung.o
 
-.debug_line     0x00000000     0x1fbe
+.debug_line     0x00000000     0x1fca
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000133      0x4a5 6_3_2_Datenlogger_mit_Com_Steuerung.o
- .debug_line    0x000005d8      0x498 communication.o
- .debug_line    0x00000a70      0x616 datalogger.o
- .debug_line    0x00001086      0x25c delay.o
- .debug_line    0x000012e2      0x203 eeprom.o
- .debug_line    0x000014e5      0x426 interrupt.o
- .debug_line    0x0000190b      0x530 lcd.o
- .debug_line    0x00001e3b      0x183 rtc.o
+ .debug_line    0x00000133      0x490 lib/communication.o
+ .debug_line    0x000005c3      0x60b lib/datalogger.o
+ .debug_line    0x00000bce      0x25e lib/delay.o
+ .debug_line    0x00000e2c      0x201 lib/eeprom.o
+ .debug_line    0x0000102d      0x436 lib/interrupt.o
+ .debug_line    0x00001463      0x551 lib/lcd.o
+ .debug_line    0x000019b4      0x17b lib/rtc.o
+ .debug_line    0x00001b2f      0x49b 6_3_2_Datenlogger_mit_Com_Steuerung.o
 
-.debug_frame    0x00000000      0xb30
+.debug_frame    0x00000000      0xb6c
  *(.debug_frame)
- .debug_frame   0x00000000       0x78 6_3_2_Datenlogger_mit_Com_Steuerung.o
- .debug_frame   0x00000078      0x1c8 communication.o
- .debug_frame   0x00000240      0x220 datalogger.o
- .debug_frame   0x00000460       0xac delay.o
- .debug_frame   0x0000050c       0xa8 eeprom.o
- .debug_frame   0x000005b4      0x2f0 interrupt.o
- .debug_frame   0x000008a4      0x214 lcd.o
- .debug_frame   0x00000ab8       0x78 rtc.o
+ .debug_frame   0x00000000      0x1c8 lib/communication.o
+ .debug_frame   0x000001c8      0x220 lib/datalogger.o
+ .debug_frame   0x000003e8       0xac lib/delay.o
+ .debug_frame   0x00000494       0xac lib/eeprom.o
+ .debug_frame   0x00000540      0x300 lib/interrupt.o
+ .debug_frame   0x00000840      0x23c lib/lcd.o
+ .debug_frame   0x00000a7c       0x78 lib/rtc.o
+ .debug_frame   0x00000af4       0x78 6_3_2_Datenlogger_mit_Com_Steuerung.o
 
-.debug_str      0x00000000      0xb83
+.debug_str      0x00000000      0xb81
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x45d 6_3_2_Datenlogger_mit_Com_Steuerung.o
-                                0x4c6 (size before relaxing)
- .debug_str     0x00000665       0xbd communication.o
-                                0x2bb (size before relaxing)
- .debug_str     0x00000722      0x108 datalogger.o
-                                0x4a7 (size before relaxing)
- .debug_str     0x0000082a       0x99 delay.o
-                                0x238 (size before relaxing)
- .debug_str     0x000008c3       0x1f eeprom.o
-                                0x257 (size before relaxing)
- .debug_str     0x000008e2      0x1f6 interrupt.o
-                                0x3bf (size before relaxing)
- .debug_str     0x00000ad8       0xa0 lcd.o
-                                0x30c (size before relaxing)
- .debug_str     0x00000b78        0xb rtc.o
-                                0x1f9 (size before relaxing)
+ .debug_str     0x00000208      0x24b lib/communication.o
+                                0x290 (size before relaxing)
+ .debug_str     0x00000453      0x267 lib/datalogger.o
+                                0x47c (size before relaxing)
+ .debug_str     0x000006ba       0xa3 lib/delay.o
+                                0x20d (size before relaxing)
+ .debug_str     0x0000075d       0x35 lib/eeprom.o
+                                0x22c (size before relaxing)
+ .debug_str     0x00000792      0x23a lib/interrupt.o
+                                0x3a8 (size before relaxing)
+ .debug_str     0x000009cc       0xe4 lib/lcd.o
+                                0x2ea (size before relaxing)
+ .debug_str     0x00000ab0       0x16 lib/rtc.o
+                                0x1ce (size before relaxing)
+ .debug_str     0x00000ac6       0xbb 6_3_2_Datenlogger_mit_Com_Steuerung.o
+                                0x49e (size before relaxing)
 
-.debug_loc      0x00000000     0x2de2
+.debug_loc      0x00000000     0x2df0
  *(.debug_loc)
- .debug_loc     0x00000000      0x259 6_3_2_Datenlogger_mit_Com_Steuerung.o
- .debug_loc     0x00000259      0x6cf communication.o
- .debug_loc     0x00000928      0x907 datalogger.o
- .debug_loc     0x0000122f      0x445 delay.o
- .debug_loc     0x00001674      0x2a8 eeprom.o
- .debug_loc     0x0000191c      0x780 interrupt.o
- .debug_loc     0x0000209c      0xb99 lcd.o
- .debug_loc     0x00002c35      0x1ad rtc.o
+ .debug_loc     0x00000000      0x6a3 lib/communication.o
+ .debug_loc     0x000006a3      0x906 lib/datalogger.o
+ .debug_loc     0x00000fa9      0x445 lib/delay.o
+ .debug_loc     0x000013ee      0x2b5 lib/eeprom.o
+ .debug_loc     0x000016a3      0x780 lib/interrupt.o
+ .debug_loc     0x00001e23      0xbc7 lib/lcd.o
+ .debug_loc     0x000029ea      0x1ad lib/rtc.o
+ .debug_loc     0x00002b97      0x259 6_3_2_Datenlogger_mit_Com_Steuerung.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1264,16 +1270,16 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x388
+.debug_ranges   0x00000000      0x398
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x40 6_3_2_Datenlogger_mit_Com_Steuerung.o
- .debug_ranges  0x00000040       0xa8 communication.o
- .debug_ranges  0x000000e8       0x90 datalogger.o
- .debug_ranges  0x00000178       0x58 delay.o
- .debug_ranges  0x000001d0       0x28 eeprom.o
- .debug_ranges  0x000001f8       0xc8 interrupt.o
- .debug_ranges  0x000002c0       0x98 lcd.o
- .debug_ranges  0x00000358       0x30 rtc.o
+ .debug_ranges  0x00000000       0xa8 lib/communication.o
+ .debug_ranges  0x000000a8       0x90 lib/datalogger.o
+ .debug_ranges  0x00000138       0x58 lib/delay.o
+ .debug_ranges  0x00000190       0x28 lib/eeprom.o
+ .debug_ranges  0x000001b8       0xd0 lib/interrupt.o
+ .debug_ranges  0x00000288       0xa0 lib/lcd.o
+ .debug_ranges  0x00000328       0x30 lib/rtc.o
+ .debug_ranges  0x00000358       0x40 6_3_2_Datenlogger_mit_Com_Steuerung.o
 
 .debug_macro
  *(.debug_macro)

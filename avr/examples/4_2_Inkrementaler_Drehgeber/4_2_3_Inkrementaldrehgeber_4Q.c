@@ -15,9 +15,9 @@ Autor:             Rahm
 
 #include "controller.h"
 
-#define _PORTD_,B1_A     2
-#define _PORTD_,B1_B     3
-#define _PORTB_,Reset    2
+#define B1_A     _PORTD_,2
+#define B1_B     _PORTD_,3
+#define Reset    _PORTB_,2
 #define M        96			  // Impulse/Umdrehung
 
 #define MAXCOUNTS 2000

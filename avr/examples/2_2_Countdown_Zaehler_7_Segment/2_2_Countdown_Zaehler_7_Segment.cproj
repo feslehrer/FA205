@@ -117,6 +117,11 @@
       <Value>DEBUG</Value>
     </ListValues>
   </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../inc</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
   <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
@@ -189,48 +194,48 @@
     <Compile Include="lib\communication.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="lib\datalogger.c">
+    <Compile Include="lib\lcd.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="lib\datalogger.c">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="lib\delay.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="lib\dht11.c">
+    <None Include="lib\dht11.c">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="lib\ds1302.c">
+    </None>
+    <None Include="lib\ds1302.c">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="lib\eeprom.c">
+    </None>
+    <None Include="lib\eeprom.c">
       <SubType>compile</SubType>
-    </Compile>
+    </None>
     <Compile Include="lib\interrupt.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="lib\in_out.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="lib\lcd.c">
+    <None Include="lib\mp3player.c">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="lib\mp3player.c">
+    </None>
+    <None Include="lib\nunchuk.c">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="lib\nunchuk.c">
+    </None>
+    <None Include="lib\rc522.c">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="lib\rc522.c">
+    </None>
+    <None Include="lib\rtc.c">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="lib\rtc.c">
+    </None>
+    <None Include="lib\spi.c">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="lib\spi.c">
+    </None>
+    <None Include="lib\srf04.c">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="lib\srf04.c">
-      <SubType>compile</SubType>
-    </Compile>
+    </None>
     <None Include="2_2_1_SiebenSegment.c">
       <SubType>compile</SubType>
     </None>

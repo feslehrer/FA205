@@ -13,21 +13,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000568  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 000001e0  00000000  00000000  000005a8  2**0
+  5 .debug_aranges 000001e8  00000000  00000000  000005a8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0000156a  00000000  00000000  00000788  2**0
+  6 .debug_info   00001597  00000000  00000000  00000790  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000a36  00000000  00000000  00001cf2  2**0
+  7 .debug_abbrev 00000a36  00000000  00000000  00001d27  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000ba9  00000000  00000000  00002728  2**0
+  8 .debug_line   00000bc8  00000000  00000000  0000275d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000004f0  00000000  00000000  000032d4  2**2
+  9 .debug_frame  00000500  00000000  00000000  00003328  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000007ac  00000000  00000000  000037c4  2**0
+ 10 .debug_str    0000078c  00000000  00000000  00003828  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000ba3  00000000  00000000  00003f70  2**0
+ 11 .debug_loc    00000bc4  00000000  00000000  00003fb4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000001b0  00000000  00000000  00004b13  2**0
+ 12 .debug_ranges 000001b8  00000000  00000000  00004b78  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -132,50 +132,50 @@ void robby_richtung(uint8_t dir);
 void setup (void)   // Initialisierungen
 { 
   // IR-Sensorsignale
-  bit_init(SensorD,IRL,IN);
+  bit_init(IRL,IN);
   a0:	40 e0       	ldi	r20, 0x00	; 0
   a2:	60 e0       	ldi	r22, 0x00	; 0
   a4:	8b e2       	ldi	r24, 0x2B	; 43
   a6:	90 e0       	ldi	r25, 0x00	; 0
   a8:	11 d1       	rcall	.+546    	; 0x2cc <bit_init>
-  bit_init(SensorD,IRM,IN);
+  bit_init(IRM,IN);
   aa:	40 e0       	ldi	r20, 0x00	; 0
   ac:	61 e0       	ldi	r22, 0x01	; 1
   ae:	8b e2       	ldi	r24, 0x2B	; 43
   b0:	90 e0       	ldi	r25, 0x00	; 0
   b2:	0c d1       	rcall	.+536    	; 0x2cc <bit_init>
-  bit_init(SensorD,IRR,IN);
+  bit_init(IRR,IN);
   b4:	40 e0       	ldi	r20, 0x00	; 0
   b6:	67 e0       	ldi	r22, 0x07	; 7
   b8:	8b e2       	ldi	r24, 0x2B	; 43
   ba:	90 e0       	ldi	r25, 0x00	; 0
   bc:	07 d1       	rcall	.+526    	; 0x2cc <bit_init>
   // Motorsignale 
-  bit_init(_PORTD_,2,OUT);      // Input 1
+  bit_init(INPUT_1,OUT);      // Input 1
   be:	41 e0       	ldi	r20, 0x01	; 1
   c0:	62 e0       	ldi	r22, 0x02	; 2
   c2:	8b e2       	ldi	r24, 0x2B	; 43
   c4:	90 e0       	ldi	r25, 0x00	; 0
   c6:	02 d1       	rcall	.+516    	; 0x2cc <bit_init>
-  bit_init(_PORTB_,2,OUT);      // Input 2 
+  bit_init(INPUT_2,OUT);      // Input 2 
   c8:	41 e0       	ldi	r20, 0x01	; 1
   ca:	62 e0       	ldi	r22, 0x02	; 2
   cc:	85 e2       	ldi	r24, 0x25	; 37
   ce:	90 e0       	ldi	r25, 0x00	; 0
   d0:	fd d0       	rcall	.+506    	; 0x2cc <bit_init>
-  bit_init(_PORTB_,4,OUT);      // Input 3
+  bit_init(INPUT_3,OUT);      // Input 3
   d2:	41 e0       	ldi	r20, 0x01	; 1
   d4:	64 e0       	ldi	r22, 0x04	; 4
   d6:	85 e2       	ldi	r24, 0x25	; 37
   d8:	90 e0       	ldi	r25, 0x00	; 0
   da:	f8 d0       	rcall	.+496    	; 0x2cc <bit_init>
-  bit_init(_PORTB_,5,OUT);      // Input 4
+  bit_init(INPUT_4,OUT);      // Input 4
   dc:	41 e0       	ldi	r20, 0x01	; 1
   de:	65 e0       	ldi	r22, 0x05	; 5
   e0:	85 e2       	ldi	r24, 0x25	; 37
   e2:	90 e0       	ldi	r25, 0x00	; 0
   e4:	f3 d0       	rcall	.+486    	; 0x2cc <bit_init>
-  // PWM für Motordrehzahl 
+  // PWM fÃ¼r Motordrehzahl 
   pwm_init();                   // Enable A (pwm)
   e6:	9a d1       	rcall	.+820    	; 0x41c <pwm_init>
   e8:	b1 c1       	rjmp	.+866    	; 0x44c <pwm2_init>
@@ -190,7 +190,7 @@ void setup (void)   // Initialisierungen
 void robby_richtung(uint8_t dir)
 {
   //Bewegungsrichtung
-  bit_write(_PORTD_,2,directions[dir][0]);       // Input 1
+  bit_write(INPUT_1,directions[dir][0]);       // Input 1
   f0:	24 e0       	ldi	r18, 0x04	; 4
   f2:	82 9f       	mul	r24, r18
   f4:	c0 01       	movw	r24, r0
@@ -203,19 +203,19 @@ void robby_richtung(uint8_t dir)
  102:	8b e2       	ldi	r24, 0x2B	; 43
  104:	90 e0       	ldi	r25, 0x00	; 0
  106:	70 d1       	rcall	.+736    	; 0x3e8 <bit_write>
-  bit_write(_PORTB_,2,directions[dir][1]);       // Input 2
+  bit_write(INPUT_2,directions[dir][1]);       // Input 2
  108:	49 81       	ldd	r20, Y+1	; 0x01
  10a:	62 e0       	ldi	r22, 0x02	; 2
  10c:	85 e2       	ldi	r24, 0x25	; 37
  10e:	90 e0       	ldi	r25, 0x00	; 0
  110:	6b d1       	rcall	.+726    	; 0x3e8 <bit_write>
-  bit_write(_PORTB_,4,directions[dir][2]);       // Input 3
+  bit_write(INPUT_3,directions[dir][2]);       // Input 3
  112:	4a 81       	ldd	r20, Y+2	; 0x02
  114:	64 e0       	ldi	r22, 0x04	; 4
  116:	85 e2       	ldi	r24, 0x25	; 37
  118:	90 e0       	ldi	r25, 0x00	; 0
  11a:	66 d1       	rcall	.+716    	; 0x3e8 <bit_write>
-  bit_write(_PORTB_,5,directions[dir][3]);       // Input 4
+  bit_write(INPUT_4,directions[dir][3]);       // Input 4
  11c:	4b 81       	ldd	r20, Y+3	; 0x03
  11e:	65 e0       	ldi	r22, 0x05	; 5
  120:	85 e2       	ldi	r24, 0x25	; 37
@@ -247,7 +247,7 @@ int main (void)
   
   while(1)
   {  
-    if      (bit_read(SensorD,IRM)==0)  robby_richtung(STOPP);
+    if      (bit_read(IRM)==0)  robby_richtung(STOPP);
  13a:	61 e0       	ldi	r22, 0x01	; 1
  13c:	8b e2       	ldi	r24, 0x2B	; 43
  13e:	90 e0       	ldi	r25, 0x00	; 0
@@ -257,7 +257,7 @@ int main (void)
  146:	d2 df       	rcall	.-92     	; 0xec <robby_richtung>
  148:	f8 cf       	rjmp	.-16     	; 0x13a <main+0xe>
  14a:	60 e0       	ldi	r22, 0x00	; 0
-    else if (bit_read(SensorD,IRL)==0)  robby_richtung(RECHTSDREH);
+    else if (bit_read(IRL)==0)  robby_richtung(RECHTSDREH);
  14c:	8b e2       	ldi	r24, 0x2B	; 43
  14e:	90 e0       	ldi	r25, 0x00	; 0
  150:	26 d1       	rcall	.+588    	; 0x39e <bit_read>
@@ -266,7 +266,7 @@ int main (void)
  156:	86 e0       	ldi	r24, 0x06	; 6
  158:	c9 df       	rcall	.-110    	; 0xec <robby_richtung>
  15a:	ef cf       	rjmp	.-34     	; 0x13a <main+0xe>
-    else if (bit_read(SensorD,IRR)==0)  robby_richtung(LINKSDREH);
+    else if (bit_read(IRR)==0)  robby_richtung(LINKSDREH);
  15c:	67 e0       	ldi	r22, 0x07	; 7
  15e:	8b e2       	ldi	r24, 0x2B	; 43
  160:	90 e0       	ldi	r25, 0x00	; 0
@@ -277,7 +277,7 @@ int main (void)
  16a:	c0 df       	rcall	.-128    	; 0xec <robby_richtung>
  16c:	e6 cf       	rjmp	.-52     	; 0x13a <main+0xe>
  16e:	81 e0       	ldi	r24, 0x01	; 1
-    else                                robby_richtung(VORWAERTS);
+    else                        robby_richtung(VORWAERTS);
  170:	bd df       	rcall	.-134    	; 0xec <robby_richtung>
  172:	e3 cf       	rjmp	.-58     	; 0x13a <main+0xe>
 

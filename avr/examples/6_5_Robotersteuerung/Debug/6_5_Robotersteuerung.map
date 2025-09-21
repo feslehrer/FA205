@@ -1,19 +1,19 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                              interrupt.o (__subsf3)
+                              lib/interrupt.o (__subsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o) (__addsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
-                              delay.o (__ltsf2)
+                              lib/delay.o (__ltsf2)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                              delay.o (__divsf3)
+                              lib/delay.o (__divsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o) (__divsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                              delay.o (__fixunssfsi)
+                              lib/delay.o (__fixunssfsi)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                              delay.o (__floatunsisf)
+                              lib/delay.o (__floatunsisf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o) (__fp_cmp)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
@@ -31,13 +31,13 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_zero)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
-                              delay.o (__gtsf2)
+                              lib/delay.o (__gtsf2)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                              delay.o (__mulsf3)
+                              lib/delay.o (__mulsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(pow.o)
-                              interrupt.o (pow)
+                              lib/interrupt.o (pow)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(exp.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(pow.o) (exp)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
@@ -53,32 +53,23 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_mpack.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(ldexp.o) (__fp_mpack)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
-                              interrupt.o (__udivmodhi4)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
-                              communication.o (__udivmodsi4)
+                              lib/interrupt.o (__udivmodhi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
                               6_5_1_Robotersteuerung_einfach.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
-                              interrupt.o (__do_clear_bss)
+                              lib/interrupt.o (__do_clear_bss)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                              communication.o (__umulhisi3)
+                              lib/communication.o (__umulhisi3)
 
 Allocating common symbols
 Common symbol       size              file
 
-Z_button            0x1               nunchuk.o
-Y_joy               0x1               nunchuk.o
-my_timer            0x2               interrupt.o
-C_button            0x1               nunchuk.o
-X_joy               0x1               nunchuk.o
-my_interrupt0       0x2               interrupt.o
-Y_accel             0x2               nunchuk.o
-my_datareceived     0x2               interrupt.o
-Z_accel             0x2               nunchuk.o
-my_interrupt1       0x2               interrupt.o
-X_accel             0x2               nunchuk.o
+my_timer            0x2               lib/interrupt.o
+my_interrupt0       0x2               lib/interrupt.o
+my_datareceived     0x2               lib/interrupt.o
+my_interrupt1       0x2               lib/interrupt.o
 
 Discarded input sections
 
@@ -87,204 +78,194 @@ Discarded input sections
  .text          0x00000000        0x0 6_5_1_Robotersteuerung_einfach.o
  .data          0x00000000        0x0 6_5_1_Robotersteuerung_einfach.o
  .bss           0x00000000        0x0 6_5_1_Robotersteuerung_einfach.o
- .text          0x00000000        0x0 communication.o
- .data          0x00000000        0x0 communication.o
- .bss           0x00000000        0x0 communication.o
+ .text          0x00000000        0x0 lib/communication.o
+ .data          0x00000000        0x0 lib/communication.o
+ .bss           0x00000000        0x0 lib/communication.o
  .text.i2c_init
-                0x00000000       0x12 communication.o
+                0x00000000       0x12 lib/communication.o
  .text.i2c_start
-                0x00000000       0x12 communication.o
+                0x00000000       0x12 lib/communication.o
  .text.i2c_stop
-                0x00000000        0x8 communication.o
+                0x00000000        0x8 lib/communication.o
  .text.i2c_write
-                0x00000000       0x4e communication.o
+                0x00000000       0x4e lib/communication.o
  .text.i2c_read
-                0x00000000       0x22 communication.o
+                0x00000000       0x22 lib/communication.o
  .text.rs232_baud
-                0x00000000       0x66 communication.o
+                0x00000000       0x20 lib/communication.o
  .text.rs232_init
-                0x00000000        0xe communication.o
+                0x00000000        0xe lib/communication.o
  .text.rs232_get
-                0x00000000       0x12 communication.o
+                0x00000000       0x12 lib/communication.o
  .text.rs232_put
-                0x00000000       0x10 communication.o
+                0x00000000       0x10 lib/communication.o
  .text.rs232_print
-                0x00000000       0x1e communication.o
+                0x00000000       0x1e lib/communication.o
  .text.rs232_inputdd
-                0x00000000       0x3c communication.o
+                0x00000000       0x3e lib/communication.o
  .text.rs232_printdd
-                0x00000000       0x36 communication.o
+                0x00000000       0x36 lib/communication.o
  .text.rs232_int
-                0x00000000       0xd0 communication.o
- .debug_info    0x00000000      0x33d communication.o
- .debug_abbrev  0x00000000      0x17b communication.o
- .debug_loc     0x00000000      0x33c communication.o
+                0x00000000       0xd0 lib/communication.o
+ .text.rs232_is_received
+                0x00000000        0xc lib/communication.o
+ .text.rs232_binary_get
+                0x00000000        0xe lib/communication.o
+ .text.rs232_readbytes
+                0x00000000       0x78 lib/communication.o
+ .debug_info    0x00000000      0x413 lib/communication.o
+ .debug_abbrev  0x00000000      0x210 lib/communication.o
+ .debug_loc     0x00000000      0x4ec lib/communication.o
  .debug_aranges
-                0x00000000       0x80 communication.o
- .debug_ranges  0x00000000       0x70 communication.o
- .debug_line    0x00000000      0x334 communication.o
- .debug_str     0x00000000      0x276 communication.o
- .comment       0x00000000       0x31 communication.o
- .debug_frame   0x00000000      0x124 communication.o
- .text          0x00000000        0x0 delay.o
- .data          0x00000000        0x0 delay.o
- .bss           0x00000000        0x0 delay.o
+                0x00000000       0x98 lib/communication.o
+ .debug_ranges  0x00000000       0xa0 lib/communication.o
+ .debug_line    0x00000000      0x3df lib/communication.o
+ .debug_str     0x00000000      0x295 lib/communication.o
+ .comment       0x00000000       0x31 lib/communication.o
+ .debug_frame   0x00000000      0x178 lib/communication.o
+ .text          0x00000000        0x0 lib/delay.o
+ .data          0x00000000        0x0 lib/delay.o
+ .bss           0x00000000        0x0 lib/delay.o
  .text.delay_us
-                0x00000000      0x14e delay.o
+                0x00000000      0x14e lib/delay.o
  .text.delay_100us
-                0x00000000       0x1e delay.o
+                0x00000000       0x1e lib/delay.o
  .text.delay_ms
-                0x00000000       0x2c delay.o
- .text.delay_s  0x00000000       0x2c delay.o
- .debug_info    0x00000000      0x3b9 delay.o
- .debug_abbrev  0x00000000      0x1aa delay.o
- .debug_loc     0x00000000      0x445 delay.o
+                0x00000000       0x2c lib/delay.o
+ .text.delay_s  0x00000000       0x2c lib/delay.o
+ .debug_info    0x00000000      0x3b9 lib/delay.o
+ .debug_abbrev  0x00000000      0x1aa lib/delay.o
+ .debug_loc     0x00000000      0x445 lib/delay.o
  .debug_aranges
-                0x00000000       0x38 delay.o
- .debug_ranges  0x00000000       0x58 delay.o
- .debug_line    0x00000000      0x25c delay.o
- .debug_str     0x00000000      0x25a delay.o
- .comment       0x00000000       0x31 delay.o
- .debug_frame   0x00000000       0xac delay.o
- .text          0x00000000        0x0 interrupt.o
- .data          0x00000000        0x0 interrupt.o
- .bss           0x00000000        0x0 interrupt.o
+                0x00000000       0x38 lib/delay.o
+ .debug_ranges  0x00000000       0x58 lib/delay.o
+ .debug_line    0x00000000      0x25e lib/delay.o
+ .debug_str     0x00000000      0x22f lib/delay.o
+ .comment       0x00000000       0x31 lib/delay.o
+ .debug_frame   0x00000000       0xac lib/delay.o
+ .text          0x00000000        0x0 lib/interrupt.o
+ .data          0x00000000        0x0 lib/interrupt.o
+ .bss           0x00000000        0x0 lib/interrupt.o
  .text.note_isr
-                0x00000000       0x1a interrupt.o
+                0x00000000       0x1a lib/interrupt.o
  .text.ext_interrupt_init
-                0x00000000       0x1a interrupt.o
+                0x00000000       0x1a lib/interrupt.o
  .text.ext_interrupt_enable
-                0x00000000        0x6 interrupt.o
+                0x00000000        0x6 lib/interrupt.o
  .text.ext_interrupt_disable
-                0x00000000        0x6 interrupt.o
+                0x00000000        0x6 lib/interrupt.o
  .text.ext_interrupt1_init
-                0x00000000       0x1a interrupt.o
+                0x00000000       0x1a lib/interrupt.o
  .text.ext_interrupt1_enable
-                0x00000000        0x6 interrupt.o
+                0x00000000        0x6 lib/interrupt.o
  .text.ext_interrupt1_disable
-                0x00000000        0x4 interrupt.o
+                0x00000000        0x4 lib/interrupt.o
  .text.preload_calc
-                0x00000000       0xd8 interrupt.o
+                0x00000000       0xd8 lib/interrupt.o
  .text.timer_ms_init
-                0x00000000       0x1a interrupt.o
+                0x00000000       0x1a lib/interrupt.o
  .text.timer1ms_init
-                0x00000000        0xe interrupt.o
+                0x00000000        0xe lib/interrupt.o
  .text.timer_ms_enable
-                0x00000000       0x60 interrupt.o
+                0x00000000       0x60 lib/interrupt.o
  .text.timer1ms_enable
-                0x00000000        0x6 interrupt.o
+                0x00000000        0x6 lib/interrupt.o
  .text.timer_ms_disable
-                0x00000000        0xe interrupt.o
+                0x00000000        0xe lib/interrupt.o
  .text.timer1ms_disable
-                0x00000000        0x6 interrupt.o
+                0x00000000        0x6 lib/interrupt.o
  .text.serial_interrupt_init
-                0x00000000       0x18 interrupt.o
+                0x00000000       0x18 lib/interrupt.o
  .text.serial_interrupt_enable
-                0x00000000        0xe interrupt.o
+                0x00000000        0xe lib/interrupt.o
  .text.serial_interrupt_disable
-                0x00000000        0xc interrupt.o
+                0x00000000        0xc lib/interrupt.o
  .text.sound_init
-                0x00000000        0xe interrupt.o
- .text.note_on  0x00000000       0x22 interrupt.o
+                0x00000000        0xe lib/interrupt.o
+ .text.note_on  0x00000000       0x22 lib/interrupt.o
  .text.note_off
-                0x00000000        0x6 interrupt.o
+                0x00000000        0x6 lib/interrupt.o
  .text.play_note
-                0x00000000       0x6a interrupt.o
+                0x00000000       0x6a lib/interrupt.o
  .bss.prescaler
-                0x00000000        0x2 interrupt.o
- .text          0x00000000        0x0 in_out.o
- .data          0x00000000        0x0 in_out.o
- .bss           0x00000000        0x0 in_out.o
+                0x00000000        0x2 lib/interrupt.o
+ .text          0x00000000        0x0 lib/in_out.o
+ .data          0x00000000        0x0 lib/in_out.o
+ .bss           0x00000000        0x0 lib/in_out.o
  .text.byte_init
-                0x00000000       0x32 in_out.o
+                0x00000000       0x32 lib/in_out.o
  .text.byte_read
-                0x00000000       0x20 in_out.o
+                0x00000000       0x20 lib/in_out.o
  .text.byte_write
-                0x00000000        0x6 in_out.o
+                0x00000000        0x6 lib/in_out.o
  .text.bit_toggle
-                0x00000000       0x4e in_out.o
+                0x00000000       0x4e lib/in_out.o
  .text.pwm_stop
-                0x00000000        0xc in_out.o
+                0x00000000        0xc lib/in_out.o
  .text.pwm2_stop
-                0x00000000        0xc in_out.o
+                0x00000000        0xc lib/in_out.o
  .text.pwm3_init
-                0x00000000       0x24 in_out.o
+                0x00000000       0x24 lib/in_out.o
  .text.pwm3_start
-                0x00000000        0xc in_out.o
+                0x00000000        0xc lib/in_out.o
  .text.pwm3_stop
-                0x00000000        0xc in_out.o
+                0x00000000        0xc lib/in_out.o
  .text.pwm3_duty_cycle
-                0x00000000       0x12 in_out.o
+                0x00000000       0x12 lib/in_out.o
  .text.adc_init
-                0x00000000        0xe in_out.o
- .text.adc_in   0x00000000       0x26 in_out.o
- .text.adc_in1  0x00000000        0x8 in_out.o
- .text.adc_in2  0x00000000        0x8 in_out.o
- .text          0x00000000        0x0 lcd.o
- .data          0x00000000        0x0 lcd.o
- .bss           0x00000000        0x0 lcd.o
+                0x00000000        0xe lib/in_out.o
+ .text.adc_in   0x00000000       0x26 lib/in_out.o
+ .text.adc_in1  0x00000000        0x8 lib/in_out.o
+ .text.adc_in2  0x00000000        0x8 lib/in_out.o
+ .text.adc_in10
+                0x00000000       0x3c lib/in_out.o
+ .text          0x00000000        0x0 lib/lcd.o
+ .data          0x00000000        0x0 lib/lcd.o
+ .bss           0x00000000        0x0 lib/lcd.o
  .text.lcd_waitwhilebusy
-                0x00000000        0xa lcd.o
+                0x00000000        0xa lib/lcd.o
+ .text.port_out
+                0x00000000       0x1c lib/lcd.o
  .text.lowlevel_write
-                0x00000000       0x12 lcd.o
+                0x00000000       0x16 lib/lcd.o
  .text.lcd_befehl
-                0x00000000       0x20 lcd.o
+                0x00000000       0x1e lib/lcd.o
  .text.lcd_daten
-                0x00000000       0x24 lcd.o
+                0x00000000       0x22 lib/lcd.o
  .text.lcd_init
-                0x00000000       0x56 lcd.o
+                0x00000000       0x50 lib/lcd.o
  .text.lcd_clear
-                0x00000000        0x8 lcd.o
+                0x00000000        0x8 lib/lcd.o
  .text.lcd_setcursor
-                0x00000000       0x28 lcd.o
+                0x00000000       0x28 lib/lcd.o
  .text.lcd_lookup
-                0x00000000       0x62 lcd.o
+                0x00000000       0x12 lib/lcd.o
  .text.lcd_char
-                0x00000000        0xa lcd.o
+                0x00000000        0xa lib/lcd.o
  .text.lcd_print
-                0x00000000       0x1e lcd.o
+                0x00000000       0x1e lib/lcd.o
  .text.lcd_byte
-                0x00000000       0x94 lcd.o
- .text.lcd_int  0x00000000       0xd0 lcd.o
+                0x00000000       0x94 lib/lcd.o
+ .text.lcd_int  0x00000000       0xd0 lib/lcd.o
  .text.lcd_defchar
-                0x00000000       0x48 lcd.o
+                0x00000000       0x48 lib/lcd.o
  .text.lcd_clearline
-                0x00000000       0x18 lcd.o
- .text.lcd_dd   0x00000000       0x56 lcd.o
+                0x00000000       0x18 lib/lcd.o
+ .text.lcd_dd   0x00000000       0x56 lib/lcd.o
  .text.lcd_debug
-                0x00000000       0x3e lcd.o
- .debug_info    0x00000000      0x6ba lcd.o
- .debug_abbrev  0x00000000      0x17c lcd.o
- .debug_loc     0x00000000      0x8c1 lcd.o
+                0x00000000       0x3e lib/lcd.o
+ .text.lcd_hhhh
+                0x00000000       0x6a lib/lcd.o
+ .debug_info    0x00000000      0x7ea lib/lcd.o
+ .debug_abbrev  0x00000000      0x18b lib/lcd.o
+ .debug_loc     0x00000000      0xa10 lib/lcd.o
  .debug_aranges
-                0x00000000       0x98 lcd.o
- .debug_ranges  0x00000000       0x88 lcd.o
- .debug_line    0x00000000      0x46c lcd.o
- .debug_str     0x00000000      0x2e0 lcd.o
- .comment       0x00000000       0x31 lcd.o
- .debug_frame   0x00000000      0x1a4 lcd.o
- .text          0x00000000        0x0 nunchuk.o
- .data          0x00000000        0x0 nunchuk.o
- .bss           0x00000000        0x0 nunchuk.o
- .text.nunchuk_init
-                0x00000000       0x4a nunchuk.o
- .text.nunchuk_read
-                0x00000000       0xf2 nunchuk.o
- .rodata.str1.1
-                0x00000000        0x6 nunchuk.o
- .text.nunchuk_debug
-                0x00000000       0xaa nunchuk.o
- .debug_info    0x00000000      0x50e nunchuk.o
- .debug_abbrev  0x00000000       0xe0 nunchuk.o
- .debug_loc     0x00000000      0x1ff nunchuk.o
- .debug_aranges
-                0x00000000       0x30 nunchuk.o
- .debug_ranges  0x00000000       0x20 nunchuk.o
- .debug_line    0x00000000      0x24e nunchuk.o
- .debug_str     0x00000000      0x289 nunchuk.o
- .comment       0x00000000       0x31 nunchuk.o
- .debug_frame   0x00000000       0x80 nunchuk.o
- COMMON         0x00000000        0xa nunchuk.o
+                0x00000000       0xa8 lib/lcd.o
+ .debug_ranges  0x00000000       0x98 lib/lcd.o
+ .debug_line    0x00000000      0x4b0 lib/lcd.o
+ .debug_str     0x00000000      0x2f2 lib/lcd.o
+ .comment       0x00000000       0x31 lib/lcd.o
+ .debug_frame   0x00000000      0x1ec lib/lcd.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -435,22 +416,6 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
- .text.libgcc.mul
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
- .text.libgcc.div
-                0x00000000       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
- .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
- .text.libgcc.prologue
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
- .text.libgcc.builtins
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
- .text.libgcc.fmul
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
- .text.libgcc.fixed
-                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -533,12 +498,11 @@ Linker script and memory map
 Address of section .data set to 0x800100
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
 LOAD 6_5_1_Robotersteuerung_einfach.o
-LOAD communication.o
-LOAD delay.o
-LOAD interrupt.o
-LOAD in_out.o
-LOAD lcd.o
-LOAD nunchuk.o
+LOAD lib/communication.o
+LOAD lib/delay.o
+LOAD lib/interrupt.o
+LOAD lib/in_out.o
+LOAD lib/lcd.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -739,43 +703,43 @@ END GROUP
  .text.main     0x0000012c       0x48 6_5_1_Robotersteuerung_einfach.o
                 0x0000012c                main
  .text.__vector_1
-                0x00000174       0x52 interrupt.o
+                0x00000174       0x52 lib/interrupt.o
                 0x00000174                __vector_1
  .text.__vector_2
-                0x000001c6       0x52 interrupt.o
+                0x000001c6       0x52 lib/interrupt.o
                 0x000001c6                __vector_2
  .text.__vector_14
-                0x00000218       0x66 interrupt.o
+                0x00000218       0x66 lib/interrupt.o
                 0x00000218                __vector_14
  .text.__vector_18
-                0x0000027e       0x4e interrupt.o
+                0x0000027e       0x4e lib/interrupt.o
                 0x0000027e                __vector_18
  .text.bit_init
-                0x000002cc       0xd2 in_out.o
+                0x000002cc       0xd2 lib/in_out.o
                 0x000002cc                bit_init
  .text.bit_read
-                0x0000039e       0x4a in_out.o
+                0x0000039e       0x4a lib/in_out.o
                 0x0000039e                bit_read
  .text.bit_write
-                0x000003e8       0x34 in_out.o
+                0x000003e8       0x34 lib/in_out.o
                 0x000003e8                bit_write
  .text.pwm_init
-                0x0000041c       0x1e in_out.o
+                0x0000041c       0x1e lib/in_out.o
                 0x0000041c                pwm_init
  .text.pwm_start
-                0x0000043a        0xc in_out.o
+                0x0000043a        0xc lib/in_out.o
                 0x0000043a                pwm_start
  .text.pwm_duty_cycle
-                0x00000446        0x6 in_out.o
+                0x00000446        0x6 lib/in_out.o
                 0x00000446                pwm_duty_cycle
  .text.pwm2_init
-                0x0000044c       0x1e in_out.o
+                0x0000044c       0x1e lib/in_out.o
                 0x0000044c                pwm2_init
  .text.pwm2_start
-                0x0000046a        0xc in_out.o
+                0x0000046a        0xc lib/in_out.o
                 0x0000046a                pwm2_start
  .text.pwm2_duty_cycle
-                0x00000476        0x6 in_out.o
+                0x00000476        0x6 lib/in_out.o
                 0x00000476                pwm2_duty_cycle
                 0x0000047c                . = ALIGN (0x2)
  *(.fini9)
@@ -824,7 +788,7 @@ END GROUP
  *(.bss)
  *(.bss*)
  *(COMMON)
- COMMON         0x00800124        0x8 interrupt.o
+ COMMON         0x00800124        0x8 lib/interrupt.o
                 0x00800124                my_timer
                 0x00800126                my_interrupt0
                 0x00800128                my_datareceived
@@ -881,8 +845,8 @@ END GROUP
  *(.comment)
  .comment       0x00000000       0x30 6_5_1_Robotersteuerung_einfach.o
                                  0x31 (size before relaxing)
- .comment       0x00000030       0x31 interrupt.o
- .comment       0x00000030       0x31 in_out.o
+ .comment       0x00000030       0x31 lib/interrupt.o
+ .comment       0x00000030       0x31 lib/in_out.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
@@ -904,60 +868,60 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x1e0
+.debug_aranges  0x00000000      0x1e8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x30 6_5_1_Robotersteuerung_einfach.o
  .debug_aranges
-                0x00000030       0xe0 interrupt.o
+                0x00000030       0xe0 lib/interrupt.o
  .debug_aranges
-                0x00000110       0xd0 in_out.o
+                0x00000110       0xd8 lib/in_out.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x156a
+.debug_info     0x00000000     0x1597
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_info    0x000005f4      0x44a 6_5_1_Robotersteuerung_einfach.o
- .debug_info    0x00000a3e      0x5e9 interrupt.o
- .debug_info    0x00001027      0x543 in_out.o
+ .debug_info    0x00000a3e      0x5e9 lib/interrupt.o
+ .debug_info    0x00001027      0x570 lib/in_out.o
 
 .debug_abbrev   0x00000000      0xa36
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_abbrev  0x000005a2      0x12f 6_5_1_Robotersteuerung_einfach.o
- .debug_abbrev  0x000006d1      0x1ef interrupt.o
- .debug_abbrev  0x000008c0      0x176 in_out.o
+ .debug_abbrev  0x000006d1      0x1ef lib/interrupt.o
+ .debug_abbrev  0x000008c0      0x176 lib/in_out.o
 
-.debug_line     0x00000000      0xba9
+.debug_line     0x00000000      0xbc8
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000133      0x1a1 6_5_1_Robotersteuerung_einfach.o
- .debug_line    0x000002d4      0x43e interrupt.o
- .debug_line    0x00000712      0x497 in_out.o
+ .debug_line    0x00000133      0x197 6_5_1_Robotersteuerung_einfach.o
+ .debug_line    0x000002ca      0x436 lib/interrupt.o
+ .debug_line    0x00000700      0x4c8 lib/in_out.o
 
-.debug_frame    0x00000000      0x4f0
+.debug_frame    0x00000000      0x500
  *(.debug_frame)
  .debug_frame   0x00000000       0x50 6_5_1_Robotersteuerung_einfach.o
- .debug_frame   0x00000050      0x300 interrupt.o
- .debug_frame   0x00000350      0x1a0 in_out.o
+ .debug_frame   0x00000050      0x300 lib/interrupt.o
+ .debug_frame   0x00000350      0x1b0 lib/in_out.o
 
-.debug_str      0x00000000      0x7ac
+.debug_str      0x00000000      0x78c
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x284 6_5_1_Robotersteuerung_einfach.o
-                                0x2b8 (size before relaxing)
- .debug_str     0x0000048c      0x244 interrupt.o
-                                0x3f5 (size before relaxing)
- .debug_str     0x000006d0       0xdc in_out.o
-                                0x2e6 (size before relaxing)
+ .debug_str     0x00000208      0x257 6_5_1_Robotersteuerung_einfach.o
+                                0x28b (size before relaxing)
+ .debug_str     0x0000045f      0x246 lib/interrupt.o
+                                0x3ca (size before relaxing)
+ .debug_str     0x000006a5       0xe7 lib/in_out.o
+                                0x2c4 (size before relaxing)
 
-.debug_loc      0x00000000      0xba3
+.debug_loc      0x00000000      0xbc4
  *(.debug_loc)
  .debug_loc     0x00000000       0x50 6_5_1_Robotersteuerung_einfach.o
- .debug_loc     0x00000050      0x780 interrupt.o
- .debug_loc     0x000007d0      0x3d3 in_out.o
+ .debug_loc     0x00000050      0x780 lib/interrupt.o
+ .debug_loc     0x000007d0      0x3f4 lib/in_out.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -977,11 +941,11 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x1b0
+.debug_ranges   0x00000000      0x1b8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x20 6_5_1_Robotersteuerung_einfach.o
- .debug_ranges  0x00000020       0xd0 interrupt.o
- .debug_ranges  0x000000f0       0xc0 in_out.o
+ .debug_ranges  0x00000020       0xd0 lib/interrupt.o
+ .debug_ranges  0x000000f0       0xc8 lib/in_out.o
 
 .debug_macro
  *(.debug_macro)

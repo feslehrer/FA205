@@ -4,15 +4,13 @@
 
 6_5_1_Robotersteuerung_einfach.c
 
-communication.c
+lib\communication.c
 
-delay.c
+lib\delay.c
 
-interrupt.c
+lib\interrupt.c
 
-in_out.c
+lib\in_out.c
 
-lcd.c
-
-nunchuk.c
+lib\lcd.c
 
