@@ -50,6 +50,7 @@ Für die Beispielprogramme werden z.T. Zusatzshields und Hardware benötigt:
 
 Projektseite:
 - <a href="https://github.com/feslehrer/NiboBlueConfig_for_ArduinoCarrierBoard.git">NiboBee-Serial-Bluetooth-Adapter am Arduino-Carrier-Board</a>
+- <a href="https://github.com/feslehrer/Temperaturmessung_4L">Temperaturmessung mit PT100 in Vierleiterschaltung</a>
 
 Beispiel Arbeitsaufträge sind im Ordner **Dokumente\Uebungen_Beispiele**
 
