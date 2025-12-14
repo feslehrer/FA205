@@ -14,14 +14,14 @@ void spi_init( void )
 }
 
 // Chip Select steuern (z.?B. PB2 als CS)
-void CS_Low(void) 
+void CS_Low( uint8_t *port, uint8_t bitnr ) 
 {
-  bit_write(CS,0);
+  bit_write(port,bitnr,0);
 }
 
-void CS_High(void) 
+void CS_High( uint8_t *port, uint8_t bitnr ) 
 {
-  bit_write(CS,1);
+  bit_write(port,bitnr,1);
 }
 
 uint8_t spi_transfer( uint8_t data )
