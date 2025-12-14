@@ -1,6 +1,9 @@
 FA205-Biblitheken für MicrochipStudio und Arduino-Carrier-Board mit ATmega328P Xplained mini<br>
 Revision-History
 **************************
+2025.12.14:<br>
++ spi-Update
++ CS_Low() und CS_High() mit Port,Pin als Eingabeparameter
 
 2025.04.30:<br>
 + Template-Datei "MeinProjekt.zip" neu strukturiert:<br>

@@ -2,12 +2,12 @@
 #include "controller.h"
 #include "spi.h"
 
-void spi_init( void )
+void spi_init( uint8_t *cs_port, uint8_t cs_bitnr )
 {
   bit_init(MISO,IN);
   bit_init(MOSI,OUT);
   bit_init(SCK,OUT);
-  bit_init(CS,OUT);
+  bit_init(port,bitnr,OUT);  // CS-Pin
 	
   //SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);		// Enable SPI, Set as Master, Prescaler: Fosc/16
   SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR1);		// Enable SPI, Set as Master, Prescaler: Fosc/32

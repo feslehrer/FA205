@@ -1,7 +1,7 @@
 #ifndef RC522_H_
 #define RC522_H_
 
-#include <avr/io.h>
+//#include <avr/io.h>
 #include "spi.h"
 
 //MF522 command bits
@@ -108,9 +108,9 @@
 #define     Reserved34			  0x3F
 //-----------------------------------------------
 
-#define SELECT_DDR  DDRB
-#define SELECT_PORT PORTB
-#define SELECT_PIN  PB2
+
+#define RC522_CS _PORTB_,2    // CS-Pin Definition
+
 
 void rc522_init( void );
 
@@ -118,12 +118,11 @@ void rc522_write( uint8_t addr, uint8_t val);
 
 uint8_t rc522_read( uint8_t addr );
 
-void rc522_antenna_on( void );
+//void rc522_antenna_on( void );
 
 void rc522_reset( void );
 
-void rc522_set_bit_mask( uint8_t addr, uint8_t mask );
-
+//void rc522_set_bit_mask( uint8_t addr, uint8_t mask );
 
 
 #endif /* RC522_H_ */
