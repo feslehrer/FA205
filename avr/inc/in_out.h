@@ -29,6 +29,7 @@
 #endif
 #ifdef _ATMEGA328_
  #define _PORTD_     &PORTD			// Vorsicht! PD0 = RxD (Input) PD1 = TxD (Output) müssen beim Programmieren floaten
+ #define PORTx        _PORTD_ 
  // Spezielle Portdefinitionen für Arduino-Carrier_Board
  #define LED0        _PORTD_,0
  #define LED1        _PORTD_,1
@@ -48,6 +49,7 @@
  #define SEG_dp      _PORTD_,7
 #endif
 #define _PORTB_      &PORTB			// Arduino-Pins: 8 ... 13
+#define PORTy        _PORTB_
 #define S1           _PORTB_,2
 #define S2           _PORTB_,3
 #define S3           _PORTB_,4
@@ -56,6 +58,7 @@
 #define BACKLIGHT    _PORTB_,3
 
 #define _PORTC_      &PORTC   			// PC6 => Arduino Reset-Pin
+#define PORTz        _PORTC_
 
 // AVR Portpins
 #undef PD0
