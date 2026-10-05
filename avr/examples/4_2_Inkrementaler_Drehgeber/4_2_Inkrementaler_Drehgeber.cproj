@@ -236,18 +236,18 @@
     <None Include="lib\srf04.c">
       <SubType>compile</SubType>
     </None>
-    <None Include="4_2_1_Inkrementaldrehgeber.c">
+    <Compile Include="4_2_1_Inkrementaldrehgeber.c">
       <SubType>compile</SubType>
-    </None>
+    </Compile>
     <None Include="4_2_4_Inkrementalsensor.c">
       <SubType>compile</SubType>
     </None>
     <None Include="4_2_2_Inkrementaldrehgeber_2Q.c">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="4_2_3_Inkrementaldrehgeber_4Q.c">
+    <None Include="4_2_3_Inkrementaldrehgeber_4Q.c">
       <SubType>compile</SubType>
-    </Compile>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="inc" />

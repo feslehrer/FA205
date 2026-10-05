@@ -28,8 +28,8 @@ void setup (void)
   lcd_clear();
   lcd_setcursor(1,1);
   lcd_print("counts =");
-	lcd_setcursor(2,1);
-	lcd_print("turns  =");
+  lcd_setcursor(2,1);
+  lcd_print("turns  =");
 
   ext_interrupt_init(ext_interrupt_isr);
 }
